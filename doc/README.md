@@ -28,3 +28,9 @@ In Atmel Studio 7, open Tools->External Tools...
     - Check "Use Output window"
 
 REF: https://www.youtube.com/watch?time_continue=508&v=zEbSQaQJvHI
+
+If problems are found when running or booting the solution, please follow the next link:
+
+REF: https://www.avrfreaks.net/forum/avrdude-4
+
+
