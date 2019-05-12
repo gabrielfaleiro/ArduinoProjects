@@ -3,29 +3,29 @@ GccTemplateApplication.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000000  00800100  00800100  00000106  2**0
+  0 .data         00000000  00800100  00800100  00000104  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         000000b2  00000000  00000000  00000054  2**1
+  1 .text         000000b0  00000000  00000000  00000054  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .comment      00000030  00000000  00000000  00000106  2**0
+  2 .comment      00000030  00000000  00000000  00000104  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000138  2**2
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000134  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 00000020  00000000  00000000  00000178  2**0
+  4 .debug_aranges 00000020  00000000  00000000  00000174  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000738  00000000  00000000  00000198  2**0
+  5 .debug_info   00000738  00000000  00000000  00000194  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 0000068a  00000000  00000000  000008d0  2**0
+  6 .debug_abbrev 0000068a  00000000  00000000  000008cc  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   0000026b  00000000  00000000  00000f5a  2**0
+  7 .debug_line   0000026b  00000000  00000000  00000f56  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000024  00000000  00000000  000011c8  2**2
+  8 .debug_frame  00000024  00000000  00000000  000011c4  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    000003c2  00000000  00000000  000011ec  2**0
+  9 .debug_str    000003b2  00000000  00000000  000011e8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000048  00000000  00000000  000015ae  2**0
+ 10 .debug_loc    00000048  00000000  00000000  0000159a  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000010  00000000  00000000  000015f6  2**0
+ 11 .debug_ranges 00000010  00000000  00000000  000015e2  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -66,7 +66,7 @@ Disassembly of section .text:
   70:	de bf       	out	0x3e, r29	; 62
   72:	cd bf       	out	0x3d, r28	; 61
   74:	0e 94 40 00 	call	0x80	; 0x80 <main>
-  78:	0c 94 57 00 	jmp	0xae	; 0xae <_exit>
+  78:	0c 94 56 00 	jmp	0xac	; 0xac <_exit>
 
 0000007c <__bad_interrupt>:
   7c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
@@ -92,31 +92,30 @@ int main(void)
 
 	__builtin_avr_delay_cycles(__ticks_dc);
   84:	2f ef       	ldi	r18, 0xFF	; 255
-  86:	33 ed       	ldi	r19, 0xD3	; 211
-  88:	80 e3       	ldi	r24, 0x30	; 48
+  86:	89 e6       	ldi	r24, 0x69	; 105
+  88:	98 e1       	ldi	r25, 0x18	; 24
   8a:	21 50       	subi	r18, 0x01	; 1
-  8c:	30 40       	sbci	r19, 0x00	; 0
-  8e:	80 40       	sbci	r24, 0x00	; 0
+  8c:	80 40       	sbci	r24, 0x00	; 0
+  8e:	90 40       	sbci	r25, 0x00	; 0
   90:	e1 f7       	brne	.-8      	; 0x8a <main+0xa>
   92:	00 c0       	rjmp	.+0      	; 0x94 <main+0x14>
   94:	00 00       	nop
-		_delay_ms(1000);
+		_delay_ms(500);
 		PORTB &= 0B11011111;
   96:	2d 98       	cbi	0x05, 5	; 5
-  98:	9a ea       	ldi	r25, 0xAA	; 170
-  9a:	26 ee       	ldi	r18, 0xE6	; 230
-  9c:	36 e9       	ldi	r19, 0x96	; 150
-  9e:	81 e0       	ldi	r24, 0x01	; 1
-  a0:	91 50       	subi	r25, 0x01	; 1
-  a2:	20 40       	sbci	r18, 0x00	; 0
-  a4:	30 40       	sbci	r19, 0x00	; 0
-  a6:	80 40       	sbci	r24, 0x00	; 0
-  a8:	d9 f7       	brne	.-10     	; 0xa0 <main+0x20>
-  aa:	00 00       	nop
-  ac:	ea cf       	rjmp	.-44     	; 0x82 <main+0x2>
+  98:	2f ef       	ldi	r18, 0xFF	; 255
+  9a:	89 e6       	ldi	r24, 0x69	; 105
+  9c:	98 e1       	ldi	r25, 0x18	; 24
+  9e:	21 50       	subi	r18, 0x01	; 1
+  a0:	80 40       	sbci	r24, 0x00	; 0
+  a2:	90 40       	sbci	r25, 0x00	; 0
+  a4:	e1 f7       	brne	.-8      	; 0x9e <main+0x1e>
+  a6:	00 c0       	rjmp	.+0      	; 0xa8 <main+0x28>
+  a8:	00 00       	nop
+  aa:	eb cf       	rjmp	.-42     	; 0x82 <main+0x2>
 
-000000ae <_exit>:
-  ae:	f8 94       	cli
+000000ac <_exit>:
+  ac:	f8 94       	cli
 
-000000b0 <__stop_program>:
-  b0:	ff cf       	rjmp	.-2      	; 0xb0 <__stop_program>
+000000ae <__stop_program>:
+  ae:	ff cf       	rjmp	.-2      	; 0xae <__stop_program>
