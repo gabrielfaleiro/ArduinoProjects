@@ -22,10 +22,10 @@ REF: https://www.geekfactory.mx/tutoriales/tutoriales-arduino/driver-ch340-para-
 ## Program with Atmel Studio 7
 
 In Atmel Studio 7, open Tools->External Tools...
-    - Title: Arduino_via_bootloader
-    - Command: C:\"Program Files"\WindowsApps\ArduinoLLC.ArduinoIDE_1.8.21.0_x86__mdqgnx93n4wtt\hardware\tools\avr/bin/avrdude.exe
-    - Arguments: -C"C:\Program Files\WindowsApps\ArduinoLLC.ArduinoIDE_1.8.21.0_x86__mdqgnx93n4wtt\hardware\tools\avr/etc/avrdude.conf" -v -patmega328p -carduino -PCOM3 -b115200 -D -Uflash:w:"$(ProjectDir)Debug\$(TargetName).hex":i
-    - Check "Use Output window"
+- Title: Arduino_via_bootloader
+- Command: C:\"Program Files"\WindowsApps\ArduinoLLC.ArduinoIDE_1.8.21.0_x86__mdqgnx93n4wtt\hardware\tools\avr/bin/avrdude.exe
+- Arguments: -C"C:\Program Files\WindowsApps\ArduinoLLC.ArduinoIDE_1.8.21.0_x86__mdqgnx93n4wtt\hardware\tools\avr/etc/avrdude.conf" -v -patmega328p -carduino -PCOM3 -b115200 -D -Uflash:w:"$(ProjectDir)Debug\$(TargetName).hex":i
+- Check "Use Output window"
 
 REF: https://www.youtube.com/watch?time_continue=508&v=zEbSQaQJvHI
 
