@@ -31,4 +31,5 @@ REF: https://www.youtube.com/watch?time_continue=508&v=zEbSQaQJvHI
 
 If problems are found when running or booting the solution, try allocating arduino files in a different folder.
 
+USB to TTL convertor: https://www.quora.com/What-is-the-difference-between-Arduino-Uno-R3-compatible-board-ATmega328P-ATmega16U2-and-Arduino-Uno-R3-ATmega328P-USB-board-CH340G-Which-should-I-buy-and-why
 
