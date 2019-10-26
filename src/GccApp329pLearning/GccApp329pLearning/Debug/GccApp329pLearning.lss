@@ -3,29 +3,29 @@ GccApp329pLearning.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000000  00800100  00800100  000000f8  2**0
+  0 .data         00000000  00800100  00800100  0000013c  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         000000a4  00000000  00000000  00000054  2**1
+  1 .text         000000e8  00000000  00000000  00000054  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .comment      00000030  00000000  00000000  000000f8  2**0
+  2 .comment      00000030  00000000  00000000  0000013c  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000128  2**2
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000016c  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 00000020  00000000  00000000  00000168  2**0
+  4 .debug_aranges 00000038  00000000  00000000  000001ac  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   000008fa  00000000  00000000  00000188  2**0
+  5 .debug_info   000009bb  00000000  00000000  000001e4  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 00000833  00000000  00000000  00000a82  2**0
+  6 .debug_abbrev 000008a2  00000000  00000000  00000b9f  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   00000259  00000000  00000000  000012b5  2**0
+  7 .debug_line   0000030a  00000000  00000000  00001441  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000024  00000000  00000000  00001510  2**2
+  8 .debug_frame  00000054  00000000  00000000  0000174c  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    00000455  00000000  00000000  00001534  2**0
+  9 .debug_str    0000047e  00000000  00000000  000017a0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000048  00000000  00000000  00001989  2**0
+ 10 .debug_loc    000000f6  00000000  00000000  00001c1e  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000010  00000000  00000000  000019d1  2**0
+ 11 .debug_ranges 00000028  00000000  00000000  00001d14  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -62,57 +62,112 @@ Disassembly of section .text:
   62:	d8 e0       	ldi	r29, 0x08	; 8
   64:	de bf       	out	0x3e, r29	; 62
   66:	cd bf       	out	0x3d, r28	; 61
-  68:	0e 94 3a 00 	call	0x74	; 0x74 <main>
-  6c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <_exit>
+  68:	0e 94 57 00 	call	0xae	; 0xae <main>
+  6c:	0c 94 72 00 	jmp	0xe4	; 0xe4 <_exit>
 
 00000070 <__bad_interrupt>:
   70:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
-00000074 <main>:
-#include <util/delay.h> // To use delay functions
+00000074 <setupLed>:
+	}
+	else{
+		val++;
+	}
+	return val;
+}
+  74:	25 9a       	sbi	0x04, 5	; 4
+  76:	80 e0       	ldi	r24, 0x00	; 0
+  78:	90 e0       	ldi	r25, 0x00	; 0
+  7a:	08 95       	ret
+
+0000007c <setupTimer0FreqGen>:
+  7c:	56 9a       	sbi	0x0a, 6	; 10
+  7e:	e4 e6       	ldi	r30, 0x64	; 100
+  80:	f0 e0       	ldi	r31, 0x00	; 0
+  82:	20 81       	ld	r18, Z
+  84:	2f 7d       	andi	r18, 0xDF	; 223
+  86:	20 83       	st	Z, r18
+  88:	24 b5       	in	r18, 0x24	; 36
+  8a:	22 64       	ori	r18, 0x42	; 66
+  8c:	24 bd       	out	0x24, r18	; 36
+  8e:	25 b5       	in	r18, 0x25	; 37
+  90:	24 60       	ori	r18, 0x04	; 4
+  92:	25 bd       	out	0x25, r18	; 37
+  94:	89 2b       	or	r24, r25
+  96:	41 f0       	breq	.+16     	; 0xa8 <setupTimer0FreqGen+0x2c>
+  98:	8f b7       	in	r24, 0x3f	; 63
+  9a:	80 68       	ori	r24, 0x80	; 128
+  9c:	8f bf       	out	0x3f, r24	; 63
+  9e:	ee e6       	ldi	r30, 0x6E	; 110
+  a0:	f0 e0       	ldi	r31, 0x00	; 0
+  a2:	80 81       	ld	r24, Z
+  a4:	82 60       	ori	r24, 0x02	; 2
+  a6:	80 83       	st	Z, r24
+  a8:	80 e0       	ldi	r24, 0x00	; 0
+  aa:	90 e0       	ldi	r25, 0x00	; 0
+  ac:	08 95       	ret
+
+000000ae <main>:
 
 int main(void)
 {
-	/* Setup */
-	DDRB |= 0B00100000;
-  74:	25 9a       	sbi	0x04, 5	; 4
-	
-    /* Replace with your application code */
-    while (1) 
-    {
-		PORTB |= 0B00100000;
-  76:	2d 9a       	sbi	0x05, 5	; 5
+	setupLed();
+  ae:	0e 94 3a 00 	call	0x74	; 0x74 <setupLed>
+	setupTimer0FreqGen(0);
+  b2:	80 e0       	ldi	r24, 0x00	; 0
+  b4:	90 e0       	ldi	r25, 0x00	; 0
+  b6:	0e 94 3e 00 	call	0x7c	; 0x7c <setupTimer0FreqGen>
+	OCR0A = 0x49; // 73 in decimal
+  ba:	89 e4       	ldi	r24, 0x49	; 73
+  bc:	87 bd       	out	0x27, r24	; 39
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
-  78:	2f ef       	ldi	r18, 0xFF	; 255
-  7a:	89 e6       	ldi	r24, 0x69	; 105
-  7c:	98 e1       	ldi	r25, 0x18	; 24
-  7e:	21 50       	subi	r18, 0x01	; 1
-  80:	80 40       	sbci	r24, 0x00	; 0
-  82:	90 40       	sbci	r25, 0x00	; 0
-  84:	e1 f7       	brne	.-8      	; 0x7e <main+0xa>
-  86:	00 c0       	rjmp	.+0      	; 0x88 <main+0x14>
-  88:	00 00       	nop
-		_delay_ms(TIME);
-		PORTB &= 0B11011111;
-  8a:	2d 98       	cbi	0x05, 5	; 5
-  8c:	2f ef       	ldi	r18, 0xFF	; 255
-  8e:	89 e6       	ldi	r24, 0x69	; 105
-  90:	98 e1       	ldi	r25, 0x18	; 24
-  92:	21 50       	subi	r18, 0x01	; 1
-  94:	80 40       	sbci	r24, 0x00	; 0
-  96:	90 40       	sbci	r25, 0x00	; 0
-  98:	e1 f7       	brne	.-8      	; 0x92 <main+0x1e>
-  9a:	00 c0       	rjmp	.+0      	; 0x9c <main+0x28>
-  9c:	00 00       	nop
-  9e:	eb cf       	rjmp	.-42     	; 0x76 <main+0x2>
+  be:	8f e3       	ldi	r24, 0x3F	; 63
+  c0:	9c e9       	ldi	r25, 0x9C	; 156
+  c2:	01 97       	sbiw	r24, 0x01	; 1
+  c4:	f1 f7       	brne	.-4      	; 0xc2 <main+0x14>
+  c6:	00 c0       	rjmp	.+0      	; 0xc8 <main+0x1a>
+  c8:	00 00       	nop
+	
+	while(1)
+	{
+		_delay_ms(10);
+		PORTB &= ~(1 << PB5); // LED off
+  ca:	2d 98       	cbi	0x05, 5	; 5
+  cc:	8f e3       	ldi	r24, 0x3F	; 63
+  ce:	9c e9       	ldi	r25, 0x9C	; 156
+  d0:	01 97       	sbiw	r24, 0x01	; 1
+  d2:	f1 f7       	brne	.-4      	; 0xd0 <main+0x22>
+  d4:	00 c0       	rjmp	.+0      	; 0xd6 <main+0x28>
+  d6:	00 00       	nop
+		_delay_ms(10);
+		PORTB |=  (1 << PB5); // LED on
+  d8:	2d 9a       	sbi	0x05, 5	; 5
+		OCR0A = inc255(OCR0A);
+  da:	87 b5       	in	r24, 0x27	; 39
+  dc:	90 e0       	ldi	r25, 0x00	; 0
+int inc255(int val){
+	if (val > 255){
+		val = 0;
+	}
+	else{
+		val++;
+  de:	01 96       	adiw	r24, 0x01	; 1
+	{
+		_delay_ms(10);
+		PORTB &= ~(1 << PB5); // LED off
+		_delay_ms(10);
+		PORTB |=  (1 << PB5); // LED on
+		OCR0A = inc255(OCR0A);
+  e0:	87 bd       	out	0x27, r24	; 39
+  e2:	ed cf       	rjmp	.-38     	; 0xbe <main+0x10>
 
-000000a0 <_exit>:
-  a0:	f8 94       	cli
+000000e4 <_exit>:
+  e4:	f8 94       	cli
 
-000000a2 <__stop_program>:
-  a2:	ff cf       	rjmp	.-2      	; 0xa2 <__stop_program>
+000000e6 <__stop_program>:
+  e6:	ff cf       	rjmp	.-2      	; 0xe6 <__stop_program>

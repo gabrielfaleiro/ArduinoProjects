@@ -13,6 +13,10 @@ http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-
 
 https://www.arduino.cc/en/uploads/Main/Arduino_Uno_Rev3-schematic.pdf
 
+## IDE Reference
+
+https://www.arduino.cc/reference/en/
+
 ## Necessary Driver CH340
 
 To recognise chinesse Arduino Boards, it is necessary to install the ch340 driver.
