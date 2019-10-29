@@ -31,219 +31,222 @@ int setupTimer0FreqGen(int enInt){
 	return 0;
 }
 
-int c3(int mSeconds){
+int c3(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000100; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 250;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int d3(int mSeconds){
+int d3(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000100; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 222;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int e3(int mSeconds){
+int e3(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000100; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 198;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int f3(int mSeconds){
+int f3(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000100; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 187;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int g3(int mSeconds){
+int g3(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000100; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 166;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int a3(int mSeconds){
+int a3(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000100; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 148;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int b3(int mSeconds){
+int b3(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000100; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 132;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int c4(int mSeconds){
+int c4(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000100; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 124;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int d4(int mSeconds){
+int d4(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000100; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 111;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int e4(int mSeconds){
+int e4(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000100; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 98;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int f4(int mSeconds){
+int f4(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000100; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 93;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int g4(int mSeconds){
+int g4(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000100; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 83;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int a4(int mSeconds){
+int a4(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000100; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 73;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int b4(int mSeconds){
+int b4(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000100; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 65;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int c5(int mSeconds){
+int c5(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000011; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 249;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int d5(int mSeconds){
+int d5(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000011; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 222;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int e5(int mSeconds){
+int e5(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000011; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 198;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int f5(int mSeconds){
+int f5(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000011; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 187;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int g5(int mSeconds){
+int g5(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000011; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 166;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int a5(int mSeconds){
+int a5(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000011; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 148;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int b5(int mSeconds){
+int b5(){
 	TCCR0B &= 0B11111000; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	TCCR0B |= 0B00000011; // FOC0A FOC0B – – WGM02 CS02 CS01 CS00
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 132;
-	_delay_ms(mSeconds); 
+	//_delay_ms(mSeconds); 
 	return 0;
 }
 
-int silence(int mSeconds){
+int silence(){
 	DDRD &= 0B10111111; // PD6 set to INPUT
-	_delay_ms(mSeconds);
+	return 0;
+}
+
+int sound(){
 	DDRD |= 0B01000000; // PD6 set to OUTPUT
 	return 0;
 }
