@@ -33,8 +33,8 @@ int main(void)
 	
 	while(1)
 	{		
-		//tetris();
-		zelda();
+		tetris();
+		//zelda();
 		
 		//_delay_ms(10);
 		//PORTB &= ~(1 << PB5); // LED off

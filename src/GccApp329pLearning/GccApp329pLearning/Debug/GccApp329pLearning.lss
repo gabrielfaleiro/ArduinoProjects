@@ -3,2741 +3,810 @@ GccApp329pLearning.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000000  00800100  00800100  00001350  2**0
+  0 .data         00000000  00800100  00800100  000005aa  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         000012fc  00000000  00000000  00000054  2**1
+  1 .text         00000556  00000000  00000000  00000054  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .comment      00000030  00000000  00000000  00001350  2**0
+  2 .comment      00000030  00000000  00000000  000005aa  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00001380  2**2
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000005dc  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 00000130  00000000  00000000  000013c0  2**0
+  4 .debug_aranges 00000130  00000000  00000000  0000061c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00004bc1  00000000  00000000  000014f0  2**0
+  5 .debug_info   00004bc1  00000000  00000000  0000074c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 00000975  00000000  00000000  000060b1  2**0
+  6 .debug_abbrev 00000975  00000000  00000000  0000530d  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   00001848  00000000  00000000  00006a26  2**0
+  7 .debug_line   00001848  00000000  00000000  00005c82  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  0000020c  00000000  00000000  00008270  2**2
+  8 .debug_frame  0000020c  00000000  00000000  000074cc  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    000004bc  00000000  00000000  0000847c  2**0
+  9 .debug_str    000004bc  00000000  00000000  000076d8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    000041ae  00000000  00000000  00008938  2**0
+ 10 .debug_loc    000041ae  00000000  00000000  00007b94  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000100  00000000  00000000  0000cae6  2**0
+ 11 .debug_ranges 00000100  00000000  00000000  0000bd42  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
-       0:	0c 94 2e 00 	jmp	0x5c	; 0x5c <__ctors_end>
-       4:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-       8:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-       c:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      10:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      14:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      18:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      1c:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      20:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      24:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      28:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      2c:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      30:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      34:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      38:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      3c:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      40:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      44:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      48:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      4c:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      50:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      54:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
-      58:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+   0:	0c 94 2e 00 	jmp	0x5c	; 0x5c <__ctors_end>
+   4:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+   8:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+   c:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  10:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  14:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  18:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  1c:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  20:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  24:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  28:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  2c:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  30:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  34:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  38:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  3c:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  40:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  44:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  48:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  4c:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  50:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  54:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
+  58:	0c 94 38 00 	jmp	0x70	; 0x70 <__bad_interrupt>
 
 0000005c <__ctors_end>:
-      5c:	11 24       	eor	r1, r1
-      5e:	1f be       	out	0x3f, r1	; 63
-      60:	cf ef       	ldi	r28, 0xFF	; 255
-      62:	d8 e0       	ldi	r29, 0x08	; 8
-      64:	de bf       	out	0x3e, r29	; 62
-      66:	cd bf       	out	0x3d, r28	; 61
-      68:	0e 94 d4 08 	call	0x11a8	; 0x11a8 <main>
-      6c:	0c 94 7c 09 	jmp	0x12f8	; 0x12f8 <_exit>
+  5c:	11 24       	eor	r1, r1
+  5e:	1f be       	out	0x3f, r1	; 63
+  60:	cf ef       	ldi	r28, 0xFF	; 255
+  62:	d8 e0       	ldi	r29, 0x08	; 8
+  64:	de bf       	out	0x3e, r29	; 62
+  66:	cd bf       	out	0x3d, r28	; 61
+  68:	0e 94 2d 02 	call	0x45a	; 0x45a <main>
+  6c:	0c 94 a9 02 	jmp	0x552	; 0x552 <_exit>
 
 00000070 <__bad_interrupt>:
-      70:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+  70:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
-00000074 <zelda_intro>:
-	return 0;
-}
+00000074 <tetris>:
 
-int zelda_intro(){
+#include "music.h"
+
+int tetris(){
+	
+	setupTimer0FreqGen(0);
+  74:	80 e0       	ldi	r24, 0x00	; 0
+  76:	90 e0       	ldi	r25, 0x00	; 0
+  78:	0e 94 30 02 	call	0x460	; 0x460 <setupTimer0FreqGen>
+	
 	// 1
-	a3();
-      74:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
+	e4();
+  7c:	0e 94 75 02 	call	0x4ea	; 0x4ea <e4>
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
-      78:	2f ef       	ldi	r18, 0xFF	; 255
-      7a:	8f e0       	ldi	r24, 0x0F	; 15
-      7c:	97 e2       	ldi	r25, 0x27	; 39
-      7e:	21 50       	subi	r18, 0x01	; 1
-      80:	80 40       	sbci	r24, 0x00	; 0
-      82:	90 40       	sbci	r25, 0x00	; 0
-      84:	e1 f7       	brne	.-8      	; 0x7e <zelda_intro+0xa>
-      86:	00 c0       	rjmp	.+0      	; 0x88 <zelda_intro+0x14>
-      88:	00 00       	nop
-	_delay_ms(MS_DOUBLE);
-	silence();
-      8a:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-      8e:	2f ef       	ldi	r18, 0xFF	; 255
-      90:	87 e8       	ldi	r24, 0x87	; 135
-      92:	93 e1       	ldi	r25, 0x13	; 19
-      94:	21 50       	subi	r18, 0x01	; 1
-      96:	80 40       	sbci	r24, 0x00	; 0
-      98:	90 40       	sbci	r25, 0x00	; 0
-      9a:	e1 f7       	brne	.-8      	; 0x94 <zelda_intro+0x20>
-      9c:	00 c0       	rjmp	.+0      	; 0x9e <zelda_intro+0x2a>
-      9e:	00 00       	nop
+  80:	2f ef       	ldi	r18, 0xFF	; 255
+  82:	87 e8       	ldi	r24, 0x87	; 135
+  84:	93 e1       	ldi	r25, 0x13	; 19
+  86:	21 50       	subi	r18, 0x01	; 1
+  88:	80 40       	sbci	r24, 0x00	; 0
+  8a:	90 40       	sbci	r25, 0x00	; 0
+  8c:	e1 f7       	brne	.-8      	; 0x86 <tetris+0x12>
+  8e:	00 c0       	rjmp	.+0      	; 0x90 <tetris+0x1c>
+  90:	00 00       	nop
 	_delay_ms(MS_BLACK);
-	sound();
-      a0:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	a3();
-      a4:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-      a8:	2f ef       	ldi	r18, 0xFF	; 255
-      aa:	83 ec       	ldi	r24, 0xC3	; 195
-      ac:	99 e0       	ldi	r25, 0x09	; 9
-      ae:	21 50       	subi	r18, 0x01	; 1
-      b0:	80 40       	sbci	r24, 0x00	; 0
-      b2:	90 40       	sbci	r25, 0x00	; 0
-      b4:	e1 f7       	brne	.-8      	; 0xae <zelda_intro+0x3a>
-      b6:	00 c0       	rjmp	.+0      	; 0xb8 <zelda_intro+0x44>
-      b8:	00 00       	nop
+	b3();
+  92:	0e 94 54 02 	call	0x4a8	; 0x4a8 <b3>
+  96:	2f ef       	ldi	r18, 0xFF	; 255
+  98:	83 ec       	ldi	r24, 0xC3	; 195
+  9a:	99 e0       	ldi	r25, 0x09	; 9
+  9c:	21 50       	subi	r18, 0x01	; 1
+  9e:	80 40       	sbci	r24, 0x00	; 0
+  a0:	90 40       	sbci	r25, 0x00	; 0
+  a2:	e1 f7       	brne	.-8      	; 0x9c <tetris+0x28>
+  a4:	00 c0       	rjmp	.+0      	; 0xa6 <tetris+0x32>
+  a6:	00 00       	nop
 	_delay_ms(MS_HALF);
-	silence();
-      ba:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-      be:	2f ef       	ldi	r18, 0xFF	; 255
-      c0:	89 ef       	ldi	r24, 0xF9	; 249
-      c2:	90 e0       	ldi	r25, 0x00	; 0
-      c4:	21 50       	subi	r18, 0x01	; 1
-      c6:	80 40       	sbci	r24, 0x00	; 0
-      c8:	90 40       	sbci	r25, 0x00	; 0
-      ca:	e1 f7       	brne	.-8      	; 0xc4 <zelda_intro+0x50>
-      cc:	00 c0       	rjmp	.+0      	; 0xce <zelda_intro+0x5a>
-      ce:	00 00       	nop
-	_delay_ms(20);
-	sound();
-      d0:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	a3();
-      d4:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-      d8:	2f ef       	ldi	r18, 0xFF	; 255
-      da:	89 ec       	ldi	r24, 0xC9	; 201
-      dc:	98 e0       	ldi	r25, 0x08	; 8
-      de:	21 50       	subi	r18, 0x01	; 1
-      e0:	80 40       	sbci	r24, 0x00	; 0
-      e2:	90 40       	sbci	r25, 0x00	; 0
-      e4:	e1 f7       	brne	.-8      	; 0xde <zelda_intro+0x6a>
-      e6:	00 c0       	rjmp	.+0      	; 0xe8 <zelda_intro+0x74>
-      e8:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	silence();
-      ea:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-      ee:	2f ef       	ldi	r18, 0xFF	; 255
-      f0:	89 ef       	ldi	r24, 0xF9	; 249
-      f2:	90 e0       	ldi	r25, 0x00	; 0
-      f4:	21 50       	subi	r18, 0x01	; 1
-      f6:	80 40       	sbci	r24, 0x00	; 0
-      f8:	90 40       	sbci	r25, 0x00	; 0
-      fa:	e1 f7       	brne	.-8      	; 0xf4 <zelda_intro+0x80>
-      fc:	00 c0       	rjmp	.+0      	; 0xfe <zelda_intro+0x8a>
-      fe:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     100:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	a3();
-     104:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     108:	2f ef       	ldi	r18, 0xFF	; 255
-     10a:	89 ec       	ldi	r24, 0xC9	; 201
-     10c:	98 e0       	ldi	r25, 0x08	; 8
-     10e:	21 50       	subi	r18, 0x01	; 1
-     110:	80 40       	sbci	r24, 0x00	; 0
-     112:	90 40       	sbci	r25, 0x00	; 0
-     114:	e1 f7       	brne	.-8      	; 0x10e <zelda_intro+0x9a>
-     116:	00 c0       	rjmp	.+0      	; 0x118 <zelda_intro+0xa4>
-     118:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	silence();
-     11a:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     11e:	2f ef       	ldi	r18, 0xFF	; 255
-     120:	89 ef       	ldi	r24, 0xF9	; 249
-     122:	90 e0       	ldi	r25, 0x00	; 0
-     124:	21 50       	subi	r18, 0x01	; 1
-     126:	80 40       	sbci	r24, 0x00	; 0
-     128:	90 40       	sbci	r25, 0x00	; 0
-     12a:	e1 f7       	brne	.-8      	; 0x124 <zelda_intro+0xb0>
-     12c:	00 c0       	rjmp	.+0      	; 0x12e <zelda_intro+0xba>
-     12e:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     130:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	a3();
-     134:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     138:	2f ef       	ldi	r18, 0xFF	; 255
-     13a:	89 ec       	ldi	r24, 0xC9	; 201
-     13c:	98 e0       	ldi	r25, 0x08	; 8
-     13e:	21 50       	subi	r18, 0x01	; 1
-     140:	80 40       	sbci	r24, 0x00	; 0
-     142:	90 40       	sbci	r25, 0x00	; 0
-     144:	e1 f7       	brne	.-8      	; 0x13e <zelda_intro+0xca>
-     146:	00 c0       	rjmp	.+0      	; 0x148 <zelda_intro+0xd4>
-     148:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	silence();
-     14a:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     14e:	2f ef       	ldi	r18, 0xFF	; 255
-     150:	89 ef       	ldi	r24, 0xF9	; 249
-     152:	90 e0       	ldi	r25, 0x00	; 0
-     154:	21 50       	subi	r18, 0x01	; 1
-     156:	80 40       	sbci	r24, 0x00	; 0
-     158:	90 40       	sbci	r25, 0x00	; 0
-     15a:	e1 f7       	brne	.-8      	; 0x154 <zelda_intro+0xe0>
-     15c:	00 c0       	rjmp	.+0      	; 0x15e <zelda_intro+0xea>
-     15e:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     160:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
+	c4();
+  a8:	0e 94 5f 02 	call	0x4be	; 0x4be <c4>
+  ac:	2f ef       	ldi	r18, 0xFF	; 255
+  ae:	83 ec       	ldi	r24, 0xC3	; 195
+  b0:	99 e0       	ldi	r25, 0x09	; 9
+  b2:	21 50       	subi	r18, 0x01	; 1
+  b4:	80 40       	sbci	r24, 0x00	; 0
+  b6:	90 40       	sbci	r25, 0x00	; 0
+  b8:	e1 f7       	brne	.-8      	; 0xb2 <tetris+0x3e>
+  ba:	00 c0       	rjmp	.+0      	; 0xbc <tetris+0x48>
+  bc:	00 00       	nop
+	_delay_ms(MS_HALF);
+	d4();
+  be:	0e 94 6a 02 	call	0x4d4	; 0x4d4 <d4>
+  c2:	2f ef       	ldi	r18, 0xFF	; 255
+  c4:	87 e8       	ldi	r24, 0x87	; 135
+  c6:	93 e1       	ldi	r25, 0x13	; 19
+  c8:	21 50       	subi	r18, 0x01	; 1
+  ca:	80 40       	sbci	r24, 0x00	; 0
+  cc:	90 40       	sbci	r25, 0x00	; 0
+  ce:	e1 f7       	brne	.-8      	; 0xc8 <tetris+0x54>
+  d0:	00 c0       	rjmp	.+0      	; 0xd2 <tetris+0x5e>
+  d2:	00 00       	nop
+	_delay_ms(MS_BLACK);
+	c4();
+  d4:	0e 94 5f 02 	call	0x4be	; 0x4be <c4>
+  d8:	2f ef       	ldi	r18, 0xFF	; 255
+  da:	83 ec       	ldi	r24, 0xC3	; 195
+  dc:	99 e0       	ldi	r25, 0x09	; 9
+  de:	21 50       	subi	r18, 0x01	; 1
+  e0:	80 40       	sbci	r24, 0x00	; 0
+  e2:	90 40       	sbci	r25, 0x00	; 0
+  e4:	e1 f7       	brne	.-8      	; 0xde <tetris+0x6a>
+  e6:	00 c0       	rjmp	.+0      	; 0xe8 <tetris+0x74>
+  e8:	00 00       	nop
+	_delay_ms(MS_HALF);
+	b3();
+  ea:	0e 94 54 02 	call	0x4a8	; 0x4a8 <b3>
+  ee:	2f ef       	ldi	r18, 0xFF	; 255
+  f0:	83 ec       	ldi	r24, 0xC3	; 195
+  f2:	99 e0       	ldi	r25, 0x09	; 9
+  f4:	21 50       	subi	r18, 0x01	; 1
+  f6:	80 40       	sbci	r24, 0x00	; 0
+  f8:	90 40       	sbci	r25, 0x00	; 0
+  fa:	e1 f7       	brne	.-8      	; 0xf4 <tetris+0x80>
+  fc:	00 c0       	rjmp	.+0      	; 0xfe <tetris+0x8a>
+  fe:	00 00       	nop
+	_delay_ms(MS_HALF);
 	// 2
 	a3();
-     164:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     168:	2f ef       	ldi	r18, 0xFF	; 255
-     16a:	8d e8       	ldi	r24, 0x8D	; 141
-     16c:	92 e1       	ldi	r25, 0x12	; 18
-     16e:	21 50       	subi	r18, 0x01	; 1
-     170:	80 40       	sbci	r24, 0x00	; 0
-     172:	90 40       	sbci	r25, 0x00	; 0
-     174:	e1 f7       	brne	.-8      	; 0x16e <zelda_intro+0xfa>
-     176:	00 c0       	rjmp	.+0      	; 0x178 <zelda_intro+0x104>
-     178:	00 00       	nop
-	_delay_ms(MS_BLACK-20);
-	g3();
-     17a:	0e 94 fb 08 	call	0x11f6	; 0x11f6 <g3>
-     17e:	2f ef       	ldi	r18, 0xFF	; 255
-     180:	83 ec       	ldi	r24, 0xC3	; 195
-     182:	99 e0       	ldi	r25, 0x09	; 9
-     184:	21 50       	subi	r18, 0x01	; 1
-     186:	80 40       	sbci	r24, 0x00	; 0
-     188:	90 40       	sbci	r25, 0x00	; 0
-     18a:	e1 f7       	brne	.-8      	; 0x184 <zelda_intro+0x110>
-     18c:	00 c0       	rjmp	.+0      	; 0x18e <zelda_intro+0x11a>
-     18e:	00 00       	nop
-	_delay_ms(MS_HALF);
-	a3();
-     190:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     194:	2f ef       	ldi	r18, 0xFF	; 255
-     196:	87 e8       	ldi	r24, 0x87	; 135
-     198:	93 e1       	ldi	r25, 0x13	; 19
-     19a:	21 50       	subi	r18, 0x01	; 1
-     19c:	80 40       	sbci	r24, 0x00	; 0
-     19e:	90 40       	sbci	r25, 0x00	; 0
-     1a0:	e1 f7       	brne	.-8      	; 0x19a <zelda_intro+0x126>
-     1a2:	00 c0       	rjmp	.+0      	; 0x1a4 <zelda_intro+0x130>
-     1a4:	00 00       	nop
+ 100:	0e 94 49 02 	call	0x492	; 0x492 <a3>
+ 104:	2f ef       	ldi	r18, 0xFF	; 255
+ 106:	87 e8       	ldi	r24, 0x87	; 135
+ 108:	93 e1       	ldi	r25, 0x13	; 19
+ 10a:	21 50       	subi	r18, 0x01	; 1
+ 10c:	80 40       	sbci	r24, 0x00	; 0
+ 10e:	90 40       	sbci	r25, 0x00	; 0
+ 110:	e1 f7       	brne	.-8      	; 0x10a <tetris+0x96>
+ 112:	00 c0       	rjmp	.+0      	; 0x114 <tetris+0xa0>
+ 114:	00 00       	nop
 	_delay_ms(MS_BLACK);
 	silence();
-     1a6:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     1aa:	2f ef       	ldi	r18, 0xFF	; 255
-     1ac:	87 e8       	ldi	r24, 0x87	; 135
-     1ae:	93 e1       	ldi	r25, 0x13	; 19
-     1b0:	21 50       	subi	r18, 0x01	; 1
-     1b2:	80 40       	sbci	r24, 0x00	; 0
-     1b4:	90 40       	sbci	r25, 0x00	; 0
-     1b6:	e1 f7       	brne	.-8      	; 0x1b0 <zelda_intro+0x13c>
-     1b8:	00 c0       	rjmp	.+0      	; 0x1ba <zelda_intro+0x146>
-     1ba:	00 00       	nop
-	_delay_ms(MS_BLACK);
+ 116:	0e 94 a1 02 	call	0x542	; 0x542 <silence>
+ 11a:	2f ef       	ldi	r18, 0xFF	; 255
+ 11c:	89 ef       	ldi	r24, 0xF9	; 249
+ 11e:	90 e0       	ldi	r25, 0x00	; 0
+ 120:	21 50       	subi	r18, 0x01	; 1
+ 122:	80 40       	sbci	r24, 0x00	; 0
+ 124:	90 40       	sbci	r25, 0x00	; 0
+ 126:	e1 f7       	brne	.-8      	; 0x120 <tetris+0xac>
+ 128:	00 c0       	rjmp	.+0      	; 0x12a <tetris+0xb6>
+ 12a:	00 00       	nop
+	_delay_ms(20);
 	sound();
-     1bc:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
+ 12c:	0e 94 a5 02 	call	0x54a	; 0x54a <sound>
 	a3();
-     1c0:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     1c4:	2f ef       	ldi	r18, 0xFF	; 255
-     1c6:	83 ec       	ldi	r24, 0xC3	; 195
-     1c8:	99 e0       	ldi	r25, 0x09	; 9
-     1ca:	21 50       	subi	r18, 0x01	; 1
-     1cc:	80 40       	sbci	r24, 0x00	; 0
-     1ce:	90 40       	sbci	r25, 0x00	; 0
-     1d0:	e1 f7       	brne	.-8      	; 0x1ca <zelda_intro+0x156>
-     1d2:	00 c0       	rjmp	.+0      	; 0x1d4 <zelda_intro+0x160>
-     1d4:	00 00       	nop
+ 130:	0e 94 49 02 	call	0x492	; 0x492 <a3>
+ 134:	2f ef       	ldi	r18, 0xFF	; 255
+ 136:	83 ec       	ldi	r24, 0xC3	; 195
+ 138:	99 e0       	ldi	r25, 0x09	; 9
+ 13a:	21 50       	subi	r18, 0x01	; 1
+ 13c:	80 40       	sbci	r24, 0x00	; 0
+ 13e:	90 40       	sbci	r25, 0x00	; 0
+ 140:	e1 f7       	brne	.-8      	; 0x13a <tetris+0xc6>
+ 142:	00 c0       	rjmp	.+0      	; 0x144 <tetris+0xd0>
+ 144:	00 00       	nop
 	_delay_ms(MS_HALF);
-	silence();
-     1d6:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     1da:	2f ef       	ldi	r18, 0xFF	; 255
-     1dc:	89 ef       	ldi	r24, 0xF9	; 249
-     1de:	90 e0       	ldi	r25, 0x00	; 0
-     1e0:	21 50       	subi	r18, 0x01	; 1
-     1e2:	80 40       	sbci	r24, 0x00	; 0
-     1e4:	90 40       	sbci	r25, 0x00	; 0
-     1e6:	e1 f7       	brne	.-8      	; 0x1e0 <zelda_intro+0x16c>
-     1e8:	00 c0       	rjmp	.+0      	; 0x1ea <zelda_intro+0x176>
-     1ea:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     1ec:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	a3();
-     1f0:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     1f4:	2f ef       	ldi	r18, 0xFF	; 255
-     1f6:	89 ec       	ldi	r24, 0xC9	; 201
-     1f8:	98 e0       	ldi	r25, 0x08	; 8
-     1fa:	21 50       	subi	r18, 0x01	; 1
-     1fc:	80 40       	sbci	r24, 0x00	; 0
-     1fe:	90 40       	sbci	r25, 0x00	; 0
-     200:	e1 f7       	brne	.-8      	; 0x1fa <zelda_intro+0x186>
-     202:	00 c0       	rjmp	.+0      	; 0x204 <zelda_intro+0x190>
-     204:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	silence();
-     206:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     20a:	2f ef       	ldi	r18, 0xFF	; 255
-     20c:	89 ef       	ldi	r24, 0xF9	; 249
-     20e:	90 e0       	ldi	r25, 0x00	; 0
-     210:	21 50       	subi	r18, 0x01	; 1
-     212:	80 40       	sbci	r24, 0x00	; 0
-     214:	90 40       	sbci	r25, 0x00	; 0
-     216:	e1 f7       	brne	.-8      	; 0x210 <zelda_intro+0x19c>
-     218:	00 c0       	rjmp	.+0      	; 0x21a <zelda_intro+0x1a6>
-     21a:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     21c:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	a3();
-     220:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     224:	2f ef       	ldi	r18, 0xFF	; 255
-     226:	89 ec       	ldi	r24, 0xC9	; 201
-     228:	98 e0       	ldi	r25, 0x08	; 8
-     22a:	21 50       	subi	r18, 0x01	; 1
-     22c:	80 40       	sbci	r24, 0x00	; 0
-     22e:	90 40       	sbci	r25, 0x00	; 0
-     230:	e1 f7       	brne	.-8      	; 0x22a <zelda_intro+0x1b6>
-     232:	00 c0       	rjmp	.+0      	; 0x234 <zelda_intro+0x1c0>
-     234:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	silence();
-     236:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     23a:	2f ef       	ldi	r18, 0xFF	; 255
-     23c:	89 ef       	ldi	r24, 0xF9	; 249
-     23e:	90 e0       	ldi	r25, 0x00	; 0
-     240:	21 50       	subi	r18, 0x01	; 1
-     242:	80 40       	sbci	r24, 0x00	; 0
-     244:	90 40       	sbci	r25, 0x00	; 0
-     246:	e1 f7       	brne	.-8      	; 0x240 <zelda_intro+0x1cc>
-     248:	00 c0       	rjmp	.+0      	; 0x24a <zelda_intro+0x1d6>
-     24a:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     24c:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	a3();
-     250:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     254:	2f ef       	ldi	r18, 0xFF	; 255
-     256:	89 ec       	ldi	r24, 0xC9	; 201
-     258:	98 e0       	ldi	r25, 0x08	; 8
-     25a:	21 50       	subi	r18, 0x01	; 1
-     25c:	80 40       	sbci	r24, 0x00	; 0
-     25e:	90 40       	sbci	r25, 0x00	; 0
-     260:	e1 f7       	brne	.-8      	; 0x25a <zelda_intro+0x1e6>
-     262:	00 c0       	rjmp	.+0      	; 0x264 <zelda_intro+0x1f0>
-     264:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	silence();
-     266:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     26a:	2f ef       	ldi	r18, 0xFF	; 255
-     26c:	89 ef       	ldi	r24, 0xF9	; 249
-     26e:	90 e0       	ldi	r25, 0x00	; 0
-     270:	21 50       	subi	r18, 0x01	; 1
-     272:	80 40       	sbci	r24, 0x00	; 0
-     274:	90 40       	sbci	r25, 0x00	; 0
-     276:	e1 f7       	brne	.-8      	; 0x270 <zelda_intro+0x1fc>
-     278:	00 c0       	rjmp	.+0      	; 0x27a <zelda_intro+0x206>
-     27a:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     27c:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	// 3
-	a3();
-     280:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     284:	2f ef       	ldi	r18, 0xFF	; 255
-     286:	8d e8       	ldi	r24, 0x8D	; 141
-     288:	92 e1       	ldi	r25, 0x12	; 18
-     28a:	21 50       	subi	r18, 0x01	; 1
-     28c:	80 40       	sbci	r24, 0x00	; 0
-     28e:	90 40       	sbci	r25, 0x00	; 0
-     290:	e1 f7       	brne	.-8      	; 0x28a <zelda_intro+0x216>
-     292:	00 c0       	rjmp	.+0      	; 0x294 <zelda_intro+0x220>
-     294:	00 00       	nop
-	_delay_ms(MS_BLACK-20);
-	g3();
-     296:	0e 94 fb 08 	call	0x11f6	; 0x11f6 <g3>
-     29a:	2f ef       	ldi	r18, 0xFF	; 255
-     29c:	83 ec       	ldi	r24, 0xC3	; 195
-     29e:	99 e0       	ldi	r25, 0x09	; 9
-     2a0:	21 50       	subi	r18, 0x01	; 1
-     2a2:	80 40       	sbci	r24, 0x00	; 0
-     2a4:	90 40       	sbci	r25, 0x00	; 0
-     2a6:	e1 f7       	brne	.-8      	; 0x2a0 <zelda_intro+0x22c>
-     2a8:	00 c0       	rjmp	.+0      	; 0x2aa <zelda_intro+0x236>
-     2aa:	00 00       	nop
+	c4();
+ 146:	0e 94 5f 02 	call	0x4be	; 0x4be <c4>
+ 14a:	2f ef       	ldi	r18, 0xFF	; 255
+ 14c:	83 ec       	ldi	r24, 0xC3	; 195
+ 14e:	99 e0       	ldi	r25, 0x09	; 9
+ 150:	21 50       	subi	r18, 0x01	; 1
+ 152:	80 40       	sbci	r24, 0x00	; 0
+ 154:	90 40       	sbci	r25, 0x00	; 0
+ 156:	e1 f7       	brne	.-8      	; 0x150 <tetris+0xdc>
+ 158:	00 c0       	rjmp	.+0      	; 0x15a <tetris+0xe6>
+ 15a:	00 00       	nop
 	_delay_ms(MS_HALF);
-	a3();
-     2ac:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     2b0:	2f ef       	ldi	r18, 0xFF	; 255
-     2b2:	87 e8       	ldi	r24, 0x87	; 135
-     2b4:	93 e1       	ldi	r25, 0x13	; 19
-     2b6:	21 50       	subi	r18, 0x01	; 1
-     2b8:	80 40       	sbci	r24, 0x00	; 0
-     2ba:	90 40       	sbci	r25, 0x00	; 0
-     2bc:	e1 f7       	brne	.-8      	; 0x2b6 <zelda_intro+0x242>
-     2be:	00 c0       	rjmp	.+0      	; 0x2c0 <zelda_intro+0x24c>
-     2c0:	00 00       	nop
+	e4();
+ 15c:	0e 94 75 02 	call	0x4ea	; 0x4ea <e4>
+ 160:	2f ef       	ldi	r18, 0xFF	; 255
+ 162:	87 e8       	ldi	r24, 0x87	; 135
+ 164:	93 e1       	ldi	r25, 0x13	; 19
+ 166:	21 50       	subi	r18, 0x01	; 1
+ 168:	80 40       	sbci	r24, 0x00	; 0
+ 16a:	90 40       	sbci	r25, 0x00	; 0
+ 16c:	e1 f7       	brne	.-8      	; 0x166 <tetris+0xf2>
+ 16e:	00 c0       	rjmp	.+0      	; 0x170 <tetris+0xfc>
+ 170:	00 00       	nop
 	_delay_ms(MS_BLACK);
-	silence();
-     2c2:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     2c6:	2f ef       	ldi	r18, 0xFF	; 255
-     2c8:	87 e8       	ldi	r24, 0x87	; 135
-     2ca:	93 e1       	ldi	r25, 0x13	; 19
-     2cc:	21 50       	subi	r18, 0x01	; 1
-     2ce:	80 40       	sbci	r24, 0x00	; 0
-     2d0:	90 40       	sbci	r25, 0x00	; 0
-     2d2:	e1 f7       	brne	.-8      	; 0x2cc <zelda_intro+0x258>
-     2d4:	00 c0       	rjmp	.+0      	; 0x2d6 <zelda_intro+0x262>
-     2d6:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	sound();
-     2d8:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	a3();
-     2dc:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     2e0:	2f ef       	ldi	r18, 0xFF	; 255
-     2e2:	83 ec       	ldi	r24, 0xC3	; 195
-     2e4:	99 e0       	ldi	r25, 0x09	; 9
-     2e6:	21 50       	subi	r18, 0x01	; 1
-     2e8:	80 40       	sbci	r24, 0x00	; 0
-     2ea:	90 40       	sbci	r25, 0x00	; 0
-     2ec:	e1 f7       	brne	.-8      	; 0x2e6 <zelda_intro+0x272>
-     2ee:	00 c0       	rjmp	.+0      	; 0x2f0 <zelda_intro+0x27c>
-     2f0:	00 00       	nop
-	_delay_ms(MS_HALF);
-	silence();
-     2f2:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     2f6:	2f ef       	ldi	r18, 0xFF	; 255
-     2f8:	89 ef       	ldi	r24, 0xF9	; 249
-     2fa:	90 e0       	ldi	r25, 0x00	; 0
-     2fc:	21 50       	subi	r18, 0x01	; 1
-     2fe:	80 40       	sbci	r24, 0x00	; 0
-     300:	90 40       	sbci	r25, 0x00	; 0
-     302:	e1 f7       	brne	.-8      	; 0x2fc <zelda_intro+0x288>
-     304:	00 c0       	rjmp	.+0      	; 0x306 <zelda_intro+0x292>
-     306:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     308:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	a3();
-     30c:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     310:	2f ef       	ldi	r18, 0xFF	; 255
-     312:	89 ec       	ldi	r24, 0xC9	; 201
-     314:	98 e0       	ldi	r25, 0x08	; 8
-     316:	21 50       	subi	r18, 0x01	; 1
-     318:	80 40       	sbci	r24, 0x00	; 0
-     31a:	90 40       	sbci	r25, 0x00	; 0
-     31c:	e1 f7       	brne	.-8      	; 0x316 <zelda_intro+0x2a2>
-     31e:	00 c0       	rjmp	.+0      	; 0x320 <zelda_intro+0x2ac>
-     320:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	silence();
-     322:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     326:	2f ef       	ldi	r18, 0xFF	; 255
-     328:	89 ef       	ldi	r24, 0xF9	; 249
-     32a:	90 e0       	ldi	r25, 0x00	; 0
-     32c:	21 50       	subi	r18, 0x01	; 1
-     32e:	80 40       	sbci	r24, 0x00	; 0
-     330:	90 40       	sbci	r25, 0x00	; 0
-     332:	e1 f7       	brne	.-8      	; 0x32c <zelda_intro+0x2b8>
-     334:	00 c0       	rjmp	.+0      	; 0x336 <zelda_intro+0x2c2>
-     336:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     338:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	a3();
-     33c:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     340:	2f ef       	ldi	r18, 0xFF	; 255
-     342:	89 ec       	ldi	r24, 0xC9	; 201
-     344:	98 e0       	ldi	r25, 0x08	; 8
-     346:	21 50       	subi	r18, 0x01	; 1
-     348:	80 40       	sbci	r24, 0x00	; 0
-     34a:	90 40       	sbci	r25, 0x00	; 0
-     34c:	e1 f7       	brne	.-8      	; 0x346 <zelda_intro+0x2d2>
-     34e:	00 c0       	rjmp	.+0      	; 0x350 <zelda_intro+0x2dc>
-     350:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	silence();
-     352:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     356:	2f ef       	ldi	r18, 0xFF	; 255
-     358:	89 ef       	ldi	r24, 0xF9	; 249
-     35a:	90 e0       	ldi	r25, 0x00	; 0
-     35c:	21 50       	subi	r18, 0x01	; 1
-     35e:	80 40       	sbci	r24, 0x00	; 0
-     360:	90 40       	sbci	r25, 0x00	; 0
-     362:	e1 f7       	brne	.-8      	; 0x35c <zelda_intro+0x2e8>
-     364:	00 c0       	rjmp	.+0      	; 0x366 <zelda_intro+0x2f2>
-     366:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     368:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	a3();
-     36c:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     370:	2f ef       	ldi	r18, 0xFF	; 255
-     372:	89 ec       	ldi	r24, 0xC9	; 201
-     374:	98 e0       	ldi	r25, 0x08	; 8
-     376:	21 50       	subi	r18, 0x01	; 1
-     378:	80 40       	sbci	r24, 0x00	; 0
-     37a:	90 40       	sbci	r25, 0x00	; 0
-     37c:	e1 f7       	brne	.-8      	; 0x376 <zelda_intro+0x302>
-     37e:	00 c0       	rjmp	.+0      	; 0x380 <zelda_intro+0x30c>
-     380:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	silence();
-     382:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     386:	2f ef       	ldi	r18, 0xFF	; 255
-     388:	89 ef       	ldi	r24, 0xF9	; 249
-     38a:	90 e0       	ldi	r25, 0x00	; 0
-     38c:	21 50       	subi	r18, 0x01	; 1
-     38e:	80 40       	sbci	r24, 0x00	; 0
-     390:	90 40       	sbci	r25, 0x00	; 0
-     392:	e1 f7       	brne	.-8      	; 0x38c <zelda_intro+0x318>
-     394:	00 c0       	rjmp	.+0      	; 0x396 <zelda_intro+0x322>
-     396:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     398:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	// 4
-	a3();
-     39c:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     3a0:	2f ef       	ldi	r18, 0xFF	; 255
-     3a2:	89 ec       	ldi	r24, 0xC9	; 201
-     3a4:	98 e0       	ldi	r25, 0x08	; 8
-     3a6:	21 50       	subi	r18, 0x01	; 1
-     3a8:	80 40       	sbci	r24, 0x00	; 0
-     3aa:	90 40       	sbci	r25, 0x00	; 0
-     3ac:	e1 f7       	brne	.-8      	; 0x3a6 <zelda_intro+0x332>
-     3ae:	00 c0       	rjmp	.+0      	; 0x3b0 <zelda_intro+0x33c>
-     3b0:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	e3();
-     3b2:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     3b6:	2f ef       	ldi	r18, 0xFF	; 255
-     3b8:	81 ee       	ldi	r24, 0xE1	; 225
-     3ba:	94 e0       	ldi	r25, 0x04	; 4
-     3bc:	21 50       	subi	r18, 0x01	; 1
-     3be:	80 40       	sbci	r24, 0x00	; 0
-     3c0:	90 40       	sbci	r25, 0x00	; 0
-     3c2:	e1 f7       	brne	.-8      	; 0x3bc <zelda_intro+0x348>
-     3c4:	00 c0       	rjmp	.+0      	; 0x3c6 <zelda_intro+0x352>
-     3c6:	00 00       	nop
-	_delay_ms(MS_QUARTER);
-	silence();
-     3c8:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     3cc:	2f ef       	ldi	r18, 0xFF	; 255
-     3ce:	89 ef       	ldi	r24, 0xF9	; 249
-     3d0:	90 e0       	ldi	r25, 0x00	; 0
-     3d2:	21 50       	subi	r18, 0x01	; 1
-     3d4:	80 40       	sbci	r24, 0x00	; 0
-     3d6:	90 40       	sbci	r25, 0x00	; 0
-     3d8:	e1 f7       	brne	.-8      	; 0x3d2 <zelda_intro+0x35e>
-     3da:	00 c0       	rjmp	.+0      	; 0x3dc <zelda_intro+0x368>
-     3dc:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     3de:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     3e2:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     3e6:	2f ef       	ldi	r18, 0xFF	; 255
-     3e8:	87 ee       	ldi	r24, 0xE7	; 231
-     3ea:	93 e0       	ldi	r25, 0x03	; 3
-     3ec:	21 50       	subi	r18, 0x01	; 1
-     3ee:	80 40       	sbci	r24, 0x00	; 0
-     3f0:	90 40       	sbci	r25, 0x00	; 0
-     3f2:	e1 f7       	brne	.-8      	; 0x3ec <zelda_intro+0x378>
-     3f4:	00 c0       	rjmp	.+0      	; 0x3f6 <zelda_intro+0x382>
-     3f6:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	silence();
-     3f8:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     3fc:	2f ef       	ldi	r18, 0xFF	; 255
-     3fe:	89 ef       	ldi	r24, 0xF9	; 249
-     400:	90 e0       	ldi	r25, 0x00	; 0
-     402:	21 50       	subi	r18, 0x01	; 1
-     404:	80 40       	sbci	r24, 0x00	; 0
-     406:	90 40       	sbci	r25, 0x00	; 0
-     408:	e1 f7       	brne	.-8      	; 0x402 <__LOCK_REGION_LENGTH__+0x2>
-     40a:	00 c0       	rjmp	.+0      	; 0x40c <__LOCK_REGION_LENGTH__+0xc>
-     40c:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     40e:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     412:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     416:	2f ef       	ldi	r18, 0xFF	; 255
-     418:	89 ec       	ldi	r24, 0xC9	; 201
-     41a:	98 e0       	ldi	r25, 0x08	; 8
-     41c:	21 50       	subi	r18, 0x01	; 1
-     41e:	80 40       	sbci	r24, 0x00	; 0
-     420:	90 40       	sbci	r25, 0x00	; 0
-     422:	e1 f7       	brne	.-8      	; 0x41c <__LOCK_REGION_LENGTH__+0x1c>
-     424:	00 c0       	rjmp	.+0      	; 0x426 <__LOCK_REGION_LENGTH__+0x26>
-     426:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	silence();
-     428:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     42c:	2f ef       	ldi	r18, 0xFF	; 255
-     42e:	89 ef       	ldi	r24, 0xF9	; 249
-     430:	90 e0       	ldi	r25, 0x00	; 0
-     432:	21 50       	subi	r18, 0x01	; 1
-     434:	80 40       	sbci	r24, 0x00	; 0
-     436:	90 40       	sbci	r25, 0x00	; 0
-     438:	e1 f7       	brne	.-8      	; 0x432 <__LOCK_REGION_LENGTH__+0x32>
-     43a:	00 c0       	rjmp	.+0      	; 0x43c <__LOCK_REGION_LENGTH__+0x3c>
-     43c:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     43e:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     442:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     446:	2f ef       	ldi	r18, 0xFF	; 255
-     448:	87 ee       	ldi	r24, 0xE7	; 231
-     44a:	93 e0       	ldi	r25, 0x03	; 3
-     44c:	21 50       	subi	r18, 0x01	; 1
-     44e:	80 40       	sbci	r24, 0x00	; 0
-     450:	90 40       	sbci	r25, 0x00	; 0
-     452:	e1 f7       	brne	.-8      	; 0x44c <__LOCK_REGION_LENGTH__+0x4c>
-     454:	00 c0       	rjmp	.+0      	; 0x456 <__LOCK_REGION_LENGTH__+0x56>
-     456:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	silence();
-     458:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     45c:	2f ef       	ldi	r18, 0xFF	; 255
-     45e:	89 ef       	ldi	r24, 0xF9	; 249
-     460:	90 e0       	ldi	r25, 0x00	; 0
-     462:	21 50       	subi	r18, 0x01	; 1
-     464:	80 40       	sbci	r24, 0x00	; 0
-     466:	90 40       	sbci	r25, 0x00	; 0
-     468:	e1 f7       	brne	.-8      	; 0x462 <__LOCK_REGION_LENGTH__+0x62>
-     46a:	00 c0       	rjmp	.+0      	; 0x46c <__LOCK_REGION_LENGTH__+0x6c>
-     46c:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     46e:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     472:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     476:	2f ef       	ldi	r18, 0xFF	; 255
-     478:	87 ee       	ldi	r24, 0xE7	; 231
-     47a:	93 e0       	ldi	r25, 0x03	; 3
-     47c:	21 50       	subi	r18, 0x01	; 1
-     47e:	80 40       	sbci	r24, 0x00	; 0
-     480:	90 40       	sbci	r25, 0x00	; 0
-     482:	e1 f7       	brne	.-8      	; 0x47c <__LOCK_REGION_LENGTH__+0x7c>
-     484:	00 c0       	rjmp	.+0      	; 0x486 <__LOCK_REGION_LENGTH__+0x86>
-     486:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	silence();
-     488:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     48c:	2f ef       	ldi	r18, 0xFF	; 255
-     48e:	89 ef       	ldi	r24, 0xF9	; 249
-     490:	90 e0       	ldi	r25, 0x00	; 0
-     492:	21 50       	subi	r18, 0x01	; 1
-     494:	80 40       	sbci	r24, 0x00	; 0
-     496:	90 40       	sbci	r25, 0x00	; 0
-     498:	e1 f7       	brne	.-8      	; 0x492 <__LOCK_REGION_LENGTH__+0x92>
-     49a:	00 c0       	rjmp	.+0      	; 0x49c <__LOCK_REGION_LENGTH__+0x9c>
-     49c:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     49e:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     4a2:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     4a6:	2f ef       	ldi	r18, 0xFF	; 255
-     4a8:	89 ec       	ldi	r24, 0xC9	; 201
-     4aa:	98 e0       	ldi	r25, 0x08	; 8
-     4ac:	21 50       	subi	r18, 0x01	; 1
-     4ae:	80 40       	sbci	r24, 0x00	; 0
-     4b0:	90 40       	sbci	r25, 0x00	; 0
-     4b2:	e1 f7       	brne	.-8      	; 0x4ac <__LOCK_REGION_LENGTH__+0xac>
-     4b4:	00 c0       	rjmp	.+0      	; 0x4b6 <__LOCK_REGION_LENGTH__+0xb6>
-     4b6:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	silence();
-     4b8:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     4bc:	2f ef       	ldi	r18, 0xFF	; 255
-     4be:	89 ef       	ldi	r24, 0xF9	; 249
-     4c0:	90 e0       	ldi	r25, 0x00	; 0
-     4c2:	21 50       	subi	r18, 0x01	; 1
-     4c4:	80 40       	sbci	r24, 0x00	; 0
-     4c6:	90 40       	sbci	r25, 0x00	; 0
-     4c8:	e1 f7       	brne	.-8      	; 0x4c2 <__LOCK_REGION_LENGTH__+0xc2>
-     4ca:	00 c0       	rjmp	.+0      	; 0x4cc <__LOCK_REGION_LENGTH__+0xcc>
-     4cc:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     4ce:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     4d2:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     4d6:	2f ef       	ldi	r18, 0xFF	; 255
-     4d8:	87 ee       	ldi	r24, 0xE7	; 231
-     4da:	93 e0       	ldi	r25, 0x03	; 3
-     4dc:	21 50       	subi	r18, 0x01	; 1
-     4de:	80 40       	sbci	r24, 0x00	; 0
-     4e0:	90 40       	sbci	r25, 0x00	; 0
-     4e2:	e1 f7       	brne	.-8      	; 0x4dc <__LOCK_REGION_LENGTH__+0xdc>
-     4e4:	00 c0       	rjmp	.+0      	; 0x4e6 <__LOCK_REGION_LENGTH__+0xe6>
-     4e6:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	silence();
-     4e8:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     4ec:	2f ef       	ldi	r18, 0xFF	; 255
-     4ee:	89 ef       	ldi	r24, 0xF9	; 249
-     4f0:	90 e0       	ldi	r25, 0x00	; 0
-     4f2:	21 50       	subi	r18, 0x01	; 1
-     4f4:	80 40       	sbci	r24, 0x00	; 0
-     4f6:	90 40       	sbci	r25, 0x00	; 0
-     4f8:	e1 f7       	brne	.-8      	; 0x4f2 <__LOCK_REGION_LENGTH__+0xf2>
-     4fa:	00 c0       	rjmp	.+0      	; 0x4fc <__LOCK_REGION_LENGTH__+0xfc>
-     4fc:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     4fe:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     502:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     506:	2f ef       	ldi	r18, 0xFF	; 255
-     508:	87 ee       	ldi	r24, 0xE7	; 231
-     50a:	93 e0       	ldi	r25, 0x03	; 3
-     50c:	21 50       	subi	r18, 0x01	; 1
-     50e:	80 40       	sbci	r24, 0x00	; 0
-     510:	90 40       	sbci	r25, 0x00	; 0
-     512:	e1 f7       	brne	.-8      	; 0x50c <__LOCK_REGION_LENGTH__+0x10c>
-     514:	00 c0       	rjmp	.+0      	; 0x516 <__LOCK_REGION_LENGTH__+0x116>
-     516:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	silence();
-     518:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     51c:	2f ef       	ldi	r18, 0xFF	; 255
-     51e:	89 ef       	ldi	r24, 0xF9	; 249
-     520:	90 e0       	ldi	r25, 0x00	; 0
-     522:	21 50       	subi	r18, 0x01	; 1
-     524:	80 40       	sbci	r24, 0x00	; 0
-     526:	90 40       	sbci	r25, 0x00	; 0
-     528:	e1 f7       	brne	.-8      	; 0x522 <__LOCK_REGION_LENGTH__+0x122>
-     52a:	00 c0       	rjmp	.+0      	; 0x52c <__LOCK_REGION_LENGTH__+0x12c>
-     52c:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     52e:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     532:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     536:	2f ef       	ldi	r18, 0xFF	; 255
-     538:	89 ec       	ldi	r24, 0xC9	; 201
-     53a:	98 e0       	ldi	r25, 0x08	; 8
-     53c:	21 50       	subi	r18, 0x01	; 1
-     53e:	80 40       	sbci	r24, 0x00	; 0
-     540:	90 40       	sbci	r25, 0x00	; 0
-     542:	e1 f7       	brne	.-8      	; 0x53c <__LOCK_REGION_LENGTH__+0x13c>
-     544:	00 c0       	rjmp	.+0      	; 0x546 <__LOCK_REGION_LENGTH__+0x146>
-     546:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	silence();
-     548:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     54c:	2f ef       	ldi	r18, 0xFF	; 255
-     54e:	89 ef       	ldi	r24, 0xF9	; 249
-     550:	90 e0       	ldi	r25, 0x00	; 0
-     552:	21 50       	subi	r18, 0x01	; 1
-     554:	80 40       	sbci	r24, 0x00	; 0
-     556:	90 40       	sbci	r25, 0x00	; 0
-     558:	e1 f7       	brne	.-8      	; 0x552 <__LOCK_REGION_LENGTH__+0x152>
-     55a:	00 c0       	rjmp	.+0      	; 0x55c <__LOCK_REGION_LENGTH__+0x15c>
-     55c:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     55e:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     562:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     566:	2f ef       	ldi	r18, 0xFF	; 255
-     568:	89 ec       	ldi	r24, 0xC9	; 201
-     56a:	98 e0       	ldi	r25, 0x08	; 8
-     56c:	21 50       	subi	r18, 0x01	; 1
-     56e:	80 40       	sbci	r24, 0x00	; 0
-     570:	90 40       	sbci	r25, 0x00	; 0
-     572:	e1 f7       	brne	.-8      	; 0x56c <__LOCK_REGION_LENGTH__+0x16c>
-     574:	00 c0       	rjmp	.+0      	; 0x576 <__LOCK_REGION_LENGTH__+0x176>
-     576:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	
-	return 0;
-}
-     578:	80 e0       	ldi	r24, 0x00	; 0
-     57a:	90 e0       	ldi	r25, 0x00	; 0
-     57c:	08 95       	ret
-
-0000057e <zelda_melody>:
-
-int zelda_melody(){
-	
-	// 5
-	a3();
-     57e:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     582:	2f ef       	ldi	r18, 0xFF	; 255
-     584:	87 e8       	ldi	r24, 0x87	; 135
-     586:	93 e1       	ldi	r25, 0x13	; 19
-     588:	21 50       	subi	r18, 0x01	; 1
-     58a:	80 40       	sbci	r24, 0x00	; 0
-     58c:	90 40       	sbci	r25, 0x00	; 0
-     58e:	e1 f7       	brne	.-8      	; 0x588 <zelda_melody+0xa>
-     590:	00 c0       	rjmp	.+0      	; 0x592 <zelda_melody+0x14>
-     592:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	e3();
-     594:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     598:	2f ef       	ldi	r18, 0xFF	; 255
-     59a:	87 e8       	ldi	r24, 0x87	; 135
-     59c:	93 e1       	ldi	r25, 0x13	; 19
-     59e:	21 50       	subi	r18, 0x01	; 1
-     5a0:	80 40       	sbci	r24, 0x00	; 0
-     5a2:	90 40       	sbci	r25, 0x00	; 0
-     5a4:	e1 f7       	brne	.-8      	; 0x59e <zelda_melody+0x20>
-     5a6:	00 c0       	rjmp	.+0      	; 0x5a8 <zelda_melody+0x2a>
-     5a8:	00 00       	nop
-     5aa:	2f ef       	ldi	r18, 0xFF	; 255
-     5ac:	83 ec       	ldi	r24, 0xC3	; 195
-     5ae:	99 e0       	ldi	r25, 0x09	; 9
-     5b0:	21 50       	subi	r18, 0x01	; 1
-     5b2:	80 40       	sbci	r24, 0x00	; 0
-     5b4:	90 40       	sbci	r25, 0x00	; 0
-     5b6:	e1 f7       	brne	.-8      	; 0x5b0 <zelda_melody+0x32>
-     5b8:	00 c0       	rjmp	.+0      	; 0x5ba <zelda_melody+0x3c>
-     5ba:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	_delay_ms(MS_HALF);
-	a3();
-     5bc:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     5c0:	2f ef       	ldi	r18, 0xFF	; 255
-     5c2:	83 ec       	ldi	r24, 0xC3	; 195
-     5c4:	99 e0       	ldi	r25, 0x09	; 9
-     5c6:	21 50       	subi	r18, 0x01	; 1
-     5c8:	80 40       	sbci	r24, 0x00	; 0
-     5ca:	90 40       	sbci	r25, 0x00	; 0
-     5cc:	e1 f7       	brne	.-8      	; 0x5c6 <zelda_melody+0x48>
-     5ce:	00 c0       	rjmp	.+0      	; 0x5d0 <zelda_melody+0x52>
-     5d0:	00 00       	nop
-	_delay_ms(MS_HALF);
-	silence();
-     5d2:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     5d6:	2f ef       	ldi	r18, 0xFF	; 255
-     5d8:	89 ef       	ldi	r24, 0xF9	; 249
-     5da:	90 e0       	ldi	r25, 0x00	; 0
-     5dc:	21 50       	subi	r18, 0x01	; 1
-     5de:	80 40       	sbci	r24, 0x00	; 0
-     5e0:	90 40       	sbci	r25, 0x00	; 0
-     5e2:	e1 f7       	brne	.-8      	; 0x5dc <zelda_melody+0x5e>
-     5e4:	00 c0       	rjmp	.+0      	; 0x5e6 <zelda_melody+0x68>
-     5e6:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     5e8:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	a3();
-     5ec:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     5f0:	2f ef       	ldi	r18, 0xFF	; 255
-     5f2:	87 ee       	ldi	r24, 0xE7	; 231
-     5f4:	93 e0       	ldi	r25, 0x03	; 3
-     5f6:	21 50       	subi	r18, 0x01	; 1
-     5f8:	80 40       	sbci	r24, 0x00	; 0
-     5fa:	90 40       	sbci	r25, 0x00	; 0
-     5fc:	e1 f7       	brne	.-8      	; 0x5f6 <zelda_melody+0x78>
-     5fe:	00 c0       	rjmp	.+0      	; 0x600 <zelda_melody+0x82>
-     600:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	b3();
-     602:	0e 94 11 09 	call	0x1222	; 0x1222 <b3>
-     606:	2f ef       	ldi	r18, 0xFF	; 255
-     608:	81 ee       	ldi	r24, 0xE1	; 225
-     60a:	94 e0       	ldi	r25, 0x04	; 4
-     60c:	21 50       	subi	r18, 0x01	; 1
-     60e:	80 40       	sbci	r24, 0x00	; 0
-     610:	90 40       	sbci	r25, 0x00	; 0
-     612:	e1 f7       	brne	.-8      	; 0x60c <zelda_melody+0x8e>
-     614:	00 c0       	rjmp	.+0      	; 0x616 <zelda_melody+0x98>
-     616:	00 00       	nop
-	_delay_ms(MS_QUARTER);
-	c4(); // sharp
-     618:	0e 94 1c 09 	call	0x1238	; 0x1238 <c4>
-     61c:	2f ef       	ldi	r18, 0xFF	; 255
-     61e:	81 ee       	ldi	r24, 0xE1	; 225
-     620:	94 e0       	ldi	r25, 0x04	; 4
-     622:	21 50       	subi	r18, 0x01	; 1
-     624:	80 40       	sbci	r24, 0x00	; 0
-     626:	90 40       	sbci	r25, 0x00	; 0
-     628:	e1 f7       	brne	.-8      	; 0x622 <zelda_melody+0xa4>
-     62a:	00 c0       	rjmp	.+0      	; 0x62c <zelda_melody+0xae>
-     62c:	00 00       	nop
-	_delay_ms(MS_QUARTER);
 	d4();
-     62e:	0e 94 27 09 	call	0x124e	; 0x124e <d4>
-     632:	2f ef       	ldi	r18, 0xFF	; 255
-     634:	81 ee       	ldi	r24, 0xE1	; 225
-     636:	94 e0       	ldi	r25, 0x04	; 4
-     638:	21 50       	subi	r18, 0x01	; 1
-     63a:	80 40       	sbci	r24, 0x00	; 0
-     63c:	90 40       	sbci	r25, 0x00	; 0
-     63e:	e1 f7       	brne	.-8      	; 0x638 <zelda_melody+0xba>
-     640:	00 c0       	rjmp	.+0      	; 0x642 <zelda_melody+0xc4>
-     642:	00 00       	nop
-	_delay_ms(MS_QUARTER);
+ 172:	0e 94 6a 02 	call	0x4d4	; 0x4d4 <d4>
+ 176:	2f ef       	ldi	r18, 0xFF	; 255
+ 178:	83 ec       	ldi	r24, 0xC3	; 195
+ 17a:	99 e0       	ldi	r25, 0x09	; 9
+ 17c:	21 50       	subi	r18, 0x01	; 1
+ 17e:	80 40       	sbci	r24, 0x00	; 0
+ 180:	90 40       	sbci	r25, 0x00	; 0
+ 182:	e1 f7       	brne	.-8      	; 0x17c <tetris+0x108>
+ 184:	00 c0       	rjmp	.+0      	; 0x186 <tetris+0x112>
+ 186:	00 00       	nop
+	_delay_ms(MS_HALF);
+	c4();
+ 188:	0e 94 5f 02 	call	0x4be	; 0x4be <c4>
+ 18c:	2f ef       	ldi	r18, 0xFF	; 255
+ 18e:	83 ec       	ldi	r24, 0xC3	; 195
+ 190:	99 e0       	ldi	r25, 0x09	; 9
+ 192:	21 50       	subi	r18, 0x01	; 1
+ 194:	80 40       	sbci	r24, 0x00	; 0
+ 196:	90 40       	sbci	r25, 0x00	; 0
+ 198:	e1 f7       	brne	.-8      	; 0x192 <tetris+0x11e>
+ 19a:	00 c0       	rjmp	.+0      	; 0x19c <tetris+0x128>
+ 19c:	00 00       	nop
+	_delay_ms(MS_HALF);
+	// 3
+	b3();
+ 19e:	0e 94 54 02 	call	0x4a8	; 0x4a8 <b3>
+ 1a2:	2f ef       	ldi	r18, 0xFF	; 255
+ 1a4:	87 e8       	ldi	r24, 0x87	; 135
+ 1a6:	93 e1       	ldi	r25, 0x13	; 19
+ 1a8:	21 50       	subi	r18, 0x01	; 1
+ 1aa:	80 40       	sbci	r24, 0x00	; 0
+ 1ac:	90 40       	sbci	r25, 0x00	; 0
+ 1ae:	e1 f7       	brne	.-8      	; 0x1a8 <tetris+0x134>
+ 1b0:	00 c0       	rjmp	.+0      	; 0x1b2 <tetris+0x13e>
+ 1b2:	00 00       	nop
+	_delay_ms(MS_BLACK);
+	silence();
+ 1b4:	0e 94 a1 02 	call	0x542	; 0x542 <silence>
+ 1b8:	2f ef       	ldi	r18, 0xFF	; 255
+ 1ba:	89 ef       	ldi	r24, 0xF9	; 249
+ 1bc:	90 e0       	ldi	r25, 0x00	; 0
+ 1be:	21 50       	subi	r18, 0x01	; 1
+ 1c0:	80 40       	sbci	r24, 0x00	; 0
+ 1c2:	90 40       	sbci	r25, 0x00	; 0
+ 1c4:	e1 f7       	brne	.-8      	; 0x1be <tetris+0x14a>
+ 1c6:	00 c0       	rjmp	.+0      	; 0x1c8 <tetris+0x154>
+ 1c8:	00 00       	nop
+	_delay_ms(20);
+	sound();
+ 1ca:	0e 94 a5 02 	call	0x54a	; 0x54a <sound>
+	b3();
+ 1ce:	0e 94 54 02 	call	0x4a8	; 0x4a8 <b3>
+ 1d2:	2f ef       	ldi	r18, 0xFF	; 255
+ 1d4:	83 ec       	ldi	r24, 0xC3	; 195
+ 1d6:	99 e0       	ldi	r25, 0x09	; 9
+ 1d8:	21 50       	subi	r18, 0x01	; 1
+ 1da:	80 40       	sbci	r24, 0x00	; 0
+ 1dc:	90 40       	sbci	r25, 0x00	; 0
+ 1de:	e1 f7       	brne	.-8      	; 0x1d8 <tetris+0x164>
+ 1e0:	00 c0       	rjmp	.+0      	; 0x1e2 <tetris+0x16e>
+ 1e2:	00 00       	nop
+	_delay_ms(MS_HALF);
+	c4();
+ 1e4:	0e 94 5f 02 	call	0x4be	; 0x4be <c4>
+ 1e8:	2f ef       	ldi	r18, 0xFF	; 255
+ 1ea:	83 ec       	ldi	r24, 0xC3	; 195
+ 1ec:	99 e0       	ldi	r25, 0x09	; 9
+ 1ee:	21 50       	subi	r18, 0x01	; 1
+ 1f0:	80 40       	sbci	r24, 0x00	; 0
+ 1f2:	90 40       	sbci	r25, 0x00	; 0
+ 1f4:	e1 f7       	brne	.-8      	; 0x1ee <tetris+0x17a>
+ 1f6:	00 c0       	rjmp	.+0      	; 0x1f8 <tetris+0x184>
+ 1f8:	00 00       	nop
+	_delay_ms(MS_HALF);
+	d4();
+ 1fa:	0e 94 6a 02 	call	0x4d4	; 0x4d4 <d4>
+ 1fe:	2f ef       	ldi	r18, 0xFF	; 255
+ 200:	87 e8       	ldi	r24, 0x87	; 135
+ 202:	93 e1       	ldi	r25, 0x13	; 19
+ 204:	21 50       	subi	r18, 0x01	; 1
+ 206:	80 40       	sbci	r24, 0x00	; 0
+ 208:	90 40       	sbci	r25, 0x00	; 0
+ 20a:	e1 f7       	brne	.-8      	; 0x204 <tetris+0x190>
+ 20c:	00 c0       	rjmp	.+0      	; 0x20e <tetris+0x19a>
+ 20e:	00 00       	nop
+	_delay_ms(MS_BLACK);
+	e4();
+ 210:	0e 94 75 02 	call	0x4ea	; 0x4ea <e4>
+ 214:	2f ef       	ldi	r18, 0xFF	; 255
+ 216:	87 e8       	ldi	r24, 0x87	; 135
+ 218:	93 e1       	ldi	r25, 0x13	; 19
+ 21a:	21 50       	subi	r18, 0x01	; 1
+ 21c:	80 40       	sbci	r24, 0x00	; 0
+ 21e:	90 40       	sbci	r25, 0x00	; 0
+ 220:	e1 f7       	brne	.-8      	; 0x21a <tetris+0x1a6>
+ 222:	00 c0       	rjmp	.+0      	; 0x224 <tetris+0x1b0>
+ 224:	00 00       	nop
+	_delay_ms(MS_BLACK);
+	// 4
+	c4();
+ 226:	0e 94 5f 02 	call	0x4be	; 0x4be <c4>
+ 22a:	2f ef       	ldi	r18, 0xFF	; 255
+ 22c:	87 e8       	ldi	r24, 0x87	; 135
+ 22e:	93 e1       	ldi	r25, 0x13	; 19
+ 230:	21 50       	subi	r18, 0x01	; 1
+ 232:	80 40       	sbci	r24, 0x00	; 0
+ 234:	90 40       	sbci	r25, 0x00	; 0
+ 236:	e1 f7       	brne	.-8      	; 0x230 <tetris+0x1bc>
+ 238:	00 c0       	rjmp	.+0      	; 0x23a <tetris+0x1c6>
+ 23a:	00 00       	nop
+	_delay_ms(MS_BLACK);
+	a3();
+ 23c:	0e 94 49 02 	call	0x492	; 0x492 <a3>
+ 240:	2f ef       	ldi	r18, 0xFF	; 255
+ 242:	87 e8       	ldi	r24, 0x87	; 135
+ 244:	93 e1       	ldi	r25, 0x13	; 19
+ 246:	21 50       	subi	r18, 0x01	; 1
+ 248:	80 40       	sbci	r24, 0x00	; 0
+ 24a:	90 40       	sbci	r25, 0x00	; 0
+ 24c:	e1 f7       	brne	.-8      	; 0x246 <tetris+0x1d2>
+ 24e:	00 c0       	rjmp	.+0      	; 0x250 <tetris+0x1dc>
+ 250:	00 00       	nop
+	_delay_ms(MS_BLACK);
+	silence();
+ 252:	0e 94 a1 02 	call	0x542	; 0x542 <silence>
+ 256:	2f ef       	ldi	r18, 0xFF	; 255
+ 258:	89 ef       	ldi	r24, 0xF9	; 249
+ 25a:	90 e0       	ldi	r25, 0x00	; 0
+ 25c:	21 50       	subi	r18, 0x01	; 1
+ 25e:	80 40       	sbci	r24, 0x00	; 0
+ 260:	90 40       	sbci	r25, 0x00	; 0
+ 262:	e1 f7       	brne	.-8      	; 0x25c <tetris+0x1e8>
+ 264:	00 c0       	rjmp	.+0      	; 0x266 <tetris+0x1f2>
+ 266:	00 00       	nop
+	_delay_ms(20);
+	sound();
+ 268:	0e 94 a5 02 	call	0x54a	; 0x54a <sound>
+	a3();
+ 26c:	0e 94 49 02 	call	0x492	; 0x492 <a3>
+ 270:	2f ef       	ldi	r18, 0xFF	; 255
+ 272:	8f e0       	ldi	r24, 0x0F	; 15
+ 274:	97 e2       	ldi	r25, 0x27	; 39
+ 276:	21 50       	subi	r18, 0x01	; 1
+ 278:	80 40       	sbci	r24, 0x00	; 0
+ 27a:	90 40       	sbci	r25, 0x00	; 0
+ 27c:	e1 f7       	brne	.-8      	; 0x276 <tetris+0x202>
+ 27e:	00 c0       	rjmp	.+0      	; 0x280 <tetris+0x20c>
+ 280:	00 00       	nop
+	_delay_ms(MS_DOUBLE);
+	// 5
+	d4();
+ 282:	0e 94 6a 02 	call	0x4d4	; 0x4d4 <d4>
+ 286:	2f ef       	ldi	r18, 0xFF	; 255
+ 288:	87 e8       	ldi	r24, 0x87	; 135
+ 28a:	93 e1       	ldi	r25, 0x13	; 19
+ 28c:	21 50       	subi	r18, 0x01	; 1
+ 28e:	80 40       	sbci	r24, 0x00	; 0
+ 290:	90 40       	sbci	r25, 0x00	; 0
+ 292:	e1 f7       	brne	.-8      	; 0x28c <tetris+0x218>
+ 294:	00 c0       	rjmp	.+0      	; 0x296 <tetris+0x222>
+ 296:	00 00       	nop
+	_delay_ms(MS_BLACK);
+	f4();
+ 298:	0e 94 80 02 	call	0x500	; 0x500 <f4>
+ 29c:	2f ef       	ldi	r18, 0xFF	; 255
+ 29e:	83 ec       	ldi	r24, 0xC3	; 195
+ 2a0:	99 e0       	ldi	r25, 0x09	; 9
+ 2a2:	21 50       	subi	r18, 0x01	; 1
+ 2a4:	80 40       	sbci	r24, 0x00	; 0
+ 2a6:	90 40       	sbci	r25, 0x00	; 0
+ 2a8:	e1 f7       	brne	.-8      	; 0x2a2 <tetris+0x22e>
+ 2aa:	00 c0       	rjmp	.+0      	; 0x2ac <tetris+0x238>
+ 2ac:	00 00       	nop
+	_delay_ms(MS_HALF);
+	a4();
+ 2ae:	0e 94 96 02 	call	0x52c	; 0x52c <a4>
+ 2b2:	2f ef       	ldi	r18, 0xFF	; 255
+ 2b4:	87 e8       	ldi	r24, 0x87	; 135
+ 2b6:	93 e1       	ldi	r25, 0x13	; 19
+ 2b8:	21 50       	subi	r18, 0x01	; 1
+ 2ba:	80 40       	sbci	r24, 0x00	; 0
+ 2bc:	90 40       	sbci	r25, 0x00	; 0
+ 2be:	e1 f7       	brne	.-8      	; 0x2b8 <tetris+0x244>
+ 2c0:	00 c0       	rjmp	.+0      	; 0x2c2 <tetris+0x24e>
+ 2c2:	00 00       	nop
+	_delay_ms(MS_BLACK);
+	g4();
+ 2c4:	0e 94 8b 02 	call	0x516	; 0x516 <g4>
+ 2c8:	2f ef       	ldi	r18, 0xFF	; 255
+ 2ca:	83 ec       	ldi	r24, 0xC3	; 195
+ 2cc:	99 e0       	ldi	r25, 0x09	; 9
+ 2ce:	21 50       	subi	r18, 0x01	; 1
+ 2d0:	80 40       	sbci	r24, 0x00	; 0
+ 2d2:	90 40       	sbci	r25, 0x00	; 0
+ 2d4:	e1 f7       	brne	.-8      	; 0x2ce <tetris+0x25a>
+ 2d6:	00 c0       	rjmp	.+0      	; 0x2d8 <tetris+0x264>
+ 2d8:	00 00       	nop
+	_delay_ms(MS_HALF);
+	f4();
+ 2da:	0e 94 80 02 	call	0x500	; 0x500 <f4>
+ 2de:	2f ef       	ldi	r18, 0xFF	; 255
+ 2e0:	83 ec       	ldi	r24, 0xC3	; 195
+ 2e2:	99 e0       	ldi	r25, 0x09	; 9
+ 2e4:	21 50       	subi	r18, 0x01	; 1
+ 2e6:	80 40       	sbci	r24, 0x00	; 0
+ 2e8:	90 40       	sbci	r25, 0x00	; 0
+ 2ea:	e1 f7       	brne	.-8      	; 0x2e4 <tetris+0x270>
+ 2ec:	00 c0       	rjmp	.+0      	; 0x2ee <tetris+0x27a>
+ 2ee:	00 00       	nop
+	_delay_ms(MS_HALF);
 	// 6
 	e4();
-     644:	0e 94 32 09 	call	0x1264	; 0x1264 <e4>
-     648:	2f ef       	ldi	r18, 0xFF	; 255
-     64a:	8f e0       	ldi	r24, 0x0F	; 15
-     64c:	97 e2       	ldi	r25, 0x27	; 39
-     64e:	21 50       	subi	r18, 0x01	; 1
-     650:	80 40       	sbci	r24, 0x00	; 0
-     652:	90 40       	sbci	r25, 0x00	; 0
-     654:	e1 f7       	brne	.-8      	; 0x64e <zelda_melody+0xd0>
-     656:	00 c0       	rjmp	.+0      	; 0x658 <zelda_melody+0xda>
-     658:	00 00       	nop
-	_delay_ms(MS_DOUBLE);
-	silence();
-     65a:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     65e:	2f ef       	ldi	r18, 0xFF	; 255
-     660:	83 ec       	ldi	r24, 0xC3	; 195
-     662:	99 e0       	ldi	r25, 0x09	; 9
-     664:	21 50       	subi	r18, 0x01	; 1
-     666:	80 40       	sbci	r24, 0x00	; 0
-     668:	90 40       	sbci	r25, 0x00	; 0
-     66a:	e1 f7       	brne	.-8      	; 0x664 <zelda_melody+0xe6>
-     66c:	00 c0       	rjmp	.+0      	; 0x66e <zelda_melody+0xf0>
-     66e:	00 00       	nop
+ 2f0:	0e 94 75 02 	call	0x4ea	; 0x4ea <e4>
+ 2f4:	2f ef       	ldi	r18, 0xFF	; 255
+ 2f6:	87 e8       	ldi	r24, 0x87	; 135
+ 2f8:	93 e1       	ldi	r25, 0x13	; 19
+ 2fa:	21 50       	subi	r18, 0x01	; 1
+ 2fc:	80 40       	sbci	r24, 0x00	; 0
+ 2fe:	90 40       	sbci	r25, 0x00	; 0
+ 300:	e1 f7       	brne	.-8      	; 0x2fa <tetris+0x286>
+ 302:	00 c0       	rjmp	.+0      	; 0x304 <tetris+0x290>
+ 304:	00 00       	nop
+ 306:	2f ef       	ldi	r18, 0xFF	; 255
+ 308:	83 ec       	ldi	r24, 0xC3	; 195
+ 30a:	99 e0       	ldi	r25, 0x09	; 9
+ 30c:	21 50       	subi	r18, 0x01	; 1
+ 30e:	80 40       	sbci	r24, 0x00	; 0
+ 310:	90 40       	sbci	r25, 0x00	; 0
+ 312:	e1 f7       	brne	.-8      	; 0x30c <tetris+0x298>
+ 314:	00 c0       	rjmp	.+0      	; 0x316 <tetris+0x2a2>
+ 316:	00 00       	nop
+	_delay_ms(MS_BLACK);
 	_delay_ms(MS_HALF);
-	sound();
-     670:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
+	c4();
+ 318:	0e 94 5f 02 	call	0x4be	; 0x4be <c4>
+ 31c:	2f ef       	ldi	r18, 0xFF	; 255
+ 31e:	83 ec       	ldi	r24, 0xC3	; 195
+ 320:	99 e0       	ldi	r25, 0x09	; 9
+ 322:	21 50       	subi	r18, 0x01	; 1
+ 324:	80 40       	sbci	r24, 0x00	; 0
+ 326:	90 40       	sbci	r25, 0x00	; 0
+ 328:	e1 f7       	brne	.-8      	; 0x322 <tetris+0x2ae>
+ 32a:	00 c0       	rjmp	.+0      	; 0x32c <tetris+0x2b8>
+ 32c:	00 00       	nop
+	_delay_ms(MS_HALF);
 	e4();
-     674:	0e 94 32 09 	call	0x1264	; 0x1264 <e4>
-     678:	2f ef       	ldi	r18, 0xFF	; 255
-     67a:	83 ec       	ldi	r24, 0xC3	; 195
-     67c:	99 e0       	ldi	r25, 0x09	; 9
-     67e:	21 50       	subi	r18, 0x01	; 1
-     680:	80 40       	sbci	r24, 0x00	; 0
-     682:	90 40       	sbci	r25, 0x00	; 0
-     684:	e1 f7       	brne	.-8      	; 0x67e <zelda_melody+0x100>
-     686:	00 c0       	rjmp	.+0      	; 0x688 <zelda_melody+0x10a>
-     688:	00 00       	nop
+ 32e:	0e 94 75 02 	call	0x4ea	; 0x4ea <e4>
+ 332:	2f ef       	ldi	r18, 0xFF	; 255
+ 334:	87 e8       	ldi	r24, 0x87	; 135
+ 336:	93 e1       	ldi	r25, 0x13	; 19
+ 338:	21 50       	subi	r18, 0x01	; 1
+ 33a:	80 40       	sbci	r24, 0x00	; 0
+ 33c:	90 40       	sbci	r25, 0x00	; 0
+ 33e:	e1 f7       	brne	.-8      	; 0x338 <tetris+0x2c4>
+ 340:	00 c0       	rjmp	.+0      	; 0x342 <tetris+0x2ce>
+ 342:	00 00       	nop
+	_delay_ms(MS_BLACK);
+	d4();
+ 344:	0e 94 6a 02 	call	0x4d4	; 0x4d4 <d4>
+ 348:	2f ef       	ldi	r18, 0xFF	; 255
+ 34a:	83 ec       	ldi	r24, 0xC3	; 195
+ 34c:	99 e0       	ldi	r25, 0x09	; 9
+ 34e:	21 50       	subi	r18, 0x01	; 1
+ 350:	80 40       	sbci	r24, 0x00	; 0
+ 352:	90 40       	sbci	r25, 0x00	; 0
+ 354:	e1 f7       	brne	.-8      	; 0x34e <tetris+0x2da>
+ 356:	00 c0       	rjmp	.+0      	; 0x358 <tetris+0x2e4>
+ 358:	00 00       	nop
 	_delay_ms(MS_HALF);
+	c4();
+ 35a:	0e 94 5f 02 	call	0x4be	; 0x4be <c4>
+ 35e:	2f ef       	ldi	r18, 0xFF	; 255
+ 360:	83 ec       	ldi	r24, 0xC3	; 195
+ 362:	99 e0       	ldi	r25, 0x09	; 9
+ 364:	21 50       	subi	r18, 0x01	; 1
+ 366:	80 40       	sbci	r24, 0x00	; 0
+ 368:	90 40       	sbci	r25, 0x00	; 0
+ 36a:	e1 f7       	brne	.-8      	; 0x364 <tetris+0x2f0>
+ 36c:	00 c0       	rjmp	.+0      	; 0x36e <tetris+0x2fa>
+ 36e:	00 00       	nop
+	_delay_ms(MS_HALF);
+	// 7 
+	b3();
+ 370:	0e 94 54 02 	call	0x4a8	; 0x4a8 <b3>
+ 374:	2f ef       	ldi	r18, 0xFF	; 255
+ 376:	87 e8       	ldi	r24, 0x87	; 135
+ 378:	93 e1       	ldi	r25, 0x13	; 19
+ 37a:	21 50       	subi	r18, 0x01	; 1
+ 37c:	80 40       	sbci	r24, 0x00	; 0
+ 37e:	90 40       	sbci	r25, 0x00	; 0
+ 380:	e1 f7       	brne	.-8      	; 0x37a <tetris+0x306>
+ 382:	00 c0       	rjmp	.+0      	; 0x384 <tetris+0x310>
+ 384:	00 00       	nop
+	_delay_ms(MS_BLACK);
 	silence();
-     68a:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     68e:	2f ef       	ldi	r18, 0xFF	; 255
-     690:	89 ef       	ldi	r24, 0xF9	; 249
-     692:	90 e0       	ldi	r25, 0x00	; 0
-     694:	21 50       	subi	r18, 0x01	; 1
-     696:	80 40       	sbci	r24, 0x00	; 0
-     698:	90 40       	sbci	r25, 0x00	; 0
-     69a:	e1 f7       	brne	.-8      	; 0x694 <zelda_melody+0x116>
-     69c:	00 c0       	rjmp	.+0      	; 0x69e <zelda_melody+0x120>
-     69e:	00 00       	nop
+ 386:	0e 94 a1 02 	call	0x542	; 0x542 <silence>
+ 38a:	2f ef       	ldi	r18, 0xFF	; 255
+ 38c:	89 ef       	ldi	r24, 0xF9	; 249
+ 38e:	90 e0       	ldi	r25, 0x00	; 0
+ 390:	21 50       	subi	r18, 0x01	; 1
+ 392:	80 40       	sbci	r24, 0x00	; 0
+ 394:	90 40       	sbci	r25, 0x00	; 0
+ 396:	e1 f7       	brne	.-8      	; 0x390 <tetris+0x31c>
+ 398:	00 c0       	rjmp	.+0      	; 0x39a <tetris+0x326>
+ 39a:	00 00       	nop
 	_delay_ms(20);
 	sound();
-     6a0:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
+ 39c:	0e 94 a5 02 	call	0x54a	; 0x54a <sound>
+	b3();
+ 3a0:	0e 94 54 02 	call	0x4a8	; 0x4a8 <b3>
+ 3a4:	2f ef       	ldi	r18, 0xFF	; 255
+ 3a6:	83 ec       	ldi	r24, 0xC3	; 195
+ 3a8:	99 e0       	ldi	r25, 0x09	; 9
+ 3aa:	21 50       	subi	r18, 0x01	; 1
+ 3ac:	80 40       	sbci	r24, 0x00	; 0
+ 3ae:	90 40       	sbci	r25, 0x00	; 0
+ 3b0:	e1 f7       	brne	.-8      	; 0x3aa <tetris+0x336>
+ 3b2:	00 c0       	rjmp	.+0      	; 0x3b4 <tetris+0x340>
+ 3b4:	00 00       	nop
+	_delay_ms(MS_HALF);
+	c4();
+ 3b6:	0e 94 5f 02 	call	0x4be	; 0x4be <c4>
+ 3ba:	2f ef       	ldi	r18, 0xFF	; 255
+ 3bc:	83 ec       	ldi	r24, 0xC3	; 195
+ 3be:	99 e0       	ldi	r25, 0x09	; 9
+ 3c0:	21 50       	subi	r18, 0x01	; 1
+ 3c2:	80 40       	sbci	r24, 0x00	; 0
+ 3c4:	90 40       	sbci	r25, 0x00	; 0
+ 3c6:	e1 f7       	brne	.-8      	; 0x3c0 <tetris+0x34c>
+ 3c8:	00 c0       	rjmp	.+0      	; 0x3ca <tetris+0x356>
+ 3ca:	00 00       	nop
+	_delay_ms(MS_HALF);
+	d4();
+ 3cc:	0e 94 6a 02 	call	0x4d4	; 0x4d4 <d4>
+ 3d0:	2f ef       	ldi	r18, 0xFF	; 255
+ 3d2:	87 e8       	ldi	r24, 0x87	; 135
+ 3d4:	93 e1       	ldi	r25, 0x13	; 19
+ 3d6:	21 50       	subi	r18, 0x01	; 1
+ 3d8:	80 40       	sbci	r24, 0x00	; 0
+ 3da:	90 40       	sbci	r25, 0x00	; 0
+ 3dc:	e1 f7       	brne	.-8      	; 0x3d6 <tetris+0x362>
+ 3de:	00 c0       	rjmp	.+0      	; 0x3e0 <tetris+0x36c>
+ 3e0:	00 00       	nop
+	_delay_ms(MS_BLACK);
 	e4();
-     6a4:	0e 94 32 09 	call	0x1264	; 0x1264 <e4>
-     6a8:	2f ef       	ldi	r18, 0xFF	; 255
-     6aa:	89 ec       	ldi	r24, 0xC9	; 201
-     6ac:	98 e0       	ldi	r25, 0x08	; 8
-     6ae:	21 50       	subi	r18, 0x01	; 1
-     6b0:	80 40       	sbci	r24, 0x00	; 0
-     6b2:	90 40       	sbci	r25, 0x00	; 0
-     6b4:	e1 f7       	brne	.-8      	; 0x6ae <zelda_melody+0x130>
-     6b6:	00 c0       	rjmp	.+0      	; 0x6b8 <zelda_melody+0x13a>
-     6b8:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	f4();
-     6ba:	0e 94 3d 09 	call	0x127a	; 0x127a <f4>
-     6be:	2f ef       	ldi	r18, 0xFF	; 255
-     6c0:	83 ec       	ldi	r24, 0xC3	; 195
-     6c2:	99 e0       	ldi	r25, 0x09	; 9
-     6c4:	21 50       	subi	r18, 0x01	; 1
-     6c6:	80 40       	sbci	r24, 0x00	; 0
-     6c8:	90 40       	sbci	r25, 0x00	; 0
-     6ca:	e1 f7       	brne	.-8      	; 0x6c4 <zelda_melody+0x146>
-     6cc:	00 c0       	rjmp	.+0      	; 0x6ce <zelda_melody+0x150>
-     6ce:	00 00       	nop
-	_delay_ms(MS_HALF);
-	g4();
-     6d0:	0e 94 48 09 	call	0x1290	; 0x1290 <g4>
-     6d4:	2f ef       	ldi	r18, 0xFF	; 255
-     6d6:	83 ec       	ldi	r24, 0xC3	; 195
-     6d8:	99 e0       	ldi	r25, 0x09	; 9
-     6da:	21 50       	subi	r18, 0x01	; 1
-     6dc:	80 40       	sbci	r24, 0x00	; 0
-     6de:	90 40       	sbci	r25, 0x00	; 0
-     6e0:	e1 f7       	brne	.-8      	; 0x6da <zelda_melody+0x15c>
-     6e2:	00 c0       	rjmp	.+0      	; 0x6e4 <zelda_melody+0x166>
-     6e4:	00 00       	nop
-	_delay_ms(MS_HALF);
-	// 7
-	a4();
-     6e6:	0e 94 53 09 	call	0x12a6	; 0x12a6 <a4>
-     6ea:	2f ef       	ldi	r18, 0xFF	; 255
-     6ec:	8f e0       	ldi	r24, 0x0F	; 15
-     6ee:	97 e2       	ldi	r25, 0x27	; 39
-     6f0:	21 50       	subi	r18, 0x01	; 1
-     6f2:	80 40       	sbci	r24, 0x00	; 0
-     6f4:	90 40       	sbci	r25, 0x00	; 0
-     6f6:	e1 f7       	brne	.-8      	; 0x6f0 <zelda_melody+0x172>
-     6f8:	00 c0       	rjmp	.+0      	; 0x6fa <zelda_melody+0x17c>
-     6fa:	00 00       	nop
-	_delay_ms(MS_DOUBLE);
-	silence();
-     6fc:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     700:	2f ef       	ldi	r18, 0xFF	; 255
-     702:	83 ec       	ldi	r24, 0xC3	; 195
-     704:	99 e0       	ldi	r25, 0x09	; 9
-     706:	21 50       	subi	r18, 0x01	; 1
-     708:	80 40       	sbci	r24, 0x00	; 0
-     70a:	90 40       	sbci	r25, 0x00	; 0
-     70c:	e1 f7       	brne	.-8      	; 0x706 <zelda_melody+0x188>
-     70e:	00 c0       	rjmp	.+0      	; 0x710 <zelda_melody+0x192>
-     710:	00 00       	nop
-	_delay_ms(MS_HALF);
-	sound();
-     712:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	a4();
-     716:	0e 94 53 09 	call	0x12a6	; 0x12a6 <a4>
-     71a:	2f ef       	ldi	r18, 0xFF	; 255
-     71c:	83 ec       	ldi	r24, 0xC3	; 195
-     71e:	99 e0       	ldi	r25, 0x09	; 9
-     720:	21 50       	subi	r18, 0x01	; 1
-     722:	80 40       	sbci	r24, 0x00	; 0
-     724:	90 40       	sbci	r25, 0x00	; 0
-     726:	e1 f7       	brne	.-8      	; 0x720 <zelda_melody+0x1a2>
-     728:	00 c0       	rjmp	.+0      	; 0x72a <zelda_melody+0x1ac>
-     72a:	00 00       	nop
-	_delay_ms(MS_HALF);
-	silence();
-     72c:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     730:	2f ef       	ldi	r18, 0xFF	; 255
-     732:	89 ef       	ldi	r24, 0xF9	; 249
-     734:	90 e0       	ldi	r25, 0x00	; 0
-     736:	21 50       	subi	r18, 0x01	; 1
-     738:	80 40       	sbci	r24, 0x00	; 0
-     73a:	90 40       	sbci	r25, 0x00	; 0
-     73c:	e1 f7       	brne	.-8      	; 0x736 <zelda_melody+0x1b8>
-     73e:	00 c0       	rjmp	.+0      	; 0x740 <zelda_melody+0x1c2>
-     740:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     742:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	a4();
-     746:	0e 94 53 09 	call	0x12a6	; 0x12a6 <a4>
-     74a:	2f ef       	ldi	r18, 0xFF	; 255
-     74c:	89 ec       	ldi	r24, 0xC9	; 201
-     74e:	98 e0       	ldi	r25, 0x08	; 8
-     750:	21 50       	subi	r18, 0x01	; 1
-     752:	80 40       	sbci	r24, 0x00	; 0
-     754:	90 40       	sbci	r25, 0x00	; 0
-     756:	e1 f7       	brne	.-8      	; 0x750 <zelda_melody+0x1d2>
-     758:	00 c0       	rjmp	.+0      	; 0x75a <zelda_melody+0x1dc>
-     75a:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	g4();
-     75c:	0e 94 48 09 	call	0x1290	; 0x1290 <g4>
-     760:	2f ef       	ldi	r18, 0xFF	; 255
-     762:	83 ec       	ldi	r24, 0xC3	; 195
-     764:	99 e0       	ldi	r25, 0x09	; 9
-     766:	21 50       	subi	r18, 0x01	; 1
-     768:	80 40       	sbci	r24, 0x00	; 0
-     76a:	90 40       	sbci	r25, 0x00	; 0
-     76c:	e1 f7       	brne	.-8      	; 0x766 <zelda_melody+0x1e8>
-     76e:	00 c0       	rjmp	.+0      	; 0x770 <zelda_melody+0x1f2>
-     770:	00 00       	nop
-	_delay_ms(MS_HALF);
-	f4();
-     772:	0e 94 3d 09 	call	0x127a	; 0x127a <f4>
-     776:	2f ef       	ldi	r18, 0xFF	; 255
-     778:	83 ec       	ldi	r24, 0xC3	; 195
-     77a:	99 e0       	ldi	r25, 0x09	; 9
-     77c:	21 50       	subi	r18, 0x01	; 1
-     77e:	80 40       	sbci	r24, 0x00	; 0
-     780:	90 40       	sbci	r25, 0x00	; 0
-     782:	e1 f7       	brne	.-8      	; 0x77c <zelda_melody+0x1fe>
-     784:	00 c0       	rjmp	.+0      	; 0x786 <zelda_melody+0x208>
-     786:	00 00       	nop
-	_delay_ms(MS_HALF);
+ 3e2:	0e 94 75 02 	call	0x4ea	; 0x4ea <e4>
+ 3e6:	2f ef       	ldi	r18, 0xFF	; 255
+ 3e8:	87 e8       	ldi	r24, 0x87	; 135
+ 3ea:	93 e1       	ldi	r25, 0x13	; 19
+ 3ec:	21 50       	subi	r18, 0x01	; 1
+ 3ee:	80 40       	sbci	r24, 0x00	; 0
+ 3f0:	90 40       	sbci	r25, 0x00	; 0
+ 3f2:	e1 f7       	brne	.-8      	; 0x3ec <tetris+0x378>
+ 3f4:	00 c0       	rjmp	.+0      	; 0x3f6 <tetris+0x382>
+ 3f6:	00 00       	nop
+	_delay_ms(MS_BLACK);
 	// 8
-	g4();
-     788:	0e 94 48 09 	call	0x1290	; 0x1290 <g4>
-     78c:	2f ef       	ldi	r18, 0xFF	; 255
-     78e:	87 e8       	ldi	r24, 0x87	; 135
-     790:	93 e1       	ldi	r25, 0x13	; 19
-     792:	21 50       	subi	r18, 0x01	; 1
-     794:	80 40       	sbci	r24, 0x00	; 0
-     796:	90 40       	sbci	r25, 0x00	; 0
-     798:	e1 f7       	brne	.-8      	; 0x792 <zelda_melody+0x214>
-     79a:	00 c0       	rjmp	.+0      	; 0x79c <zelda_melody+0x21e>
-     79c:	00 00       	nop
+	c4();
+ 3f8:	0e 94 5f 02 	call	0x4be	; 0x4be <c4>
+ 3fc:	2f ef       	ldi	r18, 0xFF	; 255
+ 3fe:	87 e8       	ldi	r24, 0x87	; 135
+ 400:	93 e1       	ldi	r25, 0x13	; 19
+ 402:	21 50       	subi	r18, 0x01	; 1
+ 404:	80 40       	sbci	r24, 0x00	; 0
+ 406:	90 40       	sbci	r25, 0x00	; 0
+ 408:	e1 f7       	brne	.-8      	; 0x402 <__LOCK_REGION_LENGTH__+0x2>
+ 40a:	00 c0       	rjmp	.+0      	; 0x40c <__LOCK_REGION_LENGTH__+0xc>
+ 40c:	00 00       	nop
 	_delay_ms(MS_BLACK);
-	f4();
-     79e:	0e 94 3d 09 	call	0x127a	; 0x127a <f4>
-     7a2:	2f ef       	ldi	r18, 0xFF	; 255
-     7a4:	81 ee       	ldi	r24, 0xE1	; 225
-     7a6:	94 e0       	ldi	r25, 0x04	; 4
-     7a8:	21 50       	subi	r18, 0x01	; 1
-     7aa:	80 40       	sbci	r24, 0x00	; 0
-     7ac:	90 40       	sbci	r25, 0x00	; 0
-     7ae:	e1 f7       	brne	.-8      	; 0x7a8 <zelda_melody+0x22a>
-     7b0:	00 c0       	rjmp	.+0      	; 0x7b2 <zelda_melody+0x234>
-     7b2:	00 00       	nop
-	_delay_ms(MS_QUARTER);
-	e4();
-     7b4:	0e 94 32 09 	call	0x1264	; 0x1264 <e4>
-     7b8:	2f ef       	ldi	r18, 0xFF	; 255
-     7ba:	8f e0       	ldi	r24, 0x0F	; 15
-     7bc:	97 e2       	ldi	r25, 0x27	; 39
-     7be:	21 50       	subi	r18, 0x01	; 1
-     7c0:	80 40       	sbci	r24, 0x00	; 0
-     7c2:	90 40       	sbci	r25, 0x00	; 0
-     7c4:	e1 f7       	brne	.-8      	; 0x7be <zelda_melody+0x240>
-     7c6:	00 c0       	rjmp	.+0      	; 0x7c8 <zelda_melody+0x24a>
-     7c8:	00 00       	nop
-	_delay_ms(MS_DOUBLE);
-	silence();
-     7ca:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     7ce:	2f ef       	ldi	r18, 0xFF	; 255
-     7d0:	89 ef       	ldi	r24, 0xF9	; 249
-     7d2:	90 e0       	ldi	r25, 0x00	; 0
-     7d4:	21 50       	subi	r18, 0x01	; 1
-     7d6:	80 40       	sbci	r24, 0x00	; 0
-     7d8:	90 40       	sbci	r25, 0x00	; 0
-     7da:	e1 f7       	brne	.-8      	; 0x7d4 <zelda_melody+0x256>
-     7dc:	00 c0       	rjmp	.+0      	; 0x7de <zelda_melody+0x260>
-     7de:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     7e0:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e4();
-     7e4:	0e 94 32 09 	call	0x1264	; 0x1264 <e4>
-     7e8:	2f ef       	ldi	r18, 0xFF	; 255
-     7ea:	89 ec       	ldi	r24, 0xC9	; 201
-     7ec:	98 e0       	ldi	r25, 0x08	; 8
-     7ee:	21 50       	subi	r18, 0x01	; 1
-     7f0:	80 40       	sbci	r24, 0x00	; 0
-     7f2:	90 40       	sbci	r25, 0x00	; 0
-     7f4:	e1 f7       	brne	.-8      	; 0x7ee <zelda_melody+0x270>
-     7f6:	00 c0       	rjmp	.+0      	; 0x7f8 <zelda_melody+0x27a>
-     7f8:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	// 9
-	d4();
-     7fa:	0e 94 27 09 	call	0x124e	; 0x124e <d4>
-     7fe:	2f ef       	ldi	r18, 0xFF	; 255
-     800:	83 ec       	ldi	r24, 0xC3	; 195
-     802:	99 e0       	ldi	r25, 0x09	; 9
-     804:	21 50       	subi	r18, 0x01	; 1
-     806:	80 40       	sbci	r24, 0x00	; 0
-     808:	90 40       	sbci	r25, 0x00	; 0
-     80a:	e1 f7       	brne	.-8      	; 0x804 <zelda_melody+0x286>
-     80c:	00 c0       	rjmp	.+0      	; 0x80e <zelda_melody+0x290>
-     80e:	00 00       	nop
-	_delay_ms(MS_HALF);
-	silence();
-     810:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     814:	2f ef       	ldi	r18, 0xFF	; 255
-     816:	89 ef       	ldi	r24, 0xF9	; 249
-     818:	90 e0       	ldi	r25, 0x00	; 0
-     81a:	21 50       	subi	r18, 0x01	; 1
-     81c:	80 40       	sbci	r24, 0x00	; 0
-     81e:	90 40       	sbci	r25, 0x00	; 0
-     820:	e1 f7       	brne	.-8      	; 0x81a <zelda_melody+0x29c>
-     822:	00 c0       	rjmp	.+0      	; 0x824 <zelda_melody+0x2a6>
-     824:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     826:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	d4();
-     82a:	0e 94 27 09 	call	0x124e	; 0x124e <d4>
-     82e:	2f ef       	ldi	r18, 0xFF	; 255
-     830:	87 ee       	ldi	r24, 0xE7	; 231
-     832:	93 e0       	ldi	r25, 0x03	; 3
-     834:	21 50       	subi	r18, 0x01	; 1
-     836:	80 40       	sbci	r24, 0x00	; 0
-     838:	90 40       	sbci	r25, 0x00	; 0
-     83a:	e1 f7       	brne	.-8      	; 0x834 <zelda_melody+0x2b6>
-     83c:	00 c0       	rjmp	.+0      	; 0x83e <zelda_melody+0x2c0>
-     83e:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	e4();
-     840:	0e 94 32 09 	call	0x1264	; 0x1264 <e4>
-     844:	2f ef       	ldi	r18, 0xFF	; 255
-     846:	81 ee       	ldi	r24, 0xE1	; 225
-     848:	94 e0       	ldi	r25, 0x04	; 4
-     84a:	21 50       	subi	r18, 0x01	; 1
-     84c:	80 40       	sbci	r24, 0x00	; 0
-     84e:	90 40       	sbci	r25, 0x00	; 0
-     850:	e1 f7       	brne	.-8      	; 0x84a <zelda_melody+0x2cc>
-     852:	00 c0       	rjmp	.+0      	; 0x854 <zelda_melody+0x2d6>
-     854:	00 00       	nop
-	_delay_ms(MS_QUARTER);
-	f4();
-     856:	0e 94 3d 09 	call	0x127a	; 0x127a <f4>
-     85a:	2f ef       	ldi	r18, 0xFF	; 255
-     85c:	8f e0       	ldi	r24, 0x0F	; 15
-     85e:	97 e2       	ldi	r25, 0x27	; 39
-     860:	21 50       	subi	r18, 0x01	; 1
-     862:	80 40       	sbci	r24, 0x00	; 0
-     864:	90 40       	sbci	r25, 0x00	; 0
-     866:	e1 f7       	brne	.-8      	; 0x860 <zelda_melody+0x2e2>
-     868:	00 c0       	rjmp	.+0      	; 0x86a <zelda_melody+0x2ec>
-     86a:	00 00       	nop
-	_delay_ms(MS_DOUBLE);
-	e4();
-     86c:	0e 94 32 09 	call	0x1264	; 0x1264 <e4>
-     870:	2f ef       	ldi	r18, 0xFF	; 255
-     872:	83 ec       	ldi	r24, 0xC3	; 195
-     874:	99 e0       	ldi	r25, 0x09	; 9
-     876:	21 50       	subi	r18, 0x01	; 1
-     878:	80 40       	sbci	r24, 0x00	; 0
-     87a:	90 40       	sbci	r25, 0x00	; 0
-     87c:	e1 f7       	brne	.-8      	; 0x876 <zelda_melody+0x2f8>
-     87e:	00 c0       	rjmp	.+0      	; 0x880 <zelda_melody+0x302>
-     880:	00 00       	nop
-	_delay_ms(MS_HALF);
-	f4();
-     882:	0e 94 3d 09 	call	0x127a	; 0x127a <f4>
-     886:	2f ef       	ldi	r18, 0xFF	; 255
-     888:	83 ec       	ldi	r24, 0xC3	; 195
-     88a:	99 e0       	ldi	r25, 0x09	; 9
-     88c:	21 50       	subi	r18, 0x01	; 1
-     88e:	80 40       	sbci	r24, 0x00	; 0
-     890:	90 40       	sbci	r25, 0x00	; 0
-     892:	e1 f7       	brne	.-8      	; 0x88c <zelda_melody+0x30e>
-     894:	00 c0       	rjmp	.+0      	; 0x896 <zelda_melody+0x318>
-     896:	00 00       	nop
-	_delay_ms(MS_HALF);
-	// 10
-	c4();
-     898:	0e 94 1c 09 	call	0x1238	; 0x1238 <c4>
-     89c:	2f ef       	ldi	r18, 0xFF	; 255
-     89e:	83 ec       	ldi	r24, 0xC3	; 195
-     8a0:	99 e0       	ldi	r25, 0x09	; 9
-     8a2:	21 50       	subi	r18, 0x01	; 1
-     8a4:	80 40       	sbci	r24, 0x00	; 0
-     8a6:	90 40       	sbci	r25, 0x00	; 0
-     8a8:	e1 f7       	brne	.-8      	; 0x8a2 <zelda_melody+0x324>
-     8aa:	00 c0       	rjmp	.+0      	; 0x8ac <zelda_melody+0x32e>
-     8ac:	00 00       	nop
-	_delay_ms(MS_HALF);
-	silence();
-     8ae:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     8b2:	2f ef       	ldi	r18, 0xFF	; 255
-     8b4:	89 ef       	ldi	r24, 0xF9	; 249
-     8b6:	90 e0       	ldi	r25, 0x00	; 0
-     8b8:	21 50       	subi	r18, 0x01	; 1
-     8ba:	80 40       	sbci	r24, 0x00	; 0
-     8bc:	90 40       	sbci	r25, 0x00	; 0
-     8be:	e1 f7       	brne	.-8      	; 0x8b8 <zelda_melody+0x33a>
-     8c0:	00 c0       	rjmp	.+0      	; 0x8c2 <zelda_melody+0x344>
-     8c2:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     8c4:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	c4();
-     8c8:	0e 94 1c 09 	call	0x1238	; 0x1238 <c4>
-     8cc:	2f ef       	ldi	r18, 0xFF	; 255
-     8ce:	87 ee       	ldi	r24, 0xE7	; 231
-     8d0:	93 e0       	ldi	r25, 0x03	; 3
-     8d2:	21 50       	subi	r18, 0x01	; 1
-     8d4:	80 40       	sbci	r24, 0x00	; 0
-     8d6:	90 40       	sbci	r25, 0x00	; 0
-     8d8:	e1 f7       	brne	.-8      	; 0x8d2 <zelda_melody+0x354>
-     8da:	00 c0       	rjmp	.+0      	; 0x8dc <zelda_melody+0x35e>
-     8dc:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	d4();
-     8de:	0e 94 27 09 	call	0x124e	; 0x124e <d4>
-     8e2:	2f ef       	ldi	r18, 0xFF	; 255
-     8e4:	81 ee       	ldi	r24, 0xE1	; 225
-     8e6:	94 e0       	ldi	r25, 0x04	; 4
-     8e8:	21 50       	subi	r18, 0x01	; 1
-     8ea:	80 40       	sbci	r24, 0x00	; 0
-     8ec:	90 40       	sbci	r25, 0x00	; 0
-     8ee:	e1 f7       	brne	.-8      	; 0x8e8 <zelda_melody+0x36a>
-     8f0:	00 c0       	rjmp	.+0      	; 0x8f2 <zelda_melody+0x374>
-     8f2:	00 00       	nop
-	_delay_ms(MS_QUARTER);
-	e4();
-     8f4:	0e 94 32 09 	call	0x1264	; 0x1264 <e4>
-     8f8:	2f ef       	ldi	r18, 0xFF	; 255
-     8fa:	8f e0       	ldi	r24, 0x0F	; 15
-     8fc:	97 e2       	ldi	r25, 0x27	; 39
-     8fe:	21 50       	subi	r18, 0x01	; 1
-     900:	80 40       	sbci	r24, 0x00	; 0
-     902:	90 40       	sbci	r25, 0x00	; 0
-     904:	e1 f7       	brne	.-8      	; 0x8fe <zelda_melody+0x380>
-     906:	00 c0       	rjmp	.+0      	; 0x908 <__stack+0x9>
-     908:	00 00       	nop
-	_delay_ms(MS_DOUBLE);
-	d4();
-     90a:	0e 94 27 09 	call	0x124e	; 0x124e <d4>
-     90e:	2f ef       	ldi	r18, 0xFF	; 255
-     910:	83 ec       	ldi	r24, 0xC3	; 195
-     912:	99 e0       	ldi	r25, 0x09	; 9
-     914:	21 50       	subi	r18, 0x01	; 1
-     916:	80 40       	sbci	r24, 0x00	; 0
-     918:	90 40       	sbci	r25, 0x00	; 0
-     91a:	e1 f7       	brne	.-8      	; 0x914 <__stack+0x15>
-     91c:	00 c0       	rjmp	.+0      	; 0x91e <__stack+0x1f>
-     91e:	00 00       	nop
-	_delay_ms(MS_HALF);
-	c4();
-     920:	0e 94 1c 09 	call	0x1238	; 0x1238 <c4>
-     924:	2f ef       	ldi	r18, 0xFF	; 255
-     926:	83 ec       	ldi	r24, 0xC3	; 195
-     928:	99 e0       	ldi	r25, 0x09	; 9
-     92a:	21 50       	subi	r18, 0x01	; 1
-     92c:	80 40       	sbci	r24, 0x00	; 0
-     92e:	90 40       	sbci	r25, 0x00	; 0
-     930:	e1 f7       	brne	.-8      	; 0x92a <__stack+0x2b>
-     932:	00 c0       	rjmp	.+0      	; 0x934 <__stack+0x35>
-     934:	00 00       	nop
-	_delay_ms(MS_HALF);
-	// 11
-	b3();
-     936:	0e 94 11 09 	call	0x1222	; 0x1222 <b3>
-     93a:	2f ef       	ldi	r18, 0xFF	; 255
-     93c:	83 ec       	ldi	r24, 0xC3	; 195
-     93e:	99 e0       	ldi	r25, 0x09	; 9
-     940:	21 50       	subi	r18, 0x01	; 1
-     942:	80 40       	sbci	r24, 0x00	; 0
-     944:	90 40       	sbci	r25, 0x00	; 0
-     946:	e1 f7       	brne	.-8      	; 0x940 <__stack+0x41>
-     948:	00 c0       	rjmp	.+0      	; 0x94a <__stack+0x4b>
-     94a:	00 00       	nop
-	_delay_ms(MS_HALF);
-	silence();
-     94c:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     950:	2f ef       	ldi	r18, 0xFF	; 255
-     952:	89 ef       	ldi	r24, 0xF9	; 249
-     954:	90 e0       	ldi	r25, 0x00	; 0
-     956:	21 50       	subi	r18, 0x01	; 1
-     958:	80 40       	sbci	r24, 0x00	; 0
-     95a:	90 40       	sbci	r25, 0x00	; 0
-     95c:	e1 f7       	brne	.-8      	; 0x956 <__stack+0x57>
-     95e:	00 c0       	rjmp	.+0      	; 0x960 <__stack+0x61>
-     960:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     962:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	b3();
-     966:	0e 94 11 09 	call	0x1222	; 0x1222 <b3>
-     96a:	2f ef       	ldi	r18, 0xFF	; 255
-     96c:	87 ee       	ldi	r24, 0xE7	; 231
-     96e:	93 e0       	ldi	r25, 0x03	; 3
-     970:	21 50       	subi	r18, 0x01	; 1
-     972:	80 40       	sbci	r24, 0x00	; 0
-     974:	90 40       	sbci	r25, 0x00	; 0
-     976:	e1 f7       	brne	.-8      	; 0x970 <__stack+0x71>
-     978:	00 c0       	rjmp	.+0      	; 0x97a <__stack+0x7b>
-     97a:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	c4(); // sharp
-     97c:	0e 94 1c 09 	call	0x1238	; 0x1238 <c4>
-     980:	2f ef       	ldi	r18, 0xFF	; 255
-     982:	81 ee       	ldi	r24, 0xE1	; 225
-     984:	94 e0       	ldi	r25, 0x04	; 4
-     986:	21 50       	subi	r18, 0x01	; 1
-     988:	80 40       	sbci	r24, 0x00	; 0
-     98a:	90 40       	sbci	r25, 0x00	; 0
-     98c:	e1 f7       	brne	.-8      	; 0x986 <__stack+0x87>
-     98e:	00 c0       	rjmp	.+0      	; 0x990 <__stack+0x91>
-     990:	00 00       	nop
-	_delay_ms(MS_QUARTER);
-	d4(); // sharp
-     992:	0e 94 27 09 	call	0x124e	; 0x124e <d4>
-     996:	2f ef       	ldi	r18, 0xFF	; 255
-     998:	8f e0       	ldi	r24, 0x0F	; 15
-     99a:	97 e2       	ldi	r25, 0x27	; 39
-     99c:	21 50       	subi	r18, 0x01	; 1
-     99e:	80 40       	sbci	r24, 0x00	; 0
-     9a0:	90 40       	sbci	r25, 0x00	; 0
-     9a2:	e1 f7       	brne	.-8      	; 0x99c <__stack+0x9d>
-     9a4:	00 c0       	rjmp	.+0      	; 0x9a6 <__stack+0xa7>
-     9a6:	00 00       	nop
-	_delay_ms(MS_DOUBLE);
-	f4(); // sharp
-     9a8:	0e 94 3d 09 	call	0x127a	; 0x127a <f4>
-     9ac:	2f ef       	ldi	r18, 0xFF	; 255
-     9ae:	87 e8       	ldi	r24, 0x87	; 135
-     9b0:	93 e1       	ldi	r25, 0x13	; 19
-     9b2:	21 50       	subi	r18, 0x01	; 1
-     9b4:	80 40       	sbci	r24, 0x00	; 0
-     9b6:	90 40       	sbci	r25, 0x00	; 0
-     9b8:	e1 f7       	brne	.-8      	; 0x9b2 <__stack+0xb3>
-     9ba:	00 c0       	rjmp	.+0      	; 0x9bc <__stack+0xbd>
-     9bc:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	// 12 (3rd line)
-	e4();
-     9be:	0e 94 32 09 	call	0x1264	; 0x1264 <e4>
-     9c2:	2f ef       	ldi	r18, 0xFF	; 255
-     9c4:	83 ec       	ldi	r24, 0xC3	; 195
-     9c6:	99 e0       	ldi	r25, 0x09	; 9
-     9c8:	21 50       	subi	r18, 0x01	; 1
-     9ca:	80 40       	sbci	r24, 0x00	; 0
-     9cc:	90 40       	sbci	r25, 0x00	; 0
-     9ce:	e1 f7       	brne	.-8      	; 0x9c8 <__stack+0xc9>
-     9d0:	00 c0       	rjmp	.+0      	; 0x9d2 <__stack+0xd3>
-     9d2:	00 00       	nop
-	_delay_ms(MS_HALF);
-	e3();
-     9d4:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     9d8:	2f ef       	ldi	r18, 0xFF	; 255
-     9da:	81 ee       	ldi	r24, 0xE1	; 225
-     9dc:	94 e0       	ldi	r25, 0x04	; 4
-     9de:	21 50       	subi	r18, 0x01	; 1
-     9e0:	80 40       	sbci	r24, 0x00	; 0
-     9e2:	90 40       	sbci	r25, 0x00	; 0
-     9e4:	e1 f7       	brne	.-8      	; 0x9de <__stack+0xdf>
-     9e6:	00 c0       	rjmp	.+0      	; 0x9e8 <__stack+0xe9>
-     9e8:	00 00       	nop
-	_delay_ms(MS_QUARTER);
-	silence();
-     9ea:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     9ee:	2f ef       	ldi	r18, 0xFF	; 255
-     9f0:	89 ef       	ldi	r24, 0xF9	; 249
-     9f2:	90 e0       	ldi	r25, 0x00	; 0
-     9f4:	21 50       	subi	r18, 0x01	; 1
-     9f6:	80 40       	sbci	r24, 0x00	; 0
-     9f8:	90 40       	sbci	r25, 0x00	; 0
-     9fa:	e1 f7       	brne	.-8      	; 0x9f4 <__stack+0xf5>
-     9fc:	00 c0       	rjmp	.+0      	; 0x9fe <__stack+0xff>
-     9fe:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     a00:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     a04:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     a08:	2f ef       	ldi	r18, 0xFF	; 255
-     a0a:	87 ee       	ldi	r24, 0xE7	; 231
-     a0c:	93 e0       	ldi	r25, 0x03	; 3
-     a0e:	21 50       	subi	r18, 0x01	; 1
-     a10:	80 40       	sbci	r24, 0x00	; 0
-     a12:	90 40       	sbci	r25, 0x00	; 0
-     a14:	e1 f7       	brne	.-8      	; 0xa0e <__stack+0x10f>
-     a16:	00 c0       	rjmp	.+0      	; 0xa18 <__stack+0x119>
-     a18:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	silence();
-     a1a:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     a1e:	2f ef       	ldi	r18, 0xFF	; 255
-     a20:	89 ef       	ldi	r24, 0xF9	; 249
-     a22:	90 e0       	ldi	r25, 0x00	; 0
-     a24:	21 50       	subi	r18, 0x01	; 1
-     a26:	80 40       	sbci	r24, 0x00	; 0
-     a28:	90 40       	sbci	r25, 0x00	; 0
-     a2a:	e1 f7       	brne	.-8      	; 0xa24 <__stack+0x125>
-     a2c:	00 c0       	rjmp	.+0      	; 0xa2e <__stack+0x12f>
-     a2e:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     a30:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     a34:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     a38:	2f ef       	ldi	r18, 0xFF	; 255
-     a3a:	89 ec       	ldi	r24, 0xC9	; 201
-     a3c:	98 e0       	ldi	r25, 0x08	; 8
-     a3e:	21 50       	subi	r18, 0x01	; 1
-     a40:	80 40       	sbci	r24, 0x00	; 0
-     a42:	90 40       	sbci	r25, 0x00	; 0
-     a44:	e1 f7       	brne	.-8      	; 0xa3e <__stack+0x13f>
-     a46:	00 c0       	rjmp	.+0      	; 0xa48 <__stack+0x149>
-     a48:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	silence();
-     a4a:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     a4e:	2f ef       	ldi	r18, 0xFF	; 255
-     a50:	89 ef       	ldi	r24, 0xF9	; 249
-     a52:	90 e0       	ldi	r25, 0x00	; 0
-     a54:	21 50       	subi	r18, 0x01	; 1
-     a56:	80 40       	sbci	r24, 0x00	; 0
-     a58:	90 40       	sbci	r25, 0x00	; 0
-     a5a:	e1 f7       	brne	.-8      	; 0xa54 <__stack+0x155>
-     a5c:	00 c0       	rjmp	.+0      	; 0xa5e <__stack+0x15f>
-     a5e:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     a60:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     a64:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     a68:	2f ef       	ldi	r18, 0xFF	; 255
-     a6a:	87 ee       	ldi	r24, 0xE7	; 231
-     a6c:	93 e0       	ldi	r25, 0x03	; 3
-     a6e:	21 50       	subi	r18, 0x01	; 1
-     a70:	80 40       	sbci	r24, 0x00	; 0
-     a72:	90 40       	sbci	r25, 0x00	; 0
-     a74:	e1 f7       	brne	.-8      	; 0xa6e <__stack+0x16f>
-     a76:	00 c0       	rjmp	.+0      	; 0xa78 <__stack+0x179>
-     a78:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	silence();
-     a7a:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     a7e:	2f ef       	ldi	r18, 0xFF	; 255
-     a80:	89 ef       	ldi	r24, 0xF9	; 249
-     a82:	90 e0       	ldi	r25, 0x00	; 0
-     a84:	21 50       	subi	r18, 0x01	; 1
-     a86:	80 40       	sbci	r24, 0x00	; 0
-     a88:	90 40       	sbci	r25, 0x00	; 0
-     a8a:	e1 f7       	brne	.-8      	; 0xa84 <__stack+0x185>
-     a8c:	00 c0       	rjmp	.+0      	; 0xa8e <__stack+0x18f>
-     a8e:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     a90:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     a94:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     a98:	2f ef       	ldi	r18, 0xFF	; 255
-     a9a:	87 ee       	ldi	r24, 0xE7	; 231
-     a9c:	93 e0       	ldi	r25, 0x03	; 3
-     a9e:	21 50       	subi	r18, 0x01	; 1
-     aa0:	80 40       	sbci	r24, 0x00	; 0
-     aa2:	90 40       	sbci	r25, 0x00	; 0
-     aa4:	e1 f7       	brne	.-8      	; 0xa9e <__stack+0x19f>
-     aa6:	00 c0       	rjmp	.+0      	; 0xaa8 <__stack+0x1a9>
-     aa8:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	silence();
-     aaa:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     aae:	2f ef       	ldi	r18, 0xFF	; 255
-     ab0:	89 ef       	ldi	r24, 0xF9	; 249
-     ab2:	90 e0       	ldi	r25, 0x00	; 0
-     ab4:	21 50       	subi	r18, 0x01	; 1
-     ab6:	80 40       	sbci	r24, 0x00	; 0
-     ab8:	90 40       	sbci	r25, 0x00	; 0
-     aba:	e1 f7       	brne	.-8      	; 0xab4 <__stack+0x1b5>
-     abc:	00 c0       	rjmp	.+0      	; 0xabe <__stack+0x1bf>
-     abe:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     ac0:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     ac4:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     ac8:	2f ef       	ldi	r18, 0xFF	; 255
-     aca:	89 ec       	ldi	r24, 0xC9	; 201
-     acc:	98 e0       	ldi	r25, 0x08	; 8
-     ace:	21 50       	subi	r18, 0x01	; 1
-     ad0:	80 40       	sbci	r24, 0x00	; 0
-     ad2:	90 40       	sbci	r25, 0x00	; 0
-     ad4:	e1 f7       	brne	.-8      	; 0xace <__stack+0x1cf>
-     ad6:	00 c0       	rjmp	.+0      	; 0xad8 <__stack+0x1d9>
-     ad8:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	silence();
-     ada:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     ade:	2f ef       	ldi	r18, 0xFF	; 255
-     ae0:	89 ef       	ldi	r24, 0xF9	; 249
-     ae2:	90 e0       	ldi	r25, 0x00	; 0
-     ae4:	21 50       	subi	r18, 0x01	; 1
-     ae6:	80 40       	sbci	r24, 0x00	; 0
-     ae8:	90 40       	sbci	r25, 0x00	; 0
-     aea:	e1 f7       	brne	.-8      	; 0xae4 <__stack+0x1e5>
-     aec:	00 c0       	rjmp	.+0      	; 0xaee <__stack+0x1ef>
-     aee:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     af0:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     af4:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     af8:	2f ef       	ldi	r18, 0xFF	; 255
-     afa:	87 ee       	ldi	r24, 0xE7	; 231
-     afc:	93 e0       	ldi	r25, 0x03	; 3
-     afe:	21 50       	subi	r18, 0x01	; 1
-     b00:	80 40       	sbci	r24, 0x00	; 0
-     b02:	90 40       	sbci	r25, 0x00	; 0
-     b04:	e1 f7       	brne	.-8      	; 0xafe <__stack+0x1ff>
-     b06:	00 c0       	rjmp	.+0      	; 0xb08 <__stack+0x209>
-     b08:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	silence();
-     b0a:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     b0e:	2f ef       	ldi	r18, 0xFF	; 255
-     b10:	89 ef       	ldi	r24, 0xF9	; 249
-     b12:	90 e0       	ldi	r25, 0x00	; 0
-     b14:	21 50       	subi	r18, 0x01	; 1
-     b16:	80 40       	sbci	r24, 0x00	; 0
-     b18:	90 40       	sbci	r25, 0x00	; 0
-     b1a:	e1 f7       	brne	.-8      	; 0xb14 <__stack+0x215>
-     b1c:	00 c0       	rjmp	.+0      	; 0xb1e <__stack+0x21f>
-     b1e:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     b20:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     b24:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     b28:	2f ef       	ldi	r18, 0xFF	; 255
-     b2a:	87 ee       	ldi	r24, 0xE7	; 231
-     b2c:	93 e0       	ldi	r25, 0x03	; 3
-     b2e:	21 50       	subi	r18, 0x01	; 1
-     b30:	80 40       	sbci	r24, 0x00	; 0
-     b32:	90 40       	sbci	r25, 0x00	; 0
-     b34:	e1 f7       	brne	.-8      	; 0xb2e <__stack+0x22f>
-     b36:	00 c0       	rjmp	.+0      	; 0xb38 <__stack+0x239>
-     b38:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	silence();
-     b3a:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     b3e:	2f ef       	ldi	r18, 0xFF	; 255
-     b40:	89 ef       	ldi	r24, 0xF9	; 249
-     b42:	90 e0       	ldi	r25, 0x00	; 0
-     b44:	21 50       	subi	r18, 0x01	; 1
-     b46:	80 40       	sbci	r24, 0x00	; 0
-     b48:	90 40       	sbci	r25, 0x00	; 0
-     b4a:	e1 f7       	brne	.-8      	; 0xb44 <__stack+0x245>
-     b4c:	00 c0       	rjmp	.+0      	; 0xb4e <__stack+0x24f>
-     b4e:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     b50:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     b54:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     b58:	2f ef       	ldi	r18, 0xFF	; 255
-     b5a:	89 ec       	ldi	r24, 0xC9	; 201
-     b5c:	98 e0       	ldi	r25, 0x08	; 8
-     b5e:	21 50       	subi	r18, 0x01	; 1
-     b60:	80 40       	sbci	r24, 0x00	; 0
-     b62:	90 40       	sbci	r25, 0x00	; 0
-     b64:	e1 f7       	brne	.-8      	; 0xb5e <__stack+0x25f>
-     b66:	00 c0       	rjmp	.+0      	; 0xb68 <__stack+0x269>
-     b68:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	silence();
-     b6a:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     b6e:	2f ef       	ldi	r18, 0xFF	; 255
-     b70:	89 ef       	ldi	r24, 0xF9	; 249
-     b72:	90 e0       	ldi	r25, 0x00	; 0
-     b74:	21 50       	subi	r18, 0x01	; 1
-     b76:	80 40       	sbci	r24, 0x00	; 0
-     b78:	90 40       	sbci	r25, 0x00	; 0
-     b7a:	e1 f7       	brne	.-8      	; 0xb74 <__stack+0x275>
-     b7c:	00 c0       	rjmp	.+0      	; 0xb7e <__stack+0x27f>
-     b7e:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     b80:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     b84:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     b88:	2f ef       	ldi	r18, 0xFF	; 255
-     b8a:	89 ec       	ldi	r24, 0xC9	; 201
-     b8c:	98 e0       	ldi	r25, 0x08	; 8
-     b8e:	21 50       	subi	r18, 0x01	; 1
-     b90:	80 40       	sbci	r24, 0x00	; 0
-     b92:	90 40       	sbci	r25, 0x00	; 0
-     b94:	e1 f7       	brne	.-8      	; 0xb8e <__stack+0x28f>
-     b96:	00 c0       	rjmp	.+0      	; 0xb98 <__stack+0x299>
-     b98:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	// 13
 	a3();
-     b9a:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     b9e:	2f ef       	ldi	r18, 0xFF	; 255
-     ba0:	87 e8       	ldi	r24, 0x87	; 135
-     ba2:	93 e1       	ldi	r25, 0x13	; 19
-     ba4:	21 50       	subi	r18, 0x01	; 1
-     ba6:	80 40       	sbci	r24, 0x00	; 0
-     ba8:	90 40       	sbci	r25, 0x00	; 0
-     baa:	e1 f7       	brne	.-8      	; 0xba4 <__stack+0x2a5>
-     bac:	00 c0       	rjmp	.+0      	; 0xbae <__stack+0x2af>
-     bae:	00 00       	nop
+ 40e:	0e 94 49 02 	call	0x492	; 0x492 <a3>
+ 412:	2f ef       	ldi	r18, 0xFF	; 255
+ 414:	87 e8       	ldi	r24, 0x87	; 135
+ 416:	93 e1       	ldi	r25, 0x13	; 19
+ 418:	21 50       	subi	r18, 0x01	; 1
+ 41a:	80 40       	sbci	r24, 0x00	; 0
+ 41c:	90 40       	sbci	r25, 0x00	; 0
+ 41e:	e1 f7       	brne	.-8      	; 0x418 <__LOCK_REGION_LENGTH__+0x18>
+ 420:	00 c0       	rjmp	.+0      	; 0x422 <__LOCK_REGION_LENGTH__+0x22>
+ 422:	00 00       	nop
 	_delay_ms(MS_BLACK);
-	e3();
-     bb0:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     bb4:	2f ef       	ldi	r18, 0xFF	; 255
-     bb6:	87 e8       	ldi	r24, 0x87	; 135
-     bb8:	93 e1       	ldi	r25, 0x13	; 19
-     bba:	21 50       	subi	r18, 0x01	; 1
-     bbc:	80 40       	sbci	r24, 0x00	; 0
-     bbe:	90 40       	sbci	r25, 0x00	; 0
-     bc0:	e1 f7       	brne	.-8      	; 0xbba <__stack+0x2bb>
-     bc2:	00 c0       	rjmp	.+0      	; 0xbc4 <__stack+0x2c5>
-     bc4:	00 00       	nop
-     bc6:	2f ef       	ldi	r18, 0xFF	; 255
-     bc8:	83 ec       	ldi	r24, 0xC3	; 195
-     bca:	99 e0       	ldi	r25, 0x09	; 9
-     bcc:	21 50       	subi	r18, 0x01	; 1
-     bce:	80 40       	sbci	r24, 0x00	; 0
-     bd0:	90 40       	sbci	r25, 0x00	; 0
-     bd2:	e1 f7       	brne	.-8      	; 0xbcc <__stack+0x2cd>
-     bd4:	00 c0       	rjmp	.+0      	; 0xbd6 <__stack+0x2d7>
-     bd6:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	_delay_ms(MS_HALF);
+	silence();
+ 424:	0e 94 a1 02 	call	0x542	; 0x542 <silence>
+ 428:	2f ef       	ldi	r18, 0xFF	; 255
+ 42a:	89 ef       	ldi	r24, 0xF9	; 249
+ 42c:	90 e0       	ldi	r25, 0x00	; 0
+ 42e:	21 50       	subi	r18, 0x01	; 1
+ 430:	80 40       	sbci	r24, 0x00	; 0
+ 432:	90 40       	sbci	r25, 0x00	; 0
+ 434:	e1 f7       	brne	.-8      	; 0x42e <__LOCK_REGION_LENGTH__+0x2e>
+ 436:	00 c0       	rjmp	.+0      	; 0x438 <__LOCK_REGION_LENGTH__+0x38>
+ 438:	00 00       	nop
+	_delay_ms(20);
+	sound();
+ 43a:	0e 94 a5 02 	call	0x54a	; 0x54a <sound>
 	a3();
-     bd8:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     bdc:	2f ef       	ldi	r18, 0xFF	; 255
-     bde:	83 ec       	ldi	r24, 0xC3	; 195
-     be0:	99 e0       	ldi	r25, 0x09	; 9
-     be2:	21 50       	subi	r18, 0x01	; 1
-     be4:	80 40       	sbci	r24, 0x00	; 0
-     be6:	90 40       	sbci	r25, 0x00	; 0
-     be8:	e1 f7       	brne	.-8      	; 0xbe2 <__stack+0x2e3>
-     bea:	00 c0       	rjmp	.+0      	; 0xbec <__stack+0x2ed>
-     bec:	00 00       	nop
-	_delay_ms(MS_HALF);
-	silence();
-     bee:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     bf2:	2f ef       	ldi	r18, 0xFF	; 255
-     bf4:	89 ef       	ldi	r24, 0xF9	; 249
-     bf6:	90 e0       	ldi	r25, 0x00	; 0
-     bf8:	21 50       	subi	r18, 0x01	; 1
-     bfa:	80 40       	sbci	r24, 0x00	; 0
-     bfc:	90 40       	sbci	r25, 0x00	; 0
-     bfe:	e1 f7       	brne	.-8      	; 0xbf8 <__stack+0x2f9>
-     c00:	00 c0       	rjmp	.+0      	; 0xc02 <__stack+0x303>
-     c02:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     c04:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	a3();
-     c08:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     c0c:	2f ef       	ldi	r18, 0xFF	; 255
-     c0e:	87 ee       	ldi	r24, 0xE7	; 231
-     c10:	93 e0       	ldi	r25, 0x03	; 3
-     c12:	21 50       	subi	r18, 0x01	; 1
-     c14:	80 40       	sbci	r24, 0x00	; 0
-     c16:	90 40       	sbci	r25, 0x00	; 0
-     c18:	e1 f7       	brne	.-8      	; 0xc12 <__stack+0x313>
-     c1a:	00 c0       	rjmp	.+0      	; 0xc1c <__stack+0x31d>
-     c1c:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	b3();
-     c1e:	0e 94 11 09 	call	0x1222	; 0x1222 <b3>
-     c22:	2f ef       	ldi	r18, 0xFF	; 255
-     c24:	81 ee       	ldi	r24, 0xE1	; 225
-     c26:	94 e0       	ldi	r25, 0x04	; 4
-     c28:	21 50       	subi	r18, 0x01	; 1
-     c2a:	80 40       	sbci	r24, 0x00	; 0
-     c2c:	90 40       	sbci	r25, 0x00	; 0
-     c2e:	e1 f7       	brne	.-8      	; 0xc28 <__stack+0x329>
-     c30:	00 c0       	rjmp	.+0      	; 0xc32 <__stack+0x333>
-     c32:	00 00       	nop
-	_delay_ms(MS_QUARTER);
-	c4(); // sharp
-     c34:	0e 94 1c 09 	call	0x1238	; 0x1238 <c4>
-     c38:	2f ef       	ldi	r18, 0xFF	; 255
-     c3a:	81 ee       	ldi	r24, 0xE1	; 225
-     c3c:	94 e0       	ldi	r25, 0x04	; 4
-     c3e:	21 50       	subi	r18, 0x01	; 1
-     c40:	80 40       	sbci	r24, 0x00	; 0
-     c42:	90 40       	sbci	r25, 0x00	; 0
-     c44:	e1 f7       	brne	.-8      	; 0xc3e <__stack+0x33f>
-     c46:	00 c0       	rjmp	.+0      	; 0xc48 <__stack+0x349>
-     c48:	00 00       	nop
-	_delay_ms(MS_QUARTER);
-	d4();
-     c4a:	0e 94 27 09 	call	0x124e	; 0x124e <d4>
-     c4e:	2f ef       	ldi	r18, 0xFF	; 255
-     c50:	81 ee       	ldi	r24, 0xE1	; 225
-     c52:	94 e0       	ldi	r25, 0x04	; 4
-     c54:	21 50       	subi	r18, 0x01	; 1
-     c56:	80 40       	sbci	r24, 0x00	; 0
-     c58:	90 40       	sbci	r25, 0x00	; 0
-     c5a:	e1 f7       	brne	.-8      	; 0xc54 <__stack+0x355>
-     c5c:	00 c0       	rjmp	.+0      	; 0xc5e <__stack+0x35f>
-     c5e:	00 00       	nop
-	_delay_ms(MS_QUARTER);
-	// 14
-	e4();
-     c60:	0e 94 32 09 	call	0x1264	; 0x1264 <e4>
-     c64:	2f ef       	ldi	r18, 0xFF	; 255
-     c66:	8f e0       	ldi	r24, 0x0F	; 15
-     c68:	97 e2       	ldi	r25, 0x27	; 39
-     c6a:	21 50       	subi	r18, 0x01	; 1
-     c6c:	80 40       	sbci	r24, 0x00	; 0
-     c6e:	90 40       	sbci	r25, 0x00	; 0
-     c70:	e1 f7       	brne	.-8      	; 0xc6a <__stack+0x36b>
-     c72:	00 c0       	rjmp	.+0      	; 0xc74 <__stack+0x375>
-     c74:	00 00       	nop
+ 43e:	0e 94 49 02 	call	0x492	; 0x492 <a3>
+ 442:	2f ef       	ldi	r18, 0xFF	; 255
+ 444:	8f e0       	ldi	r24, 0x0F	; 15
+ 446:	97 e2       	ldi	r25, 0x27	; 39
+ 448:	21 50       	subi	r18, 0x01	; 1
+ 44a:	80 40       	sbci	r24, 0x00	; 0
+ 44c:	90 40       	sbci	r25, 0x00	; 0
+ 44e:	e1 f7       	brne	.-8      	; 0x448 <__LOCK_REGION_LENGTH__+0x48>
+ 450:	00 c0       	rjmp	.+0      	; 0x452 <__LOCK_REGION_LENGTH__+0x52>
+ 452:	00 00       	nop
 	_delay_ms(MS_DOUBLE);
-	silence();
-     c76:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     c7a:	2f ef       	ldi	r18, 0xFF	; 255
-     c7c:	83 ec       	ldi	r24, 0xC3	; 195
-     c7e:	99 e0       	ldi	r25, 0x09	; 9
-     c80:	21 50       	subi	r18, 0x01	; 1
-     c82:	80 40       	sbci	r24, 0x00	; 0
-     c84:	90 40       	sbci	r25, 0x00	; 0
-     c86:	e1 f7       	brne	.-8      	; 0xc80 <__stack+0x381>
-     c88:	00 c0       	rjmp	.+0      	; 0xc8a <__stack+0x38b>
-     c8a:	00 00       	nop
-	_delay_ms(MS_HALF);
-	sound();
-     c8c:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e4();
-     c90:	0e 94 32 09 	call	0x1264	; 0x1264 <e4>
-     c94:	2f ef       	ldi	r18, 0xFF	; 255
-     c96:	83 ec       	ldi	r24, 0xC3	; 195
-     c98:	99 e0       	ldi	r25, 0x09	; 9
-     c9a:	21 50       	subi	r18, 0x01	; 1
-     c9c:	80 40       	sbci	r24, 0x00	; 0
-     c9e:	90 40       	sbci	r25, 0x00	; 0
-     ca0:	e1 f7       	brne	.-8      	; 0xc9a <__stack+0x39b>
-     ca2:	00 c0       	rjmp	.+0      	; 0xca4 <__stack+0x3a5>
-     ca4:	00 00       	nop
-	_delay_ms(MS_HALF);
-	silence();
-     ca6:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     caa:	2f ef       	ldi	r18, 0xFF	; 255
-     cac:	89 ef       	ldi	r24, 0xF9	; 249
-     cae:	90 e0       	ldi	r25, 0x00	; 0
-     cb0:	21 50       	subi	r18, 0x01	; 1
-     cb2:	80 40       	sbci	r24, 0x00	; 0
-     cb4:	90 40       	sbci	r25, 0x00	; 0
-     cb6:	e1 f7       	brne	.-8      	; 0xcb0 <__stack+0x3b1>
-     cb8:	00 c0       	rjmp	.+0      	; 0xcba <__stack+0x3bb>
-     cba:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     cbc:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e4();
-     cc0:	0e 94 32 09 	call	0x1264	; 0x1264 <e4>
-     cc4:	2f ef       	ldi	r18, 0xFF	; 255
-     cc6:	89 ec       	ldi	r24, 0xC9	; 201
-     cc8:	98 e0       	ldi	r25, 0x08	; 8
-     cca:	21 50       	subi	r18, 0x01	; 1
-     ccc:	80 40       	sbci	r24, 0x00	; 0
-     cce:	90 40       	sbci	r25, 0x00	; 0
-     cd0:	e1 f7       	brne	.-8      	; 0xcca <__stack+0x3cb>
-     cd2:	00 c0       	rjmp	.+0      	; 0xcd4 <__stack+0x3d5>
-     cd4:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	f4();
-     cd6:	0e 94 3d 09 	call	0x127a	; 0x127a <f4>
-     cda:	2f ef       	ldi	r18, 0xFF	; 255
-     cdc:	83 ec       	ldi	r24, 0xC3	; 195
-     cde:	99 e0       	ldi	r25, 0x09	; 9
-     ce0:	21 50       	subi	r18, 0x01	; 1
-     ce2:	80 40       	sbci	r24, 0x00	; 0
-     ce4:	90 40       	sbci	r25, 0x00	; 0
-     ce6:	e1 f7       	brne	.-8      	; 0xce0 <__stack+0x3e1>
-     ce8:	00 c0       	rjmp	.+0      	; 0xcea <__stack+0x3eb>
-     cea:	00 00       	nop
-	_delay_ms(MS_HALF);
-	g4();
-     cec:	0e 94 48 09 	call	0x1290	; 0x1290 <g4>
-     cf0:	2f ef       	ldi	r18, 0xFF	; 255
-     cf2:	83 ec       	ldi	r24, 0xC3	; 195
-     cf4:	99 e0       	ldi	r25, 0x09	; 9
-     cf6:	21 50       	subi	r18, 0x01	; 1
-     cf8:	80 40       	sbci	r24, 0x00	; 0
-     cfa:	90 40       	sbci	r25, 0x00	; 0
-     cfc:	e1 f7       	brne	.-8      	; 0xcf6 <__stack+0x3f7>
-     cfe:	00 c0       	rjmp	.+0      	; 0xd00 <__stack+0x401>
-     d00:	00 00       	nop
-	_delay_ms(MS_HALF);
-	// 15
-	a4();
-     d02:	0e 94 53 09 	call	0x12a6	; 0x12a6 <a4>
-     d06:	2f ef       	ldi	r18, 0xFF	; 255
-     d08:	8f e0       	ldi	r24, 0x0F	; 15
-     d0a:	97 e2       	ldi	r25, 0x27	; 39
-     d0c:	21 50       	subi	r18, 0x01	; 1
-     d0e:	80 40       	sbci	r24, 0x00	; 0
-     d10:	90 40       	sbci	r25, 0x00	; 0
-     d12:	e1 f7       	brne	.-8      	; 0xd0c <__stack+0x40d>
-     d14:	00 c0       	rjmp	.+0      	; 0xd16 <__stack+0x417>
-     d16:	00 00       	nop
-	_delay_ms(MS_DOUBLE);
-	silence();
-     d18:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     d1c:	2f ef       	ldi	r18, 0xFF	; 255
-     d1e:	87 e8       	ldi	r24, 0x87	; 135
-     d20:	93 e1       	ldi	r25, 0x13	; 19
-     d22:	21 50       	subi	r18, 0x01	; 1
-     d24:	80 40       	sbci	r24, 0x00	; 0
-     d26:	90 40       	sbci	r25, 0x00	; 0
-     d28:	e1 f7       	brne	.-8      	; 0xd22 <__stack+0x423>
-     d2a:	00 c0       	rjmp	.+0      	; 0xd2c <__stack+0x42d>
-     d2c:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	sound();
-     d2e:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	c5();
-     d32:	0e 94 69 09 	call	0x12d2	; 0x12d2 <c5>
-     d36:	2f ef       	ldi	r18, 0xFF	; 255
-     d38:	87 e8       	ldi	r24, 0x87	; 135
-     d3a:	93 e1       	ldi	r25, 0x13	; 19
-     d3c:	21 50       	subi	r18, 0x01	; 1
-     d3e:	80 40       	sbci	r24, 0x00	; 0
-     d40:	90 40       	sbci	r25, 0x00	; 0
-     d42:	e1 f7       	brne	.-8      	; 0xd3c <__stack+0x43d>
-     d44:	00 c0       	rjmp	.+0      	; 0xd46 <__stack+0x447>
-     d46:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	// 16
-	b4();
-     d48:	0e 94 5e 09 	call	0x12bc	; 0x12bc <b4>
-     d4c:	2f ef       	ldi	r18, 0xFF	; 255
-     d4e:	87 e8       	ldi	r24, 0x87	; 135
-     d50:	93 e1       	ldi	r25, 0x13	; 19
-     d52:	21 50       	subi	r18, 0x01	; 1
-     d54:	80 40       	sbci	r24, 0x00	; 0
-     d56:	90 40       	sbci	r25, 0x00	; 0
-     d58:	e1 f7       	brne	.-8      	; 0xd52 <__stack+0x453>
-     d5a:	00 c0       	rjmp	.+0      	; 0xd5c <__stack+0x45d>
-     d5c:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	g4(); //sharp
-     d5e:	0e 94 48 09 	call	0x1290	; 0x1290 <g4>
-     d62:	2f ef       	ldi	r18, 0xFF	; 255
-     d64:	8f e0       	ldi	r24, 0x0F	; 15
-     d66:	97 e2       	ldi	r25, 0x27	; 39
-     d68:	21 50       	subi	r18, 0x01	; 1
-     d6a:	80 40       	sbci	r24, 0x00	; 0
-     d6c:	90 40       	sbci	r25, 0x00	; 0
-     d6e:	e1 f7       	brne	.-8      	; 0xd68 <__stack+0x469>
-     d70:	00 c0       	rjmp	.+0      	; 0xd72 <__stack+0x473>
-     d72:	00 00       	nop
-	_delay_ms(MS_DOUBLE);
-	e4();
-     d74:	0e 94 32 09 	call	0x1264	; 0x1264 <e4>
-     d78:	2f ef       	ldi	r18, 0xFF	; 255
-     d7a:	87 e8       	ldi	r24, 0x87	; 135
-     d7c:	93 e1       	ldi	r25, 0x13	; 19
-     d7e:	21 50       	subi	r18, 0x01	; 1
-     d80:	80 40       	sbci	r24, 0x00	; 0
-     d82:	90 40       	sbci	r25, 0x00	; 0
-     d84:	e1 f7       	brne	.-8      	; 0xd7e <__stack+0x47f>
-     d86:	00 c0       	rjmp	.+0      	; 0xd88 <__stack+0x489>
-     d88:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	// 17
-	f4();
-     d8a:	0e 94 3d 09 	call	0x127a	; 0x127a <f4>
-     d8e:	2f ef       	ldi	r18, 0xFF	; 255
-     d90:	87 e8       	ldi	r24, 0x87	; 135
-     d92:	93 e1       	ldi	r25, 0x13	; 19
-     d94:	21 50       	subi	r18, 0x01	; 1
-     d96:	80 40       	sbci	r24, 0x00	; 0
-     d98:	90 40       	sbci	r25, 0x00	; 0
-     d9a:	e1 f7       	brne	.-8      	; 0xd94 <__stack+0x495>
-     d9c:	00 c0       	rjmp	.+0      	; 0xd9e <__stack+0x49f>
-     d9e:	00 00       	nop
-     da0:	2f ef       	ldi	r18, 0xFF	; 255
-     da2:	83 ec       	ldi	r24, 0xC3	; 195
-     da4:	99 e0       	ldi	r25, 0x09	; 9
-     da6:	21 50       	subi	r18, 0x01	; 1
-     da8:	80 40       	sbci	r24, 0x00	; 0
-     daa:	90 40       	sbci	r25, 0x00	; 0
-     dac:	e1 f7       	brne	.-8      	; 0xda6 <__stack+0x4a7>
-     dae:	00 c0       	rjmp	.+0      	; 0xdb0 <__stack+0x4b1>
-     db0:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	_delay_ms(MS_HALF);
-	a4();
-     db2:	0e 94 53 09 	call	0x12a6	; 0x12a6 <a4>
-     db6:	2f ef       	ldi	r18, 0xFF	; 255
-     db8:	87 e8       	ldi	r24, 0x87	; 135
-     dba:	93 e1       	ldi	r25, 0x13	; 19
-     dbc:	21 50       	subi	r18, 0x01	; 1
-     dbe:	80 40       	sbci	r24, 0x00	; 0
-     dc0:	90 40       	sbci	r25, 0x00	; 0
-     dc2:	e1 f7       	brne	.-8      	; 0xdbc <__stack+0x4bd>
-     dc4:	00 c0       	rjmp	.+0      	; 0xdc6 <__stack+0x4c7>
-     dc6:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	g4(); // sharp
-     dc8:	0e 94 48 09 	call	0x1290	; 0x1290 <g4>
-     dcc:	2f ef       	ldi	r18, 0xFF	; 255
-     dce:	87 e8       	ldi	r24, 0x87	; 135
-     dd0:	93 e1       	ldi	r25, 0x13	; 19
-     dd2:	21 50       	subi	r18, 0x01	; 1
-     dd4:	80 40       	sbci	r24, 0x00	; 0
-     dd6:	90 40       	sbci	r25, 0x00	; 0
-     dd8:	e1 f7       	brne	.-8      	; 0xdd2 <__stack+0x4d3>
-     dda:	00 c0       	rjmp	.+0      	; 0xddc <__stack+0x4dd>
-     ddc:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	e4();
-     dde:	0e 94 32 09 	call	0x1264	; 0x1264 <e4>
-     de2:	2f ef       	ldi	r18, 0xFF	; 255
-     de4:	8f e0       	ldi	r24, 0x0F	; 15
-     de6:	97 e2       	ldi	r25, 0x27	; 39
-     de8:	21 50       	subi	r18, 0x01	; 1
-     dea:	80 40       	sbci	r24, 0x00	; 0
-     dec:	90 40       	sbci	r25, 0x00	; 0
-     dee:	e1 f7       	brne	.-8      	; 0xde8 <__stack+0x4e9>
-     df0:	00 c0       	rjmp	.+0      	; 0xdf2 <__stack+0x4f3>
-     df2:	00 00       	nop
-	_delay_ms(MS_DOUBLE);
-	silence();
-     df4:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     df8:	2f ef       	ldi	r18, 0xFF	; 255
-     dfa:	89 ef       	ldi	r24, 0xF9	; 249
-     dfc:	90 e0       	ldi	r25, 0x00	; 0
-     dfe:	21 50       	subi	r18, 0x01	; 1
-     e00:	80 40       	sbci	r24, 0x00	; 0
-     e02:	90 40       	sbci	r25, 0x00	; 0
-     e04:	e1 f7       	brne	.-8      	; 0xdfe <__stack+0x4ff>
-     e06:	00 c0       	rjmp	.+0      	; 0xe08 <__stack+0x509>
-     e08:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     e0a:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e4();
-     e0e:	0e 94 32 09 	call	0x1264	; 0x1264 <e4>
-     e12:	2f ef       	ldi	r18, 0xFF	; 255
-     e14:	8d e8       	ldi	r24, 0x8D	; 141
-     e16:	92 e1       	ldi	r25, 0x12	; 18
-     e18:	21 50       	subi	r18, 0x01	; 1
-     e1a:	80 40       	sbci	r24, 0x00	; 0
-     e1c:	90 40       	sbci	r25, 0x00	; 0
-     e1e:	e1 f7       	brne	.-8      	; 0xe18 <__stack+0x519>
-     e20:	00 c0       	rjmp	.+0      	; 0xe22 <__stack+0x523>
-     e22:	00 00       	nop
-	_delay_ms(MS_BLACK-20);
-	// 19 (4th line)
-	f4();
-     e24:	0e 94 3d 09 	call	0x127a	; 0x127a <f4>
-     e28:	2f ef       	ldi	r18, 0xFF	; 255
-     e2a:	8f e0       	ldi	r24, 0x0F	; 15
-     e2c:	97 e2       	ldi	r25, 0x27	; 39
-     e2e:	21 50       	subi	r18, 0x01	; 1
-     e30:	80 40       	sbci	r24, 0x00	; 0
-     e32:	90 40       	sbci	r25, 0x00	; 0
-     e34:	e1 f7       	brne	.-8      	; 0xe2e <__stack+0x52f>
-     e36:	00 c0       	rjmp	.+0      	; 0xe38 <__stack+0x539>
-     e38:	00 00       	nop
-     e3a:	2f ef       	ldi	r18, 0xFF	; 255
-     e3c:	87 e8       	ldi	r24, 0x87	; 135
-     e3e:	93 e1       	ldi	r25, 0x13	; 19
-     e40:	21 50       	subi	r18, 0x01	; 1
-     e42:	80 40       	sbci	r24, 0x00	; 0
-     e44:	90 40       	sbci	r25, 0x00	; 0
-     e46:	e1 f7       	brne	.-8      	; 0xe40 <__stack+0x541>
-     e48:	00 c0       	rjmp	.+0      	; 0xe4a <__stack+0x54b>
-     e4a:	00 00       	nop
-	_delay_ms(MS_DOUBLE);
-	_delay_ms(MS_BLACK);
-	a4();
-     e4c:	0e 94 53 09 	call	0x12a6	; 0x12a6 <a4>
-     e50:	2f ef       	ldi	r18, 0xFF	; 255
-     e52:	87 e8       	ldi	r24, 0x87	; 135
-     e54:	93 e1       	ldi	r25, 0x13	; 19
-     e56:	21 50       	subi	r18, 0x01	; 1
-     e58:	80 40       	sbci	r24, 0x00	; 0
-     e5a:	90 40       	sbci	r25, 0x00	; 0
-     e5c:	e1 f7       	brne	.-8      	; 0xe56 <__stack+0x557>
-     e5e:	00 c0       	rjmp	.+0      	; 0xe60 <__stack+0x561>
-     e60:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	// 20
-	g4(); // sharp 
-     e62:	0e 94 48 09 	call	0x1290	; 0x1290 <g4>
-     e66:	2f ef       	ldi	r18, 0xFF	; 255
-     e68:	87 e8       	ldi	r24, 0x87	; 135
-     e6a:	93 e1       	ldi	r25, 0x13	; 19
-     e6c:	21 50       	subi	r18, 0x01	; 1
-     e6e:	80 40       	sbci	r24, 0x00	; 0
-     e70:	90 40       	sbci	r25, 0x00	; 0
-     e72:	e1 f7       	brne	.-8      	; 0xe6c <__stack+0x56d>
-     e74:	00 c0       	rjmp	.+0      	; 0xe76 <__stack+0x577>
-     e76:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	e4();
-     e78:	0e 94 32 09 	call	0x1264	; 0x1264 <e4>
-     e7c:	2f ef       	ldi	r18, 0xFF	; 255
-     e7e:	8f e0       	ldi	r24, 0x0F	; 15
-     e80:	97 e2       	ldi	r25, 0x27	; 39
-     e82:	21 50       	subi	r18, 0x01	; 1
-     e84:	80 40       	sbci	r24, 0x00	; 0
-     e86:	90 40       	sbci	r25, 0x00	; 0
-     e88:	e1 f7       	brne	.-8      	; 0xe82 <__stack+0x583>
-     e8a:	00 c0       	rjmp	.+0      	; 0xe8c <__stack+0x58d>
-     e8c:	00 00       	nop
-	_delay_ms(MS_DOUBLE);
-	c4(); // sharp
-     e8e:	0e 94 1c 09 	call	0x1238	; 0x1238 <c4>
-     e92:	2f ef       	ldi	r18, 0xFF	; 255
-     e94:	87 e8       	ldi	r24, 0x87	; 135
-     e96:	93 e1       	ldi	r25, 0x13	; 19
-     e98:	21 50       	subi	r18, 0x01	; 1
-     e9a:	80 40       	sbci	r24, 0x00	; 0
-     e9c:	90 40       	sbci	r25, 0x00	; 0
-     e9e:	e1 f7       	brne	.-8      	; 0xe98 <__stack+0x599>
-     ea0:	00 c0       	rjmp	.+0      	; 0xea2 <__stack+0x5a3>
-     ea2:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	// 21 
-	d4();
-     ea4:	0e 94 27 09 	call	0x124e	; 0x124e <d4>
-     ea8:	2f ef       	ldi	r18, 0xFF	; 255
-     eaa:	8f e0       	ldi	r24, 0x0F	; 15
-     eac:	97 e2       	ldi	r25, 0x27	; 39
-     eae:	21 50       	subi	r18, 0x01	; 1
-     eb0:	80 40       	sbci	r24, 0x00	; 0
-     eb2:	90 40       	sbci	r25, 0x00	; 0
-     eb4:	e1 f7       	brne	.-8      	; 0xeae <__stack+0x5af>
-     eb6:	00 c0       	rjmp	.+0      	; 0xeb8 <__stack+0x5b9>
-     eb8:	00 00       	nop
-     eba:	2f ef       	ldi	r18, 0xFF	; 255
-     ebc:	87 e8       	ldi	r24, 0x87	; 135
-     ebe:	93 e1       	ldi	r25, 0x13	; 19
-     ec0:	21 50       	subi	r18, 0x01	; 1
-     ec2:	80 40       	sbci	r24, 0x00	; 0
-     ec4:	90 40       	sbci	r25, 0x00	; 0
-     ec6:	e1 f7       	brne	.-8      	; 0xec0 <__stack+0x5c1>
-     ec8:	00 c0       	rjmp	.+0      	; 0xeca <__stack+0x5cb>
-     eca:	00 00       	nop
-	_delay_ms(MS_DOUBLE);
-	_delay_ms(MS_BLACK);
-	f4();
-     ecc:	0e 94 3d 09 	call	0x127a	; 0x127a <f4>
-     ed0:	2f ef       	ldi	r18, 0xFF	; 255
-     ed2:	87 e8       	ldi	r24, 0x87	; 135
-     ed4:	93 e1       	ldi	r25, 0x13	; 19
-     ed6:	21 50       	subi	r18, 0x01	; 1
-     ed8:	80 40       	sbci	r24, 0x00	; 0
-     eda:	90 40       	sbci	r25, 0x00	; 0
-     edc:	e1 f7       	brne	.-8      	; 0xed6 <__stack+0x5d7>
-     ede:	00 c0       	rjmp	.+0      	; 0xee0 <__stack+0x5e1>
-     ee0:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	// 22
-	e4();
-     ee2:	0e 94 32 09 	call	0x1264	; 0x1264 <e4>
-     ee6:	2f ef       	ldi	r18, 0xFF	; 255
-     ee8:	87 e8       	ldi	r24, 0x87	; 135
-     eea:	93 e1       	ldi	r25, 0x13	; 19
-     eec:	21 50       	subi	r18, 0x01	; 1
-     eee:	80 40       	sbci	r24, 0x00	; 0
-     ef0:	90 40       	sbci	r25, 0x00	; 0
-     ef2:	e1 f7       	brne	.-8      	; 0xeec <__stack+0x5ed>
-     ef4:	00 c0       	rjmp	.+0      	; 0xef6 <__stack+0x5f7>
-     ef6:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	c4();
-     ef8:	0e 94 1c 09 	call	0x1238	; 0x1238 <c4>
-     efc:	2f ef       	ldi	r18, 0xFF	; 255
-     efe:	8f e0       	ldi	r24, 0x0F	; 15
-     f00:	97 e2       	ldi	r25, 0x27	; 39
-     f02:	21 50       	subi	r18, 0x01	; 1
-     f04:	80 40       	sbci	r24, 0x00	; 0
-     f06:	90 40       	sbci	r25, 0x00	; 0
-     f08:	e1 f7       	brne	.-8      	; 0xf02 <__stack+0x603>
-     f0a:	00 c0       	rjmp	.+0      	; 0xf0c <__stack+0x60d>
-     f0c:	00 00       	nop
-	_delay_ms(MS_DOUBLE);
-	a3();
-     f0e:	0e 94 06 09 	call	0x120c	; 0x120c <a3>
-     f12:	2f ef       	ldi	r18, 0xFF	; 255
-     f14:	87 e8       	ldi	r24, 0x87	; 135
-     f16:	93 e1       	ldi	r25, 0x13	; 19
-     f18:	21 50       	subi	r18, 0x01	; 1
-     f1a:	80 40       	sbci	r24, 0x00	; 0
-     f1c:	90 40       	sbci	r25, 0x00	; 0
-     f1e:	e1 f7       	brne	.-8      	; 0xf18 <__stack+0x619>
-     f20:	00 c0       	rjmp	.+0      	; 0xf22 <__stack+0x623>
-     f22:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	// 23
-	b3();
-     f24:	0e 94 11 09 	call	0x1222	; 0x1222 <b3>
-     f28:	2f ef       	ldi	r18, 0xFF	; 255
-     f2a:	83 ec       	ldi	r24, 0xC3	; 195
-     f2c:	99 e0       	ldi	r25, 0x09	; 9
-     f2e:	21 50       	subi	r18, 0x01	; 1
-     f30:	80 40       	sbci	r24, 0x00	; 0
-     f32:	90 40       	sbci	r25, 0x00	; 0
-     f34:	e1 f7       	brne	.-8      	; 0xf2e <__stack+0x62f>
-     f36:	00 c0       	rjmp	.+0      	; 0xf38 <__stack+0x639>
-     f38:	00 00       	nop
-	_delay_ms(MS_HALF);
-	silence();
-     f3a:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     f3e:	2f ef       	ldi	r18, 0xFF	; 255
-     f40:	89 ef       	ldi	r24, 0xF9	; 249
-     f42:	90 e0       	ldi	r25, 0x00	; 0
-     f44:	21 50       	subi	r18, 0x01	; 1
-     f46:	80 40       	sbci	r24, 0x00	; 0
-     f48:	90 40       	sbci	r25, 0x00	; 0
-     f4a:	e1 f7       	brne	.-8      	; 0xf44 <__stack+0x645>
-     f4c:	00 c0       	rjmp	.+0      	; 0xf4e <__stack+0x64f>
-     f4e:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     f50:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	b3();
-     f54:	0e 94 11 09 	call	0x1222	; 0x1222 <b3>
-     f58:	2f ef       	ldi	r18, 0xFF	; 255
-     f5a:	87 ee       	ldi	r24, 0xE7	; 231
-     f5c:	93 e0       	ldi	r25, 0x03	; 3
-     f5e:	21 50       	subi	r18, 0x01	; 1
-     f60:	80 40       	sbci	r24, 0x00	; 0
-     f62:	90 40       	sbci	r25, 0x00	; 0
-     f64:	e1 f7       	brne	.-8      	; 0xf5e <__stack+0x65f>
-     f66:	00 c0       	rjmp	.+0      	; 0xf68 <__stack+0x669>
-     f68:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	c4();
-     f6a:	0e 94 1c 09 	call	0x1238	; 0x1238 <c4>
-     f6e:	2f ef       	ldi	r18, 0xFF	; 255
-     f70:	81 ee       	ldi	r24, 0xE1	; 225
-     f72:	94 e0       	ldi	r25, 0x04	; 4
-     f74:	21 50       	subi	r18, 0x01	; 1
-     f76:	80 40       	sbci	r24, 0x00	; 0
-     f78:	90 40       	sbci	r25, 0x00	; 0
-     f7a:	e1 f7       	brne	.-8      	; 0xf74 <__stack+0x675>
-     f7c:	00 c0       	rjmp	.+0      	; 0xf7e <__stack+0x67f>
-     f7e:	00 00       	nop
-	_delay_ms(MS_QUARTER);
-	d4();
-     f80:	0e 94 27 09 	call	0x124e	; 0x124e <d4>
-     f84:	2f ef       	ldi	r18, 0xFF	; 255
-     f86:	8f e0       	ldi	r24, 0x0F	; 15
-     f88:	97 e2       	ldi	r25, 0x27	; 39
-     f8a:	21 50       	subi	r18, 0x01	; 1
-     f8c:	80 40       	sbci	r24, 0x00	; 0
-     f8e:	90 40       	sbci	r25, 0x00	; 0
-     f90:	e1 f7       	brne	.-8      	; 0xf8a <__stack+0x68b>
-     f92:	00 c0       	rjmp	.+0      	; 0xf94 <__stack+0x695>
-     f94:	00 00       	nop
-	_delay_ms(MS_DOUBLE);
-	f4();
-     f96:	0e 94 3d 09 	call	0x127a	; 0x127a <f4>
-     f9a:	2f ef       	ldi	r18, 0xFF	; 255
-     f9c:	87 e8       	ldi	r24, 0x87	; 135
-     f9e:	93 e1       	ldi	r25, 0x13	; 19
-     fa0:	21 50       	subi	r18, 0x01	; 1
-     fa2:	80 40       	sbci	r24, 0x00	; 0
-     fa4:	90 40       	sbci	r25, 0x00	; 0
-     fa6:	e1 f7       	brne	.-8      	; 0xfa0 <__stack+0x6a1>
-     fa8:	00 c0       	rjmp	.+0      	; 0xfaa <__stack+0x6ab>
-     faa:	00 00       	nop
-	_delay_ms(MS_BLACK);
-	// 24
-	e4();
-     fac:	0e 94 32 09 	call	0x1264	; 0x1264 <e4>
-     fb0:	2f ef       	ldi	r18, 0xFF	; 255
-     fb2:	83 ec       	ldi	r24, 0xC3	; 195
-     fb4:	99 e0       	ldi	r25, 0x09	; 9
-     fb6:	21 50       	subi	r18, 0x01	; 1
-     fb8:	80 40       	sbci	r24, 0x00	; 0
-     fba:	90 40       	sbci	r25, 0x00	; 0
-     fbc:	e1 f7       	brne	.-8      	; 0xfb6 <__stack+0x6b7>
-     fbe:	00 c0       	rjmp	.+0      	; 0xfc0 <__stack+0x6c1>
-     fc0:	00 00       	nop
-	_delay_ms(MS_HALF);
-	e3();
-     fc2:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     fc6:	2f ef       	ldi	r18, 0xFF	; 255
-     fc8:	81 ee       	ldi	r24, 0xE1	; 225
-     fca:	94 e0       	ldi	r25, 0x04	; 4
-     fcc:	21 50       	subi	r18, 0x01	; 1
-     fce:	80 40       	sbci	r24, 0x00	; 0
-     fd0:	90 40       	sbci	r25, 0x00	; 0
-     fd2:	e1 f7       	brne	.-8      	; 0xfcc <__stack+0x6cd>
-     fd4:	00 c0       	rjmp	.+0      	; 0xfd6 <__stack+0x6d7>
-     fd6:	00 00       	nop
-	_delay_ms(MS_QUARTER);
-	silence();
-     fd8:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-     fdc:	2f ef       	ldi	r18, 0xFF	; 255
-     fde:	89 ef       	ldi	r24, 0xF9	; 249
-     fe0:	90 e0       	ldi	r25, 0x00	; 0
-     fe2:	21 50       	subi	r18, 0x01	; 1
-     fe4:	80 40       	sbci	r24, 0x00	; 0
-     fe6:	90 40       	sbci	r25, 0x00	; 0
-     fe8:	e1 f7       	brne	.-8      	; 0xfe2 <__stack+0x6e3>
-     fea:	00 c0       	rjmp	.+0      	; 0xfec <__stack+0x6ed>
-     fec:	00 00       	nop
-	_delay_ms(20);
-	sound();
-     fee:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-     ff2:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-     ff6:	2f ef       	ldi	r18, 0xFF	; 255
-     ff8:	87 ee       	ldi	r24, 0xE7	; 231
-     ffa:	93 e0       	ldi	r25, 0x03	; 3
-     ffc:	21 50       	subi	r18, 0x01	; 1
-     ffe:	80 40       	sbci	r24, 0x00	; 0
-    1000:	90 40       	sbci	r25, 0x00	; 0
-    1002:	e1 f7       	brne	.-8      	; 0xffc <__stack+0x6fd>
-    1004:	00 c0       	rjmp	.+0      	; 0x1006 <__stack+0x707>
-    1006:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	silence();
-    1008:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-    100c:	2f ef       	ldi	r18, 0xFF	; 255
-    100e:	89 ef       	ldi	r24, 0xF9	; 249
-    1010:	90 e0       	ldi	r25, 0x00	; 0
-    1012:	21 50       	subi	r18, 0x01	; 1
-    1014:	80 40       	sbci	r24, 0x00	; 0
-    1016:	90 40       	sbci	r25, 0x00	; 0
-    1018:	e1 f7       	brne	.-8      	; 0x1012 <__stack+0x713>
-    101a:	00 c0       	rjmp	.+0      	; 0x101c <__stack+0x71d>
-    101c:	00 00       	nop
-	_delay_ms(20);
-	sound();
-    101e:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-    1022:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-    1026:	2f ef       	ldi	r18, 0xFF	; 255
-    1028:	89 ec       	ldi	r24, 0xC9	; 201
-    102a:	98 e0       	ldi	r25, 0x08	; 8
-    102c:	21 50       	subi	r18, 0x01	; 1
-    102e:	80 40       	sbci	r24, 0x00	; 0
-    1030:	90 40       	sbci	r25, 0x00	; 0
-    1032:	e1 f7       	brne	.-8      	; 0x102c <__stack+0x72d>
-    1034:	00 c0       	rjmp	.+0      	; 0x1036 <__stack+0x737>
-    1036:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	silence();
-    1038:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-    103c:	2f ef       	ldi	r18, 0xFF	; 255
-    103e:	89 ef       	ldi	r24, 0xF9	; 249
-    1040:	90 e0       	ldi	r25, 0x00	; 0
-    1042:	21 50       	subi	r18, 0x01	; 1
-    1044:	80 40       	sbci	r24, 0x00	; 0
-    1046:	90 40       	sbci	r25, 0x00	; 0
-    1048:	e1 f7       	brne	.-8      	; 0x1042 <__stack+0x743>
-    104a:	00 c0       	rjmp	.+0      	; 0x104c <__stack+0x74d>
-    104c:	00 00       	nop
-	_delay_ms(20);
-	sound();
-    104e:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-    1052:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-    1056:	2f ef       	ldi	r18, 0xFF	; 255
-    1058:	87 ee       	ldi	r24, 0xE7	; 231
-    105a:	93 e0       	ldi	r25, 0x03	; 3
-    105c:	21 50       	subi	r18, 0x01	; 1
-    105e:	80 40       	sbci	r24, 0x00	; 0
-    1060:	90 40       	sbci	r25, 0x00	; 0
-    1062:	e1 f7       	brne	.-8      	; 0x105c <__stack+0x75d>
-    1064:	00 c0       	rjmp	.+0      	; 0x1066 <__stack+0x767>
-    1066:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	silence();
-    1068:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-    106c:	2f ef       	ldi	r18, 0xFF	; 255
-    106e:	89 ef       	ldi	r24, 0xF9	; 249
-    1070:	90 e0       	ldi	r25, 0x00	; 0
-    1072:	21 50       	subi	r18, 0x01	; 1
-    1074:	80 40       	sbci	r24, 0x00	; 0
-    1076:	90 40       	sbci	r25, 0x00	; 0
-    1078:	e1 f7       	brne	.-8      	; 0x1072 <__stack+0x773>
-    107a:	00 c0       	rjmp	.+0      	; 0x107c <__stack+0x77d>
-    107c:	00 00       	nop
-	_delay_ms(20);
-	sound();
-    107e:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-    1082:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-    1086:	2f ef       	ldi	r18, 0xFF	; 255
-    1088:	87 ee       	ldi	r24, 0xE7	; 231
-    108a:	93 e0       	ldi	r25, 0x03	; 3
-    108c:	21 50       	subi	r18, 0x01	; 1
-    108e:	80 40       	sbci	r24, 0x00	; 0
-    1090:	90 40       	sbci	r25, 0x00	; 0
-    1092:	e1 f7       	brne	.-8      	; 0x108c <__stack+0x78d>
-    1094:	00 c0       	rjmp	.+0      	; 0x1096 <__stack+0x797>
-    1096:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	silence();
-    1098:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-    109c:	2f ef       	ldi	r18, 0xFF	; 255
-    109e:	89 ef       	ldi	r24, 0xF9	; 249
-    10a0:	90 e0       	ldi	r25, 0x00	; 0
-    10a2:	21 50       	subi	r18, 0x01	; 1
-    10a4:	80 40       	sbci	r24, 0x00	; 0
-    10a6:	90 40       	sbci	r25, 0x00	; 0
-    10a8:	e1 f7       	brne	.-8      	; 0x10a2 <__stack+0x7a3>
-    10aa:	00 c0       	rjmp	.+0      	; 0x10ac <__stack+0x7ad>
-    10ac:	00 00       	nop
-	_delay_ms(20);
-	sound();
-    10ae:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-    10b2:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-    10b6:	2f ef       	ldi	r18, 0xFF	; 255
-    10b8:	89 ec       	ldi	r24, 0xC9	; 201
-    10ba:	98 e0       	ldi	r25, 0x08	; 8
-    10bc:	21 50       	subi	r18, 0x01	; 1
-    10be:	80 40       	sbci	r24, 0x00	; 0
-    10c0:	90 40       	sbci	r25, 0x00	; 0
-    10c2:	e1 f7       	brne	.-8      	; 0x10bc <__stack+0x7bd>
-    10c4:	00 c0       	rjmp	.+0      	; 0x10c6 <__stack+0x7c7>
-    10c6:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	silence();
-    10c8:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-    10cc:	2f ef       	ldi	r18, 0xFF	; 255
-    10ce:	89 ef       	ldi	r24, 0xF9	; 249
-    10d0:	90 e0       	ldi	r25, 0x00	; 0
-    10d2:	21 50       	subi	r18, 0x01	; 1
-    10d4:	80 40       	sbci	r24, 0x00	; 0
-    10d6:	90 40       	sbci	r25, 0x00	; 0
-    10d8:	e1 f7       	brne	.-8      	; 0x10d2 <__stack+0x7d3>
-    10da:	00 c0       	rjmp	.+0      	; 0x10dc <__stack+0x7dd>
-    10dc:	00 00       	nop
-	_delay_ms(20);
-	sound();
-    10de:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-    10e2:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-    10e6:	2f ef       	ldi	r18, 0xFF	; 255
-    10e8:	87 ee       	ldi	r24, 0xE7	; 231
-    10ea:	93 e0       	ldi	r25, 0x03	; 3
-    10ec:	21 50       	subi	r18, 0x01	; 1
-    10ee:	80 40       	sbci	r24, 0x00	; 0
-    10f0:	90 40       	sbci	r25, 0x00	; 0
-    10f2:	e1 f7       	brne	.-8      	; 0x10ec <__stack+0x7ed>
-    10f4:	00 c0       	rjmp	.+0      	; 0x10f6 <__stack+0x7f7>
-    10f6:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	silence();
-    10f8:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-    10fc:	2f ef       	ldi	r18, 0xFF	; 255
-    10fe:	89 ef       	ldi	r24, 0xF9	; 249
-    1100:	90 e0       	ldi	r25, 0x00	; 0
-    1102:	21 50       	subi	r18, 0x01	; 1
-    1104:	80 40       	sbci	r24, 0x00	; 0
-    1106:	90 40       	sbci	r25, 0x00	; 0
-    1108:	e1 f7       	brne	.-8      	; 0x1102 <__stack+0x803>
-    110a:	00 c0       	rjmp	.+0      	; 0x110c <__stack+0x80d>
-    110c:	00 00       	nop
-	_delay_ms(20);
-	sound();
-    110e:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-    1112:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-    1116:	2f ef       	ldi	r18, 0xFF	; 255
-    1118:	87 ee       	ldi	r24, 0xE7	; 231
-    111a:	93 e0       	ldi	r25, 0x03	; 3
-    111c:	21 50       	subi	r18, 0x01	; 1
-    111e:	80 40       	sbci	r24, 0x00	; 0
-    1120:	90 40       	sbci	r25, 0x00	; 0
-    1122:	e1 f7       	brne	.-8      	; 0x111c <__stack+0x81d>
-    1124:	00 c0       	rjmp	.+0      	; 0x1126 <__stack+0x827>
-    1126:	00 00       	nop
-	_delay_ms(MS_QUARTER-20);
-	silence();
-    1128:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-    112c:	2f ef       	ldi	r18, 0xFF	; 255
-    112e:	89 ef       	ldi	r24, 0xF9	; 249
-    1130:	90 e0       	ldi	r25, 0x00	; 0
-    1132:	21 50       	subi	r18, 0x01	; 1
-    1134:	80 40       	sbci	r24, 0x00	; 0
-    1136:	90 40       	sbci	r25, 0x00	; 0
-    1138:	e1 f7       	brne	.-8      	; 0x1132 <__stack+0x833>
-    113a:	00 c0       	rjmp	.+0      	; 0x113c <__stack+0x83d>
-    113c:	00 00       	nop
-	_delay_ms(20);
-	sound();
-    113e:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-    1142:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-    1146:	2f ef       	ldi	r18, 0xFF	; 255
-    1148:	89 ec       	ldi	r24, 0xC9	; 201
-    114a:	98 e0       	ldi	r25, 0x08	; 8
-    114c:	21 50       	subi	r18, 0x01	; 1
-    114e:	80 40       	sbci	r24, 0x00	; 0
-    1150:	90 40       	sbci	r25, 0x00	; 0
-    1152:	e1 f7       	brne	.-8      	; 0x114c <__stack+0x84d>
-    1154:	00 c0       	rjmp	.+0      	; 0x1156 <__stack+0x857>
-    1156:	00 00       	nop
-	_delay_ms(MS_HALF-20);
-	silence();
-    1158:	0e 94 74 09 	call	0x12e8	; 0x12e8 <silence>
-    115c:	2f ef       	ldi	r18, 0xFF	; 255
-    115e:	89 ef       	ldi	r24, 0xF9	; 249
-    1160:	90 e0       	ldi	r25, 0x00	; 0
-    1162:	21 50       	subi	r18, 0x01	; 1
-    1164:	80 40       	sbci	r24, 0x00	; 0
-    1166:	90 40       	sbci	r25, 0x00	; 0
-    1168:	e1 f7       	brne	.-8      	; 0x1162 <__stack+0x863>
-    116a:	00 c0       	rjmp	.+0      	; 0x116c <__stack+0x86d>
-    116c:	00 00       	nop
-	_delay_ms(20);
-	sound();
-    116e:	0e 94 78 09 	call	0x12f0	; 0x12f0 <sound>
-	e3();
-    1172:	0e 94 f0 08 	call	0x11e0	; 0x11e0 <e3>
-    1176:	2f ef       	ldi	r18, 0xFF	; 255
-    1178:	89 ec       	ldi	r24, 0xC9	; 201
-    117a:	98 e0       	ldi	r25, 0x08	; 8
-    117c:	21 50       	subi	r18, 0x01	; 1
-    117e:	80 40       	sbci	r24, 0x00	; 0
-    1180:	90 40       	sbci	r25, 0x00	; 0
-    1182:	e1 f7       	brne	.-8      	; 0x117c <__stack+0x87d>
-    1184:	00 c0       	rjmp	.+0      	; 0x1186 <__stack+0x887>
-    1186:	00 00       	nop
-	_delay_ms(MS_HALF-20);
 	
 	return 0;
 }
-    1188:	80 e0       	ldi	r24, 0x00	; 0
-    118a:	90 e0       	ldi	r25, 0x00	; 0
-    118c:	08 95       	ret
+ 454:	80 e0       	ldi	r24, 0x00	; 0
+ 456:	90 e0       	ldi	r25, 0x00	; 0
+ 458:	08 95       	ret
 
-0000118e <zelda>:
-
-int zelda(){
-	setupTimer0FreqGen(0);
-    118e:	80 e0       	ldi	r24, 0x00	; 0
-    1190:	90 e0       	ldi	r25, 0x00	; 0
-    1192:	0e 94 d7 08 	call	0x11ae	; 0x11ae <setupTimer0FreqGen>
-	
-	// REF: https://musescore.com/user/20360426/scores/4880846
-	
-	zelda_intro();
-    1196:	0e 94 3a 00 	call	0x74	; 0x74 <zelda_intro>
-	zelda_melody();
-    119a:	0e 94 bf 02 	call	0x57e	; 0x57e <zelda_melody>
-	zelda_melody();
-    119e:	0e 94 bf 02 	call	0x57e	; 0x57e <zelda_melody>
-	
-	return 0;
-}
-    11a2:	80 e0       	ldi	r24, 0x00	; 0
-    11a4:	90 e0       	ldi	r25, 0x00	; 0
-    11a6:	08 95       	ret
-
-000011a8 <main>:
+0000045a <main>:
+	//setupLed();
 	//setupTimer0FreqGen(0);
 	
 	while(1)
 	{		
-		//tetris();
-		zelda();
-    11a8:	0e 94 c7 08 	call	0x118e	; 0x118e <zelda>
-    11ac:	fd cf       	rjmp	.-6      	; 0x11a8 <main>
+		tetris();
+ 45a:	0e 94 3a 00 	call	0x74	; 0x74 <tetris>
+ 45e:	fd cf       	rjmp	.-6      	; 0x45a <main>
 
-000011ae <setupTimer0FreqGen>:
+00000460 <setupTimer0FreqGen>:
 	// CS00:2 = 3 -> 64
 	// CS00:2 = 4 -> 256
 	OCR0A = 132;
 	//_delay_ms(mSeconds); 
 	return 0;
 }
-    11ae:	56 9a       	sbi	0x0a, 6	; 10
-    11b0:	e4 e6       	ldi	r30, 0x64	; 100
-    11b2:	f0 e0       	ldi	r31, 0x00	; 0
-    11b4:	20 81       	ld	r18, Z
-    11b6:	2f 7d       	andi	r18, 0xDF	; 223
-    11b8:	20 83       	st	Z, r18
-    11ba:	24 b5       	in	r18, 0x24	; 36
-    11bc:	22 64       	ori	r18, 0x42	; 66
-    11be:	24 bd       	out	0x24, r18	; 36
-    11c0:	25 b5       	in	r18, 0x25	; 37
-    11c2:	24 60       	ori	r18, 0x04	; 4
-    11c4:	25 bd       	out	0x25, r18	; 37
-    11c6:	89 2b       	or	r24, r25
-    11c8:	41 f0       	breq	.+16     	; 0x11da <setupTimer0FreqGen+0x2c>
-    11ca:	8f b7       	in	r24, 0x3f	; 63
-    11cc:	80 68       	ori	r24, 0x80	; 128
-    11ce:	8f bf       	out	0x3f, r24	; 63
-    11d0:	ee e6       	ldi	r30, 0x6E	; 110
-    11d2:	f0 e0       	ldi	r31, 0x00	; 0
-    11d4:	80 81       	ld	r24, Z
-    11d6:	82 60       	ori	r24, 0x02	; 2
-    11d8:	80 83       	st	Z, r24
-    11da:	80 e0       	ldi	r24, 0x00	; 0
-    11dc:	90 e0       	ldi	r25, 0x00	; 0
-    11de:	08 95       	ret
+ 460:	56 9a       	sbi	0x0a, 6	; 10
+ 462:	e4 e6       	ldi	r30, 0x64	; 100
+ 464:	f0 e0       	ldi	r31, 0x00	; 0
+ 466:	20 81       	ld	r18, Z
+ 468:	2f 7d       	andi	r18, 0xDF	; 223
+ 46a:	20 83       	st	Z, r18
+ 46c:	24 b5       	in	r18, 0x24	; 36
+ 46e:	22 64       	ori	r18, 0x42	; 66
+ 470:	24 bd       	out	0x24, r18	; 36
+ 472:	25 b5       	in	r18, 0x25	; 37
+ 474:	24 60       	ori	r18, 0x04	; 4
+ 476:	25 bd       	out	0x25, r18	; 37
+ 478:	89 2b       	or	r24, r25
+ 47a:	41 f0       	breq	.+16     	; 0x48c <setupTimer0FreqGen+0x2c>
+ 47c:	8f b7       	in	r24, 0x3f	; 63
+ 47e:	80 68       	ori	r24, 0x80	; 128
+ 480:	8f bf       	out	0x3f, r24	; 63
+ 482:	ee e6       	ldi	r30, 0x6E	; 110
+ 484:	f0 e0       	ldi	r31, 0x00	; 0
+ 486:	80 81       	ld	r24, Z
+ 488:	82 60       	ori	r24, 0x02	; 2
+ 48a:	80 83       	st	Z, r24
+ 48c:	80 e0       	ldi	r24, 0x00	; 0
+ 48e:	90 e0       	ldi	r25, 0x00	; 0
+ 490:	08 95       	ret
 
-000011e0 <e3>:
-    11e0:	85 b5       	in	r24, 0x25	; 37
-    11e2:	88 7f       	andi	r24, 0xF8	; 248
-    11e4:	85 bd       	out	0x25, r24	; 37
-    11e6:	85 b5       	in	r24, 0x25	; 37
-    11e8:	84 60       	ori	r24, 0x04	; 4
-    11ea:	85 bd       	out	0x25, r24	; 37
-    11ec:	86 ec       	ldi	r24, 0xC6	; 198
-    11ee:	87 bd       	out	0x27, r24	; 39
-    11f0:	80 e0       	ldi	r24, 0x00	; 0
-    11f2:	90 e0       	ldi	r25, 0x00	; 0
-    11f4:	08 95       	ret
+00000492 <a3>:
+ 492:	85 b5       	in	r24, 0x25	; 37
+ 494:	88 7f       	andi	r24, 0xF8	; 248
+ 496:	85 bd       	out	0x25, r24	; 37
+ 498:	85 b5       	in	r24, 0x25	; 37
+ 49a:	84 60       	ori	r24, 0x04	; 4
+ 49c:	85 bd       	out	0x25, r24	; 37
+ 49e:	84 e9       	ldi	r24, 0x94	; 148
+ 4a0:	87 bd       	out	0x27, r24	; 39
+ 4a2:	80 e0       	ldi	r24, 0x00	; 0
+ 4a4:	90 e0       	ldi	r25, 0x00	; 0
+ 4a6:	08 95       	ret
 
-000011f6 <g3>:
-    11f6:	85 b5       	in	r24, 0x25	; 37
-    11f8:	88 7f       	andi	r24, 0xF8	; 248
-    11fa:	85 bd       	out	0x25, r24	; 37
-    11fc:	85 b5       	in	r24, 0x25	; 37
-    11fe:	84 60       	ori	r24, 0x04	; 4
-    1200:	85 bd       	out	0x25, r24	; 37
-    1202:	86 ea       	ldi	r24, 0xA6	; 166
-    1204:	87 bd       	out	0x27, r24	; 39
-    1206:	80 e0       	ldi	r24, 0x00	; 0
-    1208:	90 e0       	ldi	r25, 0x00	; 0
-    120a:	08 95       	ret
+000004a8 <b3>:
+ 4a8:	85 b5       	in	r24, 0x25	; 37
+ 4aa:	88 7f       	andi	r24, 0xF8	; 248
+ 4ac:	85 bd       	out	0x25, r24	; 37
+ 4ae:	85 b5       	in	r24, 0x25	; 37
+ 4b0:	84 60       	ori	r24, 0x04	; 4
+ 4b2:	85 bd       	out	0x25, r24	; 37
+ 4b4:	84 e8       	ldi	r24, 0x84	; 132
+ 4b6:	87 bd       	out	0x27, r24	; 39
+ 4b8:	80 e0       	ldi	r24, 0x00	; 0
+ 4ba:	90 e0       	ldi	r25, 0x00	; 0
+ 4bc:	08 95       	ret
 
-0000120c <a3>:
-    120c:	85 b5       	in	r24, 0x25	; 37
-    120e:	88 7f       	andi	r24, 0xF8	; 248
-    1210:	85 bd       	out	0x25, r24	; 37
-    1212:	85 b5       	in	r24, 0x25	; 37
-    1214:	84 60       	ori	r24, 0x04	; 4
-    1216:	85 bd       	out	0x25, r24	; 37
-    1218:	84 e9       	ldi	r24, 0x94	; 148
-    121a:	87 bd       	out	0x27, r24	; 39
-    121c:	80 e0       	ldi	r24, 0x00	; 0
-    121e:	90 e0       	ldi	r25, 0x00	; 0
-    1220:	08 95       	ret
+000004be <c4>:
+ 4be:	85 b5       	in	r24, 0x25	; 37
+ 4c0:	88 7f       	andi	r24, 0xF8	; 248
+ 4c2:	85 bd       	out	0x25, r24	; 37
+ 4c4:	85 b5       	in	r24, 0x25	; 37
+ 4c6:	84 60       	ori	r24, 0x04	; 4
+ 4c8:	85 bd       	out	0x25, r24	; 37
+ 4ca:	8c e7       	ldi	r24, 0x7C	; 124
+ 4cc:	87 bd       	out	0x27, r24	; 39
+ 4ce:	80 e0       	ldi	r24, 0x00	; 0
+ 4d0:	90 e0       	ldi	r25, 0x00	; 0
+ 4d2:	08 95       	ret
 
-00001222 <b3>:
-    1222:	85 b5       	in	r24, 0x25	; 37
-    1224:	88 7f       	andi	r24, 0xF8	; 248
-    1226:	85 bd       	out	0x25, r24	; 37
-    1228:	85 b5       	in	r24, 0x25	; 37
-    122a:	84 60       	ori	r24, 0x04	; 4
-    122c:	85 bd       	out	0x25, r24	; 37
-    122e:	84 e8       	ldi	r24, 0x84	; 132
-    1230:	87 bd       	out	0x27, r24	; 39
-    1232:	80 e0       	ldi	r24, 0x00	; 0
-    1234:	90 e0       	ldi	r25, 0x00	; 0
-    1236:	08 95       	ret
+000004d4 <d4>:
+ 4d4:	85 b5       	in	r24, 0x25	; 37
+ 4d6:	88 7f       	andi	r24, 0xF8	; 248
+ 4d8:	85 bd       	out	0x25, r24	; 37
+ 4da:	85 b5       	in	r24, 0x25	; 37
+ 4dc:	84 60       	ori	r24, 0x04	; 4
+ 4de:	85 bd       	out	0x25, r24	; 37
+ 4e0:	8f e6       	ldi	r24, 0x6F	; 111
+ 4e2:	87 bd       	out	0x27, r24	; 39
+ 4e4:	80 e0       	ldi	r24, 0x00	; 0
+ 4e6:	90 e0       	ldi	r25, 0x00	; 0
+ 4e8:	08 95       	ret
 
-00001238 <c4>:
-    1238:	85 b5       	in	r24, 0x25	; 37
-    123a:	88 7f       	andi	r24, 0xF8	; 248
-    123c:	85 bd       	out	0x25, r24	; 37
-    123e:	85 b5       	in	r24, 0x25	; 37
-    1240:	84 60       	ori	r24, 0x04	; 4
-    1242:	85 bd       	out	0x25, r24	; 37
-    1244:	8c e7       	ldi	r24, 0x7C	; 124
-    1246:	87 bd       	out	0x27, r24	; 39
-    1248:	80 e0       	ldi	r24, 0x00	; 0
-    124a:	90 e0       	ldi	r25, 0x00	; 0
-    124c:	08 95       	ret
+000004ea <e4>:
+ 4ea:	85 b5       	in	r24, 0x25	; 37
+ 4ec:	88 7f       	andi	r24, 0xF8	; 248
+ 4ee:	85 bd       	out	0x25, r24	; 37
+ 4f0:	85 b5       	in	r24, 0x25	; 37
+ 4f2:	84 60       	ori	r24, 0x04	; 4
+ 4f4:	85 bd       	out	0x25, r24	; 37
+ 4f6:	82 e6       	ldi	r24, 0x62	; 98
+ 4f8:	87 bd       	out	0x27, r24	; 39
+ 4fa:	80 e0       	ldi	r24, 0x00	; 0
+ 4fc:	90 e0       	ldi	r25, 0x00	; 0
+ 4fe:	08 95       	ret
 
-0000124e <d4>:
-    124e:	85 b5       	in	r24, 0x25	; 37
-    1250:	88 7f       	andi	r24, 0xF8	; 248
-    1252:	85 bd       	out	0x25, r24	; 37
-    1254:	85 b5       	in	r24, 0x25	; 37
-    1256:	84 60       	ori	r24, 0x04	; 4
-    1258:	85 bd       	out	0x25, r24	; 37
-    125a:	8f e6       	ldi	r24, 0x6F	; 111
-    125c:	87 bd       	out	0x27, r24	; 39
-    125e:	80 e0       	ldi	r24, 0x00	; 0
-    1260:	90 e0       	ldi	r25, 0x00	; 0
-    1262:	08 95       	ret
+00000500 <f4>:
+ 500:	85 b5       	in	r24, 0x25	; 37
+ 502:	88 7f       	andi	r24, 0xF8	; 248
+ 504:	85 bd       	out	0x25, r24	; 37
+ 506:	85 b5       	in	r24, 0x25	; 37
+ 508:	84 60       	ori	r24, 0x04	; 4
+ 50a:	85 bd       	out	0x25, r24	; 37
+ 50c:	8d e5       	ldi	r24, 0x5D	; 93
+ 50e:	87 bd       	out	0x27, r24	; 39
+ 510:	80 e0       	ldi	r24, 0x00	; 0
+ 512:	90 e0       	ldi	r25, 0x00	; 0
+ 514:	08 95       	ret
 
-00001264 <e4>:
-    1264:	85 b5       	in	r24, 0x25	; 37
-    1266:	88 7f       	andi	r24, 0xF8	; 248
-    1268:	85 bd       	out	0x25, r24	; 37
-    126a:	85 b5       	in	r24, 0x25	; 37
-    126c:	84 60       	ori	r24, 0x04	; 4
-    126e:	85 bd       	out	0x25, r24	; 37
-    1270:	82 e6       	ldi	r24, 0x62	; 98
-    1272:	87 bd       	out	0x27, r24	; 39
-    1274:	80 e0       	ldi	r24, 0x00	; 0
-    1276:	90 e0       	ldi	r25, 0x00	; 0
-    1278:	08 95       	ret
+00000516 <g4>:
+ 516:	85 b5       	in	r24, 0x25	; 37
+ 518:	88 7f       	andi	r24, 0xF8	; 248
+ 51a:	85 bd       	out	0x25, r24	; 37
+ 51c:	85 b5       	in	r24, 0x25	; 37
+ 51e:	84 60       	ori	r24, 0x04	; 4
+ 520:	85 bd       	out	0x25, r24	; 37
+ 522:	83 e5       	ldi	r24, 0x53	; 83
+ 524:	87 bd       	out	0x27, r24	; 39
+ 526:	80 e0       	ldi	r24, 0x00	; 0
+ 528:	90 e0       	ldi	r25, 0x00	; 0
+ 52a:	08 95       	ret
 
-0000127a <f4>:
-    127a:	85 b5       	in	r24, 0x25	; 37
-    127c:	88 7f       	andi	r24, 0xF8	; 248
-    127e:	85 bd       	out	0x25, r24	; 37
-    1280:	85 b5       	in	r24, 0x25	; 37
-    1282:	84 60       	ori	r24, 0x04	; 4
-    1284:	85 bd       	out	0x25, r24	; 37
-    1286:	8d e5       	ldi	r24, 0x5D	; 93
-    1288:	87 bd       	out	0x27, r24	; 39
-    128a:	80 e0       	ldi	r24, 0x00	; 0
-    128c:	90 e0       	ldi	r25, 0x00	; 0
-    128e:	08 95       	ret
+0000052c <a4>:
+ 52c:	85 b5       	in	r24, 0x25	; 37
+ 52e:	88 7f       	andi	r24, 0xF8	; 248
+ 530:	85 bd       	out	0x25, r24	; 37
+ 532:	85 b5       	in	r24, 0x25	; 37
+ 534:	84 60       	ori	r24, 0x04	; 4
+ 536:	85 bd       	out	0x25, r24	; 37
+ 538:	89 e4       	ldi	r24, 0x49	; 73
+ 53a:	87 bd       	out	0x27, r24	; 39
+ 53c:	80 e0       	ldi	r24, 0x00	; 0
+ 53e:	90 e0       	ldi	r25, 0x00	; 0
+ 540:	08 95       	ret
 
-00001290 <g4>:
-    1290:	85 b5       	in	r24, 0x25	; 37
-    1292:	88 7f       	andi	r24, 0xF8	; 248
-    1294:	85 bd       	out	0x25, r24	; 37
-    1296:	85 b5       	in	r24, 0x25	; 37
-    1298:	84 60       	ori	r24, 0x04	; 4
-    129a:	85 bd       	out	0x25, r24	; 37
-    129c:	83 e5       	ldi	r24, 0x53	; 83
-    129e:	87 bd       	out	0x27, r24	; 39
-    12a0:	80 e0       	ldi	r24, 0x00	; 0
-    12a2:	90 e0       	ldi	r25, 0x00	; 0
-    12a4:	08 95       	ret
-
-000012a6 <a4>:
-    12a6:	85 b5       	in	r24, 0x25	; 37
-    12a8:	88 7f       	andi	r24, 0xF8	; 248
-    12aa:	85 bd       	out	0x25, r24	; 37
-    12ac:	85 b5       	in	r24, 0x25	; 37
-    12ae:	84 60       	ori	r24, 0x04	; 4
-    12b0:	85 bd       	out	0x25, r24	; 37
-    12b2:	89 e4       	ldi	r24, 0x49	; 73
-    12b4:	87 bd       	out	0x27, r24	; 39
-    12b6:	80 e0       	ldi	r24, 0x00	; 0
-    12b8:	90 e0       	ldi	r25, 0x00	; 0
-    12ba:	08 95       	ret
-
-000012bc <b4>:
-    12bc:	85 b5       	in	r24, 0x25	; 37
-    12be:	88 7f       	andi	r24, 0xF8	; 248
-    12c0:	85 bd       	out	0x25, r24	; 37
-    12c2:	85 b5       	in	r24, 0x25	; 37
-    12c4:	84 60       	ori	r24, 0x04	; 4
-    12c6:	85 bd       	out	0x25, r24	; 37
-    12c8:	81 e4       	ldi	r24, 0x41	; 65
-    12ca:	87 bd       	out	0x27, r24	; 39
-    12cc:	80 e0       	ldi	r24, 0x00	; 0
-    12ce:	90 e0       	ldi	r25, 0x00	; 0
-    12d0:	08 95       	ret
-
-000012d2 <c5>:
-    12d2:	85 b5       	in	r24, 0x25	; 37
-    12d4:	88 7f       	andi	r24, 0xF8	; 248
-    12d6:	85 bd       	out	0x25, r24	; 37
-    12d8:	85 b5       	in	r24, 0x25	; 37
-    12da:	83 60       	ori	r24, 0x03	; 3
-    12dc:	85 bd       	out	0x25, r24	; 37
-    12de:	89 ef       	ldi	r24, 0xF9	; 249
-    12e0:	87 bd       	out	0x27, r24	; 39
-    12e2:	80 e0       	ldi	r24, 0x00	; 0
-    12e4:	90 e0       	ldi	r25, 0x00	; 0
-    12e6:	08 95       	ret
-
-000012e8 <silence>:
+00000542 <silence>:
 
 int silence(){
 	DDRD &= 0B10111111; // PD6 set to INPUT
-    12e8:	56 98       	cbi	0x0a, 6	; 10
+ 542:	56 98       	cbi	0x0a, 6	; 10
 	return 0;
 }
-    12ea:	80 e0       	ldi	r24, 0x00	; 0
-    12ec:	90 e0       	ldi	r25, 0x00	; 0
-    12ee:	08 95       	ret
+ 544:	80 e0       	ldi	r24, 0x00	; 0
+ 546:	90 e0       	ldi	r25, 0x00	; 0
+ 548:	08 95       	ret
 
-000012f0 <sound>:
+0000054a <sound>:
 
 int sound(){
 	DDRD |= 0B01000000; // PD6 set to OUTPUT
-    12f0:	56 9a       	sbi	0x0a, 6	; 10
+ 54a:	56 9a       	sbi	0x0a, 6	; 10
 	return 0;
 }
-    12f2:	80 e0       	ldi	r24, 0x00	; 0
-    12f4:	90 e0       	ldi	r25, 0x00	; 0
-    12f6:	08 95       	ret
+ 54c:	80 e0       	ldi	r24, 0x00	; 0
+ 54e:	90 e0       	ldi	r25, 0x00	; 0
+ 550:	08 95       	ret
 
-000012f8 <_exit>:
-    12f8:	f8 94       	cli
+00000552 <_exit>:
+ 552:	f8 94       	cli
 
-000012fa <__stop_program>:
-    12fa:	ff cf       	rjmp	.-2      	; 0x12fa <__stop_program>
+00000554 <__stop_program>:
+ 554:	ff cf       	rjmp	.-2      	; 0x554 <__stop_program>
