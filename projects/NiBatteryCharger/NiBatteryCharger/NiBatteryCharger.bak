@@ -1,0 +1,97 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Transistor_BJT:BD233 Q?
+U 1 1 5E374305
+P 2400 4500
+F 0 "Q?" H 2592 4546 50  0000 L CNN
+F 1 "BD233" H 2592 4455 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-126-3_Vertical" H 2600 4425 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BD/BD233.pdf" H 2400 4500 50  0001 L CNN
+	1    2400 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5E3762C3
+P 1050 4500
+F 0 "#PWR?" H 1050 4350 50  0001 C CNN
+F 1 "+5V" H 1065 4673 50  0000 C CNN
+F 2 "" H 1050 4500 50  0001 C CNN
+F 3 "" H 1050 4500 50  0001 C CNN
+	1    1050 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R Resistor
+U 1 1 5E37685C
+P 1650 4500
+F 0 "Resistor" V 1857 4500 50  0000 C CNN
+F 1 "R" V 1766 4500 50  0000 C CNN
+F 2 "" V 1580 4500 50  0001 C CNN
+F 3 "~" H 1650 4500 50  0001 C CNN
+	1    1650 4500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1500 4500 1050 4500
+Wire Wire Line
+	1800 4500 2200 4500
+$Comp
+L Device:R Resistor
+U 1 1 5E379295
+P 2500 5100
+F 0 "Resistor" H 2570 5146 50  0000 L CNN
+F 1 "R" H 2570 5055 50  0000 L CNN
+F 2 "" V 2430 5100 50  0001 C CNN
+F 3 "~" H 2500 5100 50  0001 C CNN
+	1    2500 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 4700 2500 4950
+Wire Wire Line
+	2500 5600 2500 5250
+Connection ~ 3000 5600
+Wire Wire Line
+	3000 5600 2500 5600
+Wire Wire Line
+	3000 5250 3000 5600
+Wire Wire Line
+	3750 5250 3000 5250
+$Comp
+L Device:R Battery
+U 1 1 5E374C36
+P 3750 5100
+F 0 "Battery" H 3820 5146 50  0000 L CNN
+F 1 "R" H 3820 5055 50  0000 L CNN
+F 2 "" V 3680 5100 50  0001 C CNN
+F 3 "~" H 3750 5100 50  0001 C CNN
+	1    3750 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E3730F0
+P 3000 5600
+F 0 "#PWR?" H 3000 5350 50  0001 C CNN
+F 1 "GNDREF" H 3005 5427 50  0000 C CNN
+F 2 "" H 3000 5600 50  0001 C CNN
+F 3 "" H 3000 5600 50  0001 C CNN
+	1    3000 5600
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

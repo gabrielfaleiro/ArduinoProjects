@@ -1,0 +1,123 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Transistor_BJT:BD233 Q?
+U 1 1 5E374305
+P 2400 4200
+F 0 "Q?" H 2592 4246 50  0000 L CNN
+F 1 "BD233" H 2592 4155 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-126-3_Vertical" H 2600 4125 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BD/BD233.pdf" H 2400 4200 50  0001 L CNN
+	1    2400 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5E3762C3
+P 1700 3350
+F 0 "#PWR?" H 1700 3200 50  0001 C CNN
+F 1 "+5V" H 1715 3523 50  0000 C CNN
+F 2 "" H 1700 3350 50  0001 C CNN
+F 3 "" H 1700 3350 50  0001 C CNN
+	1    1700 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R Resistor
+U 1 1 5E37685C
+P 1900 4200
+F 0 "Resistor" V 2107 4200 50  0000 C CNN
+F 1 "R" V 2016 4200 50  0000 C CNN
+F 2 "" V 1830 4200 50  0001 C CNN
+F 3 "~" H 1900 4200 50  0001 C CNN
+	1    1900 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5E3730F0
+P 2950 5100
+F 0 "#PWR?" H 2950 4850 50  0001 C CNN
+F 1 "GNDREF" H 2955 4927 50  0000 C CNN
+F 2 "" H 2950 5100 50  0001 C CNN
+F 3 "" H 2950 5100 50  0001 C CNN
+	1    2950 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5E37C740
+P 2950 3400
+F 0 "#PWR?" H 2950 3250 50  0001 C CNN
+F 1 "VCC" H 2967 3573 50  0000 C CNN
+F 2 "" H 2950 3400 50  0001 C CNN
+F 3 "" H 2950 3400 50  0001 C CNN
+	1    2950 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 3400 2950 3500
+Wire Wire Line
+	2950 5100 2950 5000
+Wire Wire Line
+	2950 3500 3450 3500
+Wire Wire Line
+	2950 5000 3450 5000
+Wire Wire Line
+	3450 5000 3450 4750
+Wire Wire Line
+	3450 3800 3450 3500
+Wire Wire Line
+	3450 4100 3450 4450
+$Comp
+L Device:LED D?
+U 1 1 5E37A648
+P 3450 4600
+F 0 "D?" V 3397 4678 50  0000 L CNN
+F 1 "LED" V 3488 4678 50  0000 L CNN
+F 2 "" H 3450 4600 50  0001 C CNN
+F 3 "~" H 3450 4600 50  0001 C CNN
+	1    3450 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R Battery
+U 1 1 5E374C36
+P 3450 3950
+F 0 "Battery" H 3520 3996 50  0000 L CNN
+F 1 "R" H 3520 3905 50  0000 L CNN
+F 2 "" V 3380 3950 50  0001 C CNN
+F 3 "~" H 3450 3950 50  0001 C CNN
+	1    3450 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 3500 2500 3500
+Wire Wire Line
+	2500 3500 2500 4000
+Connection ~ 2950 3500
+Wire Wire Line
+	2500 4400 2500 5000
+Wire Wire Line
+	2500 5000 2950 5000
+Connection ~ 2950 5000
+Wire Wire Line
+	2050 4200 2200 4200
+Wire Wire Line
+	1700 3350 1700 4200
+Wire Wire Line
+	1700 4200 1750 4200
+$EndSCHEMATC
