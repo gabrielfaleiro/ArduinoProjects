@@ -4,6 +4,7 @@
 
 - Chinesse UNO       - Atmel MEGA328P AV 1451
 - Chinesse UNO Baite - Atmel MEGA328P AU 1433
+- TBD - UNO...
 
 ## uP DataSheet
 
